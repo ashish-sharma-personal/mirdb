@@ -1,0 +1,173 @@
+[
+ {
+   "miRNA_name": "miR-100/miR-125b",
+   "cancer": "colorectal cancer",
+   "cell line": "HCT116",
+   "targetD": "mTOR, IGF1R direct targets and XIAP indirect target",
+   "technique": "Real Time PCR",
+   "functionName": " enhances invasion, motility, and MMP activity",
+   "reference": "https://www.ncbi.nlm.nih.gov/pubmed/28032929"
+ },
+ {
+   "miRNA_name": "miR-101",
+   "cancer": "Esophageal Cancer",
+   "cell line": "HT-29 and HCT-116 lines",
+   "targetD": "sphingosine kinase 1 (SphK1)",
+   "technique": "Real time PCR, Western Blotting",
+   "functionName": "increases in vitro anti-CRC activity of conventional chemo-agents: paclitaxel and doxorubicin",
+   "reference": "https://www.ncbi.nlm.nih.gov/pubmed/26071354"
+ },
+ {
+   "miRNA_name": "miR‑101 ",
+   "cancer": "colorectal cancer",
+   "cell line": "SW620 ",
+   "targetD": "EZH2",
+   "technique": "Expression analysis",
+   "functionName": "activated by methyl jasmonate and induced apoptosis ",
+   "reference": "https://www.ncbi.nlm.nih.gov/pubmed/28000868"
+ },
+ {
+   "miRNA_name": "miR-106b",
+   "cancer": "colorectal cancer",
+   "cell line": "SW480, HCT116, HT29, SW620 and LoVo, HEK-293T",
+   "targetD": "DLC1",
+   "technique": "Luciferase reporter assay",
+   "functionName": "promotes colorectal cancer cell migration and invasion ",
+   "reference": "https://www.ncbi.nlm.nih.gov/pubmed/26223867"
+ },
+ {
+   "miRNA_name": "miR-106b",
+   "cancer": "Gastric Cancer",
+   "cell line": "SW480 cells",
+   "targetD": "PTEN and p21",
+   "technique": "Luciferase reporter assay",
+   "functionName": "enhances the tumour-initiating cell capacity without or with IR condition, such as the colony sphere formation capacity and the upregulation of stemness-related genes (CD133, Sox2).",
+   "reference": "http://www.ncbi.nlm.nih.gov/pubmed/26238857"
+ },
+ {
+   "miRNA_name": "miR-10a",
+   "cancer": "Gastric Cancer",
+   "cell line": "",
+   "targetD": "MMP14 and ACTG1",
+   "technique": "",
+   "functionName": "promoted migration and invasion in vitro but inhibited metastasis in vivo by regulating EMT and anoikis",
+   "reference": "https://www.ncbi.nlm.nih.gov/pubmed/28383561"
+ },
+ {
+   "miRNA_name": "miR-10b",
+   "cancer": "colorectal cancer",
+   "cell line": "",
+   "targetD": "expression induced by high levels of TWIST-1 and decreases E-cadherin  levels",
+   "technique": "",
+   "functionName": "acquisition of metastatic phenotypes",
+   "reference": "https://www.ncbi.nlm.nih.gov/pubmed/28345456"
+ },
+ {
+   "miRNA_name": "miR-124",
+   "cancer": "colorectal cancer",
+   "cell line": "HCT116, HT29, and SW620",
+   "targetD": "ROCK1",
+   "technique": "Western blotting",
+   "functionName": " Transformation and invasion of cells significantly increased",
+   "reference": "https://www.ncbi.nlm.nih.gov/pubmed/25987767"
+ },
+ {
+   "miRNA_name": "miR-1269",
+   "cancer": "Esophageal Cancer",
+   "cell line": "",
+   "targetD": "enhances TGF-β signalling by targeting Smad7 and HOXD10",
+   "technique": "",
+   "functionName": "increases the ability of CRC cells to invade and metastasize",
+   "reference": "https://www.ncbi.nlm.nih.gov/pubmed/25872451"
+ },
+ {
+   "miRNA_name": "miR-1280",
+   "cancer": "Esophageal Cancer",
+   "cell line": "",
+   "targetD": "Notch ligand JAG2",
+   "technique": "",
+   "functionName": "suppresses CRC growth and metastasis by repressing Notch signaling pathways",
+   "reference": "https://www.ncbi.nlm.nih.gov/pubmed/28446464"
+ },
+ {
+   "miRNA_name": "miR-130a",
+   "cancer": "colon cancer",
+   "cell line": "HT126 cells",
+   "targetD": "---",
+   "technique": "---",
+   "functionName": "miR-130a sponge inhibited colon cancer cells growth, sensitized 5-FU anti-cancer effect",
+   "reference": "https://www.ncbi.nlm.nih.gov/pubmed/27974852"
+ },
+ {
+   "miRNA_name": "miR-130b",
+   "cancer": "colorectal cancer",
+   "cell line": "CRC cells",
+   "targetD": "integrin α5",
+   "technique": "Luciferase reporter assay",
+   "functionName": "Cell motility, TGF-β1 acts through miR-130b to promote integrin α5 expression",
+   "reference": "http://www.ncbi.nlm.nih.gov/pubmed/26873488"
+ },
+ {
+   "miRNA_name": "miR-132",
+   "cancer": "Colon Cancer",
+   "cell line": "DLD-1 and HCT116",
+   "targetD": "ANO1",
+   "technique": "Luciferase reporter assay",
+   "functionName": "inhibited cell proliferation and cell invasion",
+   "reference": "https://www.ncbi.nlm.nih.gov/pubmed/26868958"
+ },
+ {
+   "miRNA_name": "miR-132",
+   "cancer": "Colon Cancer",
+   "cell line": "",
+   "targetD": "ANO1",
+   "technique": "Luciferase reporter assay",
+   "functionName": "inhibited cell proliferation and invasion",
+   "reference": "http://www.ncbi.nlm.nih.gov/pubmed/26868958"
+ },
+ {
+   "miRNA_name": "miR-133a",
+   "cancer": "colorectal cancer",
+   "cell line": "",
+   "targetD": "eIF4A1",
+   "technique": "Luciferase reporter assay",
+   "functionName": "inhibited cellular migration and invasiveness",
+   "reference": "https://www.ncbi.nlm.nih.gov/pubmed/28466778"
+ },
+ {
+   "miRNA_name": "miR-133a",
+   "cancer": "colorectal cancer",
+   "cell line": "HepG2",
+   "targetD": "IGF1R",
+   "technique": "Luciferase reporter assay",
+   "functionName": " inhibited activation of AKT and ERK signal pathway",
+   "reference": "https://www.ncbi.nlm.nih.gov/pubmed/26156803"
+ },
+ {
+   "miRNA_name": "miR-133b",
+   "cancer": "colorectal cancer",
+   "cell line": "HCT-116",
+   "targetD": "indirectly regulates TAp63 through RhoA",
+   "technique": "Expression level",
+   "functionName": "TAp63/miR-133b/RhoA negative feedback loop inhibits proliferation, apoptosis and metastasis",
+   "reference": "https://www.ncbi.nlm.nih.gov/pubmed/27894087"
+ },
+ {
+   "miRNA_name": "miR‑133b",
+   "cancer": "colorectal cancer",
+   "cell line": "HT-29, SW480, SW620, Caco-2 and HCT-116,",
+   "targetD": "EGFR",
+   "technique": "Luciferase reporter assay",
+   "functionName": "miR‑133b and cetuximab has increased inhibitory effects on the growth and invasion",
+   "reference": "https://www.ncbi.nlm.nih.gov/pubmed/26151111"
+ },
+ {
+   "miRNA_name": "miR-134",
+   "cancer": "colorectal cancer",
+   "cell line": "SW620",
+   "targetD": "",
+   "technique": "",
+   "functionName": "inhibited cell proliferation, invasion, and migration, and promoted cell apoptosis",
+   "reference": "http://www.ncbi.nlm.nih.gov/pubmed/26897940"
+ }
+]
