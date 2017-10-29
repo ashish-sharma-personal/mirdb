@@ -628,3 +628,12 @@ a.button.bt2 {background: #0000ff;color: #ffffff;}
 .maps iframe{
     pointer-events: none;
 }
+
+.description-container {
+    text-align: justify;
+}
+
+.description-container li {
+    margin-left: 10px;
+    font-size: 12px;
+  }
