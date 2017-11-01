@@ -6,8 +6,9 @@
   "author": "Shubham Dubey",
   "dependencies": {
     "body-parser": "^1.13.3",
+    "connect-basic-auth": "^0.1.0",
     "express": "^4.13.3",
-    "mongoose": "^4.1.2",
-    "connect-basic-auth": "^0.1.0"
+    "mongodb": "^2.2.33",
+    "mongoose": "^4.1.2"
   }
 }

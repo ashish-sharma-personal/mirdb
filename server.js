@@ -48,7 +48,7 @@ app.route("/miRNA")
 app.route("/expression")
     .get(function (req, res) {
         var response = {};
-        expressionMongo.find(req.query, function (err, data) {
+        expressionMongo.find('', function (err, data) {
             // Mongo command to fetch all data from collection.
             if (err) {
                 response = { "error": true, "message": "Error fetching data" };
@@ -62,7 +62,7 @@ app.route("/expression")
 app.route("/snp")
     .get(function (req, res) {
         var response = {};
-        snpMongo.find(req.query, function (err, data) {
+        snpMongo.find('', function (err, data) {
             // Mongo command to fetch all data from collection.
             if (err) {
                 response = { "error": true, "message": "Error fetching data" };
@@ -73,76 +73,78 @@ app.route("/snp")
         });
     });
 
-//   var len = funcData.length;
+// var len = funcData.length;
 // for (var i = 0; i < len; i++) {
-// var db = new miRNAmongo();
-//    	db.miRNA_name=funcData[i].miRNA_name;
-//     db.cancer=funcData[i].cancer;
-//     db.cell_line=funcData[i].cell_line;
-//     db.targetD=funcData[i].targetD;
-//     db.technique=funcData[i].technique;
-//     db.functionName=funcData[i].functionName;
-//     db.reference=funcData[i].reference;
+//     var db = new miRNAmongo();
+//     db.miRNA_name = funcData[i].miRNA_name;
+//     db.cancer = funcData[i].cancer;
+//     db.cell_line = funcData[i].cell_line;
+//     db.targetD = funcData[i].targetD;
+//     db.technique = funcData[i].technique;
+//     db.functionName = funcData[i].functionName;
+//     db.reference = funcData[i].reference;
 
-//      db.save(function(err){
-//         if(err) {
-//             response = {"error" : true,"message" : "Error adding data"};
+//     db.save(function (err) {
+//         if (err) {
+//             console.log('error');
+//             response = { "error": true, "message": "Error adding data" };
 //         } else {
-//             response = {"error" : false,"message" : "Data added"};
+//             console.log('success');
+//             response = { "error": false, "message": "Data added" };
 //         }
 
 //     });
-//     }
+// }
 
 // var len = exprData.length;
 // for (var i = 0; i < len; i++) {
-// var db = new expressionMongo();
-// db.miRNA_name=exprData[i].miRNA_name;
-// db.cancer=exprData[i].cancer;
-// db.population_continent=exprData[i].population_continent;
-// db.population_country=exprData[i].population_country;
-// db.sample=exprData[i].sample;
-// db.regulation=exprData[i].regulation;
-// db.regulation_details=exprData[i].regulation_details;
-// db.significance=exprData[i].significance;
-// db.technique=exprData[i].technique;
-// db.marker=exprData[i].marker;
-// db.marker_details=exprData[i].marker_details;
-// db.therapy=exprData[i].therapy;
-// db.therapy_details=exprData[i].therapy_details;
-// db.stage=exprData[i].stage;
-// db.stage_details=exprData[i].stage_details;
-// db.reference=exprData[i].reference;
+//     var db = new expressionMongo();
+//     db.miRNA_name = exprData[i].miRNA_name;
+//     db.cancer = exprData[i].cancer;
+//     db.population_continent = exprData[i].population_continent;
+//     db.population_country = exprData[i].population_country;
+//     db.sample = exprData[i].sample;
+//     db.regulation = exprData[i].regulation;
+//     db.regulation_details = exprData[i].regulation_details;
+//     db.significance = exprData[i].significance;
+//     db.technique = exprData[i].technique;
+//     db.marker = exprData[i].marker;
+//     db.marker_details = exprData[i].marker_details;
+//     db.therapy = exprData[i].therapy;
+//     db.therapy_details = exprData[i].therapy_details;
+//     db.stage = exprData[i].stage;
+//     db.stage_details = exprData[i].stage_details;
+//     db.reference = exprData[i].reference;
 
-//    db.save(function(err){
-//       if(err) {
-//           response = {"error" : true,"message" : "Error adding data"};
-//       } else {
-//           response = {"error" : false,"message" : "Data added"};
-//       }
+//     db.save(function (err) {
+//         if (err) {
+//             response = { "error": true, "message": "Error adding data" };
+//         } else {
+//             response = { "error": false, "message": "Data added" };
+//         }
 
-//   });
+//     });
 // }
 
 // var len = snpData.length;
 // for (var i = 0; i < len; i++) {
-// var db = new snpMongo();
-// db.miRNA_name=snpData[i].miRNA_name;
-// db.cancer=snpData[i].cancer;
-// db.population_continent=snpData[i].population_continent;
-// db.population_country=snpData[i].population_country;
-// db.functionName=snpData[i].functionName;
-// db.snp=snpData[i].snp;
-// db.reference=snpData[i].reference;
+//     var db = new snpMongo();
+//     db.miRNA_name = snpData[i].miRNA_name;
+//     db.cancer = snpData[i].cancer;
+//     db.population_continent = snpData[i].population_continent;
+//     db.population_country = snpData[i].population_country;
+//     db.functionName = snpData[i].functionName;
+//     db.snp = snpData[i].snp;
+//     db.reference = snpData[i].reference;
 
-//    db.save(function(err){
-//       if(err) {
-//           response = {"error" : true,"message" : "Error adding data"};
-//       } else {
-//           response = {"error" : false,"message" : "Data added"};
-//       }
+//     db.save(function (err) {
+//         if (err) {
+//             response = { "error": true, "message": "Error adding data" };
+//         } else {
+//             response = { "error": false, "message": "Data added" };
+//         }
 
-//   });
+//     });
 // }
 
 
@@ -162,5 +164,5 @@ app.route("/snp")
 // });
 
 
-app.listen(3002);
+app.listen(3000);
 console.log("Listening to PORT 3000");
