@@ -1,0 +1,83 @@
+[
+  {
+    "miRNA_name": "miR-146",
+    "cancer": "colorectal cancer",
+    "population_continent": "Asia",
+    "population_country": "China ",
+    "snp": "rs1052918 C>G",
+    "functionName": "promote tumorigenesis via Wnt pathway",
+    "reference": "http://www.ncbi.nlm.nih.gov/pubmed/26813595"
+  },
+  {
+    "miRNA_name": "let-7 binding site",
+    "cancer": "colorectal cancer",
+    "population_continent": "Asia",
+    "population_country": "India",
+    "snp": "KRAS-rs712",
+    "functionName": "predict poor clinical outcome",
+    "reference": "http://www.ncbi.nlm.nih.gov/pubmed/26543374"
+  },
+  {
+    "miRNA_name": "mir-196a2 ",
+    "cancer": "colorectal cancer",
+    "population_continent": "America",
+    "population_country": "USA",
+    "snp": "",
+    "functionName": "additive model: OR = 1.197, 95%CI 1.084 ~ 1.32, P < 0.001; dominant model: OR = 1.247, 95%CI 1.065 ~ 1.46, P = 0.006; recessive model: OR = 1.298, 95%CI 1.101 ~ 1.531, P = 0.002",
+    "reference": "https://www.ncbi.nlm.nih.gov/pubmed/26208586"
+  },
+  {
+    "miRNA_name": "mir-146a ",
+    "cancer": "colorectal cancer",
+    "population_continent": "Asia",
+    "population_country": "China",
+    "snp": "hsa-mir-146a rs2910164",
+    "functionName": "Significant association with risk, OR = 1.24, 95% CI = 1.03-1.49",
+    "reference": "https://www.ncbi.nlm.nih.gov/pubmed/26078942"
+  },
+  {
+    "miRNA_name": "mir-149 ",
+    "cancer": "Gastric cancer",
+    "population_continent": "Europe",
+    "population_country": "Ireland",
+    "snp": "hsa-mir-149 rs2292832",
+    "functionName": "high risk factor, OR = 1.18, 95% CI = 1.08-1.38",
+    "reference": "https://www.ncbi.nlm.nih.gov/pubmed/26078942"
+  },
+  {
+    "miRNA_name": "mir-196a2",
+    "cancer": "colorectal cancer",
+    "population_continent": "Europe",
+    "population_country": "Denmark",
+    "snp": "hsa-mir-196a2 rs11614913,",
+    "functionName": "may reduce the risk of CRC",
+    "reference": "https://www.ncbi.nlm.nih.gov/pubmed/26078943"
+  },
+  {
+    "miRNA_name": "mir-499 ",
+    "cancer": "Esophageal Cancer",
+    "population_continent": "Asia",
+    "population_country": "China",
+    "snp": "hsa-mir-499 rs3746444",
+    "functionName": "associated with cancer risk OR = 0.57, 95% CI = 0.34-0.98",
+    "reference": "https://www.ncbi.nlm.nih.gov/pubmed/26078944"
+  },
+  {
+    "miRNA_name": "miR-27a ",
+    "cancer": "colorectal cancer",
+    "population_continent": "Asia",
+    "population_country": "Korea",
+    "snp": "rs895819 ",
+    "functionName": "associated with increased risk of cancer (OR = 1.56, 95%CI 1.01 to 2.40 for GG vs. AA) ",
+    "reference": "https://www.ncbi.nlm.nih.gov/pubmed/25976406"
+  },
+  {
+    "miRNA_name": "miR-1307",
+    "cancer": "colorectal cancer",
+    "population_continent": "Asia",
+    "population_country": "China",
+    "snp": "rs7911488 C-allelic pre-miR-1307",
+    "functionName": "binds to MBNL1 and infers with Dicer processing, leading to reduced miR-1307 and increased Bcl2 expression",
+    "reference": "https://www.ncbi.nlm.nih.gov/pubmed/25977444"
+  }
+]

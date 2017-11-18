@@ -155,10 +155,10 @@
 														</div>
 													</div>
 												</label>
-												<label class="row">
-													<div class="sepLine"></div>
-												</label>
 											</form>
+											<label class="row">
+												<div class="sepLine"></div>
+											</label>
 											<form name="form12" id="ff" ng-submit="searchQuery(form12)">
 												<label class="row">
 													<div class="col-1-3">
@@ -306,9 +306,7 @@
 														<div class="wrap-col">
 															<select name="miRNA_name" ng-model="RNA2.miRNA_name" required>
 																<option value="" default selected>Select miRNA</option>
-																<option value="miR-10b">miR-10b</option>
-																<option value="mir-132">miR-124</option>
-																<option value="mir-132b">miR-130a</option>
+																<option value={{x}} ng-repeat="x in function.miRNADropValues">{{x}}</option>
 															</select>
 														</div>
 													</div>
@@ -318,7 +316,7 @@
 														<div class="wrap-col">
 															<select name="function" ng-model="RNA2.function" ng-change="functiononSelector(RNA2.function, 'function')" required>
 																<option value="" default selected>Select Function</option>
-																<option value={{x}} ng-repeat="x in functionDropValues">{{x}}</option>
+																<option value={{x}} ng-repeat="x in function.functionDropValues">{{x}}</option>
 															</select>
 														</div>
 													</div>
@@ -326,6 +324,7 @@
 														<div class="wrap-col">
 															<select name="target" ng-model="RNA2.target" ng-change="functiononSelector(RNA2.target, 'target')">
 																<option value="" default selected>Select Target</option>
+																<option value={{x}} ng-repeat="x in function.targetDropValues">{{x}}</option>
 															</select>
 														</div>
 													</div>
@@ -368,16 +367,15 @@
 										<div id="contact_form">
 											<form name="form31" id="ff" ng-submit="searchQuery(form31)">
 												<label class="row">
-													<div class="col-1-2">
+													<div class="col-2-5">
 														<div class="wrap-col">
 															<select name="miRNA_name" ng-model="SNP1.miRNA_name" required>
 																<option value="" default selected>Select miRNA</option>
-																<option value="miR-146">miR-146</option>
-																<option value="mir-146a ">mir-146a</option>
+																<option value={{x}} ng-repeat="x in snp.miRNADropValues">{{x}}</option>
 															</select>
 														</div>
 													</div>
-													<div class="col-1-2">
+													<div class="col-2-5">
 														<div class="wrap-col">
 															<select name="cancer" ng-model="SNP1.cancer" required>
 																<option value="" default selected>Select Cancer Type</option>
@@ -389,26 +387,27 @@
 															</select>
 														</div>
 													</div>
+													<div class="col-1-5">
+														<div class="wrap-col">
+															<button type="submit" class="sendButton btn">Search</button>
+														</div>
+													</div>
 												</label>
-												<center>
-													<button type="submit" class="sendButton btn">Search</button>
-												</center>
 											</form>
 											<label class="row">
 												<div class="sepLine"></div>
 											</label>
 											<form name="form32" id="ff" ng-submit="searchQuery(form32)">
 												<label class="row">
-													<div class="col-1-2">
+													<div class="col-2-5">
 														<div class="wrap-col">
 															<select name="snp" ng-model="SNP2.snp" required>
 																<option value="" default selected>Select SNP</option>
-																<option value="KRAS-rs712">KRAS-rs712</option>
-																<option value="rs895819 ">rs895819 </option>
+																<option value={{x}} ng-repeat="x in snp.snpDropValues">{{x}}</option>
 															</select>
 														</div>
 													</div>
-													<div class="col-1-2">
+													<div class="col-2-5">
 														<div class="wrap-col">
 															<select name="cancer" ng-model="SNP2.cancer" required>
 																<option value="" default selected>Select Cancer Type</option>
@@ -420,38 +419,40 @@
 															</select>
 														</div>
 													</div>
+													<div class="col-1-5">
+														<div class="wrap-col">
+															<button type="submit" class="sendButton btn">Search</button>
+														</div>
+													</div>
 												</label>
-												<center>
-													<button type="submit" class="sendButton btn">Search</button>
-												</center>
 											</form>
+											<label class="row">
+												<div class="sepLine"></div>
+											</label>
 											<form name="form33" id="ff" ng-submit="searchQuery(form33)">
 												<label class="row">
-													<div class="col-1-2">
+													<div class="col-2-5">
 														<div class="wrap-col">
 															<select name="snp" ng-model="SNP3.snp" required>
 																<option value="" default selected>Select SNP</option>
-																<option value="KRAS-rs712">KRAS-rs712</option>
-																<option value="rs895819 ">rs895819 </option>
+																<option value={{x}} ng-repeat="x in snp.snpDropValues">{{x}}</option>
 															</select>
 														</div>
 													</div>
-													<div class="col-1-2">
+													<div class="col-2-5">
 														<div class="wrap-col">
-															<select name="population" ng-model="SNP3.population_continent" ng-change="popChecker()">
+															<select name="population" ng-model="SNP3.population">
 																<option value="" default selected>Select Population</option>
-																<option value="Ireland">Ireland</option>
-																<option value="Denmark">Denmark</option>
-																<option value="China">China</option>
-																<option value="Asia">Asia</option>
-																<option value="Europe">Europe</option>
+																<option value={{x}} ng-repeat="x in snp.populationDropValues">{{x}}</option>
 															</select>
+														</div>
+													</div>
+													<div class="col-1-5">
+														<div class="wrap-col">
+															<button type="submit" class="sendButton btn">Search</button>
 														</div>
 													</div>
 												</label>
-												<center>
-													<button type="submit" class="sendButton btn">Search</button>
-												</center>
 											</form>
 										</div>
 									</div>

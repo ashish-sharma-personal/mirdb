@@ -1,13 +1,13 @@
 [
   {
-    "miRNA_name": "miR-146a",
+    "miRNA_name": "miR-146",
     "cancer": "Colorectal Cancer",
     "cancer_subtype": "",
     "continent": "Asia",
     "population": "Chinese",
     "sample": "30 CRC tumor tissues and 30 tumor-adjacent tissues",
-    "snp": "rs1052918",
-    "function": "mir-146a rs1052918 C>G, promote tumorigenesis via Wnt pathway",
+    "snp": "mir-146a rs1052918 C>G",
+    "function": "promote tumorigenesis via Wnt pathway",
     "reference": "http://www.ncbi.nlm.nih.gov/pubmed/26813595"
   },
   {
@@ -17,8 +17,8 @@
     "continent": "Asia",
     "population": "Chinese",
     "sample": "586 CRC cases and 476 controls",
-    "snp": "KRAS-rs712",
-    "function": "KRAS-rs712 allele T and genotypes TT and GT/TT, predict poor clinical outcome",
+    "snp": "KRAS-rs712 allele T and genotypes TT and GT/TT",
+    "function": "predict poor clinical outcome",
     "reference": "http://www.ncbi.nlm.nih.gov/pubmed/26543374"
   },
   {
@@ -39,7 +39,7 @@
     "continent": "Meta-analysis",
     "population": "Meta-analysis",
     "sample": "5,486 CRC patients and 7,184 controls",
-    "snp": "rs2910164",
+    "snp": "hsa-mir-146a rs2910164",
     "function": "Significant association with risk, OR = 1.24, 95% CI = 1.03-1.49",
     "reference": "https://www.ncbi.nlm.nih.gov/pubmed/26078942"
   },
@@ -50,7 +50,7 @@
     "continent": "Meta-analysis",
     "population": "Meta-analysis",
     "sample": "5,486 CRC patients and 7,184 controls",
-    "snp": "rs2292832",
+    "snp": "hsa-mir-149 rs2292832",
     "function": "high risk factor, OR = 1.18, 95% CI = 1.08-1.38",
     "reference": "https://www.ncbi.nlm.nih.gov/pubmed/26078942"
   },
@@ -61,7 +61,7 @@
     "continent": "Meta-analysis",
     "population": "Meta-analysis",
     "sample": "5,486 CRC patients and 7,184 controls",
-    "snp": "rs11614913",
+    "snp": "hsa-mir-196a2 rs11614913,",
     "function": "may reduce the risk of CRC",
     "reference": "https://www.ncbi.nlm.nih.gov/pubmed/26078942"
   },
@@ -72,7 +72,7 @@
     "continent": "Meta-analysis",
     "population": "Meta-analysis",
     "sample": "5,486 CRC patients and 7,184 controls",
-    "snp": "rs3746444",
+    "snp": "hsa-mir-499 rs3746444",
     "function": "associated with cancer risk OR = 0.57, 95% CI = 0.34-0.98",
     "reference": "https://www.ncbi.nlm.nih.gov/pubmed/26078942"
   },
@@ -94,7 +94,7 @@
     "continent": "Asia",
     "population": "Chinese",
     "sample": "1026 colorectal cancer (CRC) patients and 1026 health controls",
-    "snp": "rs7911488",
+    "snp": "rs7911488 C-allelic pre-miR-1307",
     "function": "binds to MBNL1 and infers with Dicer processing, leading to reduced miR-1307 and increased Bcl2 expression",
     "reference": "https://www.ncbi.nlm.nih.gov/pubmed/25977444"
   },
@@ -110,7 +110,7 @@
     "reference": "https://www.ncbi.nlm.nih.gov/pubmed/27751356"
   },
   {
-    "miRNA_name": "let-7 binding site",
+    "miRNA_name": "let-7 miRNA_name binding site",
     "cancer": "Colorectal Cancer",
     "cancer_subtype": "",
     "continent": "Europe and USA",
@@ -138,8 +138,8 @@
     "continent": "Asia",
     "population": "Han Chinese Population",
     "sample": "386 CRC patients and 394 matched controls",
-    "snp": "rs141178472",
-    "function": "rs141178472 in the PIK3CA 3'-UTR, Individuals with rs141178472 CC genotype or C allele had an increased risk of developing CRC",
+    "snp": "rs141178472 in the PIK3CA 3'-UTR",
+    "function": "Individuals with rs141178472 CC genotype or C allele had an increased risk of developing CRC",
     "reference": "https://www.ncbi.nlm.nih.gov/pubmed/25834816"
   },
   {
@@ -149,7 +149,7 @@
     "continent": "Europe",
     "population": "Greek",
     "sample": "157 CRC patients and 299 healthy controls",
-    "snp": "rs2910164",
+    "snp": "miR-146a rs2910164",
     "function": "risk for CRC was higher for carriers of miR-146a rs2910164 CC genotype and C allele",
     "reference": "https://www.ncbi.nlm.nih.gov/pubmed/25519012"
   },
@@ -204,8 +204,8 @@
     "continent": "Europe",
     "population": "European population",
     "sample": "621 subjects (controls: n = 428; CRC: n = 193)",
-    "snp": "rs2910164",
-    "function": "G>C, miR-146a C allele associated with lower risk of CRC as compared to G allele (p>0.05)",
+    "snp": "G>C (rs2910164)",
+    "function": "miR-146a C allele associated with lower risk of CRC as compared to G allele (p>0.05)",
     "reference": "https://www.ncbi.nlm.nih.gov/pubmed/25103961"
   },
   {
@@ -224,15 +224,15 @@
     "cancer": "Colorectal Cancer",
     "cancer_subtype": "",
     "continent": "--",
-    "population": "Cancer Surveillance and Registry System (554 cases and 556 controls)",
-    "sample": "Cancer Surveillance and Registry System (554 cases and 556 controls)",
+    "population": "Cancer Surveillance and Registry System (554 cases and 556 controls)",
+    "sample": "Cancer Surveillance and Registry System (554 cases and 556 controls)",
     "snp": "rs2910164",
-    "function": "individuals with CC/CG genotype had an increased risk of developing colorectal cancer compared with those carrying GG genotype (odds ratio = 1.63,",
+    "function": "individuals with CC/CG genotype had an increased risk of developing colorectal cancer compared with those carrying GG genotype (odds ratio = 1.63,",
     "reference": "https://www.ncbi.nlm.nih.gov/pubmed/24740563"
   },
   {
-    "miRNA_name": "let-7 binding site",
-    "cancer": "Colon Cancer",
+    "miRNA_name": "let-7 microRNA-complementary site (LCS6)",
+    "cancer": "Colon Cancer",
     "cancer_subtype": "",
     "continent": "Asia",
     "population": "Chinese",
@@ -248,12 +248,12 @@
     "continent": "Asia",
     "population": "Han Chinese Population",
     "sample": "600 CRC patients and 638 matched controls",
-    "snp": "rs12997",
-    "function": "TGF-? signaling pathway, compared with A carriers (AA?+?AG), the GG genotype is associated with higher risk of CRC (OR of 1.52 and p=0.031)",
+    "snp": "ACVR1/rs12997",
+    "function": "TGF-β signaling pathway, compared with A carriers (AA + AG), the GG genotype is associated with higher risk of CRC (OR of 1.52 and p=0.031)",
     "reference": "https://www.ncbi.nlm.nih.gov/pubmed/24375256"
   },
   {
-    "miRNA_name": "miRNA_binding site in ITGB1",
+    "miRNA_name": "miRNA_name binding site in ITGB1",
     "cancer": "Colorectal Cancer",
     "cancer_subtype": "",
     "continent": "Asia",
@@ -264,7 +264,7 @@
     "reference": "https://www.ncbi.nlm.nih.gov/pubmed/24777809"
   },
   {
-    "miRNA_name": "miRNA _binding site in ITGB3",
+    "miRNA_name": "miRNA_name binding site in ITGB3",
     "cancer": "Colorectal Cancer",
     "cancer_subtype": "",
     "continent": "Asia",
@@ -281,8 +281,8 @@
     "continent": "Asia",
     "population": "Chinese",
     "sample": "276 CRC cases and 373 healthy controls",
-    "snp": "rs2910164",
-    "function": "G>C, CG genotype was associated with a decreased risk of CRC as compared to GG genotype",
+    "snp": "rs2910164 G > C",
+    "function": "CG genotype was associated with a decreased risk of CRC as compared to GG genotype",
     "reference": "https://www.ncbi.nlm.nih.gov/pubmed/24136745"
   },
   {
@@ -292,8 +292,8 @@
     "continent": "Asia",
     "population": "Korea",
     "sample": "545 CRC patients and 428 healthy controls",
-    "snp": "rs4938723",
-    "function": "rs4938723 in promoter, Related to decreased risk of CRC in the population",
+    "snp": "rs4938723 in promoter",
+    "function": "Related to decreased risk of CRC in the population",
     "reference": "https://www.ncbi.nlm.nih.gov/pubmed/24337371"
   },
   {
@@ -302,20 +302,20 @@
     "cancer_subtype": "",
     "continent": "Asia",
     "population": "Chinese",
-    "sample": "102 CRC patients and 204 matched cancer-free controls",
-    "snp": "rs11014002",
+    "sample": "102 CRC patients and 204 matched cancer-free controls",
+    "snp": "rs11014002 CT/TT",
     "function": "CT/TT genotype had an increased susceptibility for CRC as compared to CC genotype (P=0.032)",
     "reference": "https://www.ncbi.nlm.nih.gov/pubmed/24934365"
   },
   {
-    "miRNA_name": "let-7 binding site",
+    "miRNA_name": "let-7",
     "cancer": "Colorectal Cancer",
     "cancer_subtype": "",
     "continent": "Asia",
     "population": "Chinese",
     "sample": "339 CRC patients and 313 age- and sex-matched controls",
-    "snp": "rs712",
-    "function": "binding site in KRAS, TT genotype and T allele had an increased risk of developing CRC and is associated with distant metastasis",
+    "snp": "let-7 KRAS rs712",
+    "function": "TT genotype and T allele had an increased risk of developing CRC and is associated with distant metastasis",
     "reference": "https://www.ncbi.nlm.nih.gov/pubmed/23975373"
   },
   {
@@ -445,7 +445,7 @@
     "cancer_subtype": "",
     "continent": "Asia",
     "population": "Chinese",
-    "sample": "1,147 CRC patients and 1,203 cancer-free controls",
+    "sample": "1,147 CRC patients and 1,203 cancer-free controls",
     "snp": "rs2910164",
     "function": "significantly associated with the reduced CRC risk [GC/CC versus GG",
     "reference": "https://www.ncbi.nlm.nih.gov/pubmed/23306950"
@@ -462,7 +462,7 @@
     "reference": "https://www.ncbi.nlm.nih.gov/pubmed/23183747"
   },
   {
-    "miRNA_name": "let-7 binding site",
+    "miRNA_name": "binding site of let-7",
     "cancer": "Colorectal Cancer",
     "cancer_subtype": "",
     "continent": "Europe",
@@ -506,7 +506,7 @@
     "reference": "https://www.ncbi.nlm.nih.gov/pubmed/21976437"
   },
   {
-    "miRNA_name": "miRNA_binding sites of nucleotide excision repair gene  RPA2",
+    "miRNA_name": "miRNA_name-binding sites of nucleotide excision repair gene  RPA2",
     "cancer": "Colorectal Cancer",
     "cancer_subtype": "",
     "continent": "Europe",
@@ -517,14 +517,14 @@
     "reference": "https://www.ncbi.nlm.nih.gov/pubmed/22581836"
   },
   {
-    "miRNA_name": "miRNA_binding sites of nucleotide excision repair gene GTF2H1",
+    "miRNA_name": "miRNA_name-binding sites of nucleotide excision repair gene GTF2H1",
     "cancer": "Colorectal Cancer",
     "cancer_subtype": "",
     "continent": "Europe",
     "population": "Czech Republic.",
     "sample": "1098 colorectal cancer cases and 1469 healthy controls",
     "snp": "rs4596",
-    "function": "associated with colorectal cancer risk, OR 0.69, P = 0.02",
+    "function": "associated with colorectal cancer risk, OR 0.69, P = 0.02",
     "reference": "https://www.ncbi.nlm.nih.gov/pubmed/22581836"
   },
   {
@@ -568,7 +568,7 @@
     "population": "Chinese",
     "sample": "408 CRC patients with surgically-resected adenocarcinoma.",
     "snp": "rs6505162",
-    "function": "Compared with the homozygous wild-type genotype, the variant-containing genotypes of this SNP were significantly associated with both the overall survival (P = 0.001) and the recurrence-free survival (p=0.019)",
+    "function": "Compared with the homozygous wild-type genotype, the variant-containing genotypes of this SNP were significantly associated with both the overall survival (P = 0.001) and the recurrence-free survival (p=0.019)",
     "reference": "https://www.ncbi.nlm.nih.gov/pubmed/22028396"
   },
   {
@@ -590,18 +590,18 @@
     "population": "USA",
     "sample": "245 cases and 446 controls",
     "snp": "rs4919510",
-    "function": "GG genotype was associated with an increased risk of death in Caucasians and with a reduced risk of death in African Americans",
+    "function": "GG genotype was associated with an increased risk of death in Caucasians and with a reduced risk of death in African Americans",
     "reference": "https://www.ncbi.nlm.nih.gov/pubmed/22606253"
   },
   {
-    "miRNA_name": "let-7 binding site",
+    "miRNA_name": "let-7 microRNA SNP in the KRAS 3'UTR",
     "cancer": "Colorectal Cancer",
     "cancer_subtype": "",
     "continent": "Europe",
     "population": "Netherlands",
     "sample": "409 early stage, 182 stage III, and 69 stage IV cases, and 1,886 subcohort members",
-    "snp": "KRAS let-7 LCS6",
-    "function": "let-7 microRNA SNP in the KRAS 3'UTR, Early-stage cases with the KRAS-LCS6 variant had a lower CRC risk and a better survival",
+    "snp": "KRAS-LCS6 variant",
+    "function": "Early-stage cases with the KRAS-LCS6 variant had a lower CRC risk and a better survival",
     "reference": "https://www.ncbi.nlm.nih.gov/pubmed/21994416"
   },
   {
@@ -634,7 +634,7 @@
     "population": "Korea",
     "sample": "407 colorectal patients",
     "snp": "196a2C>T",
-    "function": "heterozygous TC genotype of the 196a2C>T polymorphism was a significant risk factor for the overall survival of rectal cancer patients",
+    "function": "heterozygous TC genotype of the 196a2C>T polymorphism was a significant risk factor for the overall survival of rectal cancer patients",
     "reference": "https://www.ncbi.nlm.nih.gov/pubmed/22977632"
   },
   {
@@ -649,25 +649,25 @@
     "reference": "https://www.ncbi.nlm.nih.gov/pubmed/21565628"
   },
   {
-    "miRNA_name": "let-7 binding site",
+    "miRNA_name": "let-7",
     "cancer": "Colorectal Cancer",
     "cancer_subtype": "",
     "continent": "USA",
     "population": "USA",
     "sample": "130 mCRC patients who were enrolled in a phase II study of cetuximab monotherapy",
-    "snp": "KRAS let-7 LCS6",
+    "snp": "KRAS let-7 lcs6",
     "function": "KRAS 3'UTR polymorphism may predict for cetuximab responsiveness in KRASwt mCRC patients",
     "reference": "https://www.ncbi.nlm.nih.gov/pubmed/20603437"
   },
   {
-    "miRNA_name": "let-7 binding site",
+    "miRNA_name": "Let-7 microRNA binding to KRAS 3'UTR",
     "cancer": "Colorectal Cancer",
     "cancer_subtype": "",
     "continent": "Europe",
     "population": "Italy",
     "sample": "134 patients with MCRC who underwent salvage cetuximab-irinotecan therapy.",
-    "snp": "KRAS let-7 LCS6",
-    "function": "let-7 microRNA SNP in the KRAS 3'UTR, G-allele carriers showed worse OS (P=0.001) and PFS (P=0.004) than T/T genotype carriers",
+    "snp": "LCS6",
+    "function": "G-allele carriers showed worse OS (P=0.001) and PFS (P=0.004) than T/T genotype carriers",
     "reference": "https://www.ncbi.nlm.nih.gov/pubmed/20177422"
   },
   {
@@ -682,25 +682,25 @@
     "reference": "https://www.ncbi.nlm.nih.gov/pubmed/20044760"
   },
   {
-    "miRNA_name": "miRNA_binding site in CD86",
+    "miRNA_name": "miRNA_name binding site in CD86",
     "cancer": "Colorectal Cancer",
     "cancer_subtype": "",
     "continent": "Europe",
     "population": "Czech Republic",
-    "sample": "697 CRC patients",
+    "sample": "697 CRC patients",
     "snp": "rs17281995",
-    "function": "Both the heterozygotes and homozygotes for the variant allele rs17281995 within CD86were associated with an increased risk of CRC (OR = 1.33 and 2.93 respectively).",
+    "function": "Both the heterozygotes and homozygotes for the variant allele rs17281995 within CD86were associated with an increased risk of CRC (OR = 1.33 and 2.93 respectively).",
     "reference": "https://www.ncbi.nlm.nih.gov/pubmed/18192692"
   },
   {
-    "miRNA_name": "miRNA_binding site in  INSR",
+    "miRNA_name": "miRNA_name binding site in  INSR",
     "cancer": "Colorectal Cancer",
     "cancer_subtype": "",
     "continent": "Europe",
     "population": "Czech Republic",
-    "sample": "697 CRC patients",
+    "sample": "697 CRC patients",
     "snp": "rs1051690",
-    "function": "homozygotes for the variant allele rs1051690 within INSR showed an OR of 1.86 with ( P = 0.052).",
+    "function": "homozygotes for the variant allele rs1051690 within INSR showed an OR of 1.86 with ( P = 0.052).",
     "reference": "https://www.ncbi.nlm.nih.gov/pubmed/18192692"
   },
   {
@@ -722,28 +722,17 @@
     "population": "Iran",
     "sample": "170 CRC patients",
     "snp": "rs16917496",
-    "function": "TT+TC genotypes of SET8 rs16917496 are strongly associated with increased risk of CRC in smoker subgroup",
+    "function": "TT+TC genotypes of SET8 rs16917496 are strongly associated with increased risk of CRC in smoker subgroup",
     "reference": "https://www.ncbi.nlm.nih.gov/pubmed/28808643"
   },
   {
-    "miRNA_name": "miR-196a2",
+    "miRNA_name": "miR-196a2,miR-499",
     "cancer": "Esophageal Cancer",
     "cancer_subtype": "ESCC",
     "continent": "Asia",
     "population": "China",
     "sample": "1400 ESCC cases and 2185 matched controls",
-    "snp": "rs11614913",
-    "function": "miR-196a2 rs11614913 and miR-499 rs374644  were correlated with increased risk of ESCC",
-    "reference": "https://www.ncbi.nlm.nih.gov/pubmed/26518769"
-  },
-  {
-    "miRNA_name": "miR-499",
-    "cancer": "Esophageal Cancer",
-    "cancer_subtype": "ESCC",
-    "continent": "Asia",
-    "population": "China",
-    "sample": "1400 ESCC cases and 2185 matched controls",
-    "snp": "rs374644",
+    "snp": "rs11614913(miR-196a2),rs374644(miR-499)",
     "function": "miR-196a2 rs11614913 and miR-499 rs374644  were correlated with increased risk of ESCC",
     "reference": "https://www.ncbi.nlm.nih.gov/pubmed/26518769"
   },
@@ -754,8 +743,8 @@
     "continent": "Asia",
     "population": "China",
     "sample": "248 Kazakh esophageal squamous cell carcinoma (ESCC) cases and 300 frequency-matched control subjects were",
-    "snp": "rs107822",
-    "function": "G>A, this SNP decreased the risk of ESCC in Kazakhz population",
+    "snp": "rs107822G>A",
+    "function": "this SNP decreased the risk of ESCC in Kazakhz population",
     "reference": "https://www.ncbi.nlm.nih.gov/pubmed/26379361"
   },
   {
@@ -765,8 +754,8 @@
     "continent": "Asia",
     "population": "China",
     "sample": "248 Kazakh patients with ESCC and 300 frequency matched control subjects",
-    "snp": "rs1834306",
-    "function": "T>C, correlates significantly with decreased risk ESCC",
+    "snp": "rs1834306T>C",
+    "function": "correlates significantly with decreased risk ESCC",
     "reference": "https://www.ncbi.nlm.nih.gov/pubmed/26261633"
   },
   {
@@ -776,7 +765,7 @@
     "continent": "Asia",
     "population": "China",
     "sample": "773 patients with ESCC and 882 gender- and age-matched controls",
-    "snp": "rs10001133",
+    "snp": "rs10001133(miR-449b)",
     "function": "polymorphism associated with decreased ESCC",
     "reference": "https://www.ncbi.nlm.nih.gov/pubmed/26055141"
   },
@@ -787,7 +776,7 @@
     "continent": "Asia",
     "population": "China",
     "sample": "773 patients with ESCC and 882 gender- and age-matched controls",
-    "snp": "rs12220909",
+    "snp": "rs12220909(miR-4293)",
     "function": "polymorphism associated with decreased ESCC",
     "reference": "https://www.ncbi.nlm.nih.gov/pubmed/26055141"
   },
@@ -798,7 +787,7 @@
     "continent": "Asia",
     "population": "China",
     "sample": "1109 ESCC patients and 1275 control subjects",
-    "snp": "rs531564",
+    "snp": "rs531564(pri-miR-124)",
     "function": "polymorphism in  pri-miRNA_name  associated with decreased ESCC risk",
     "reference": "https://www.ncbi.nlm.nih.gov/pubmed/24945256"
   },
@@ -809,7 +798,7 @@
     "continent": "Asia",
     "population": "China",
     "sample": "1109 ESCC patients and 1275 control subjects",
-    "snp": "rs4938723",
+    "snp": "rs4938723(Pri-miR-34b/c)",
     "function": "polymorphism in pri-miRNA_name associated with decreased ESCC risk",
     "reference": "https://www.ncbi.nlm.nih.gov/pubmed/24945256"
   },
@@ -825,25 +814,14 @@
     "reference": "https://www.ncbi.nlm.nih.gov/pubmed/24320161"
   },
   {
-    "miRNA_name": "miR-34b/c",
+    "miRNA_name": "miR-34b/c,miR-423",
     "cancer": "Esophageal Cancer",
     "cancer_subtype": "ESCC",
     "continent": "Asia",
     "population": "China",
     "sample": "629 ESCC cases and 686 controls",
-    "snp": "rs4938723",
-    "function": "miR-34b/c rs4938723 T>C decreased ESCC risk in patients with smoking",
-    "reference": "https://www.ncbi.nlm.nih.gov/pubmed/24260422"
-  },
-  {
-    "miRNA_name": "miR-423",
-    "cancer": "Esophageal Cancer",
-    "cancer_subtype": "ESCC",
-    "continent": "Asia",
-    "population": "China",
-    "sample": "629 ESCC cases and 686 controls",
-    "snp": "rs6505162",
-    "function": "miR-423 rs6505162 C>A associated with increased ESCC risk in patients with smoking",
+    "snp": "rs4938723(miR-34b/c),rs6505162(miR-423)",
+    "function": "miR-34b/c rs4938723 T>C decreased ESCC risk & miR-423 rs6505162 C>A associated with increased ESCC risk in patients with smoking",
     "reference": "https://www.ncbi.nlm.nih.gov/pubmed/24260422"
   },
   {
@@ -853,7 +831,7 @@
     "continent": "Asia",
     "population": "China",
     "sample": "380 ESCC cases and 380 controls",
-    "snp": "rs11614913",
+    "snp": "rs11614913T>c",
     "function": "miR-196a2 rs11614913 T>C associated with decreased ESCC risk in women patients and those who never smoke or drink",
     "reference": "https://www.ncbi.nlm.nih.gov/pubmed/23792053"
   },
@@ -864,7 +842,7 @@
     "continent": "Asia",
     "population": "China",
     "sample": "444 sporadic ESCC patients and 468 matched cancer-free controls",
-    "snp": "rs2910164",
+    "snp": "rs2910164 GG genotype",
     "function": "rs2910164 GG associated with increased ESCC risk as compared to CC genotype,correlation between rs2910164 C/G & clinical TNM stage(p<0.01)",
     "reference": "https://www.ncbi.nlm.nih.gov/pubmed/20680470"
   },
@@ -916,8 +894,8 @@
     "miRNA_name": "miR-146a",
     "cancer": "Gastric Cancer",
     "cancer_subtype": "",
-    "continent": "Meta-analysis",
-    "population": "Meta-analysis",
+    "continent": "meta analysis",
+    "population": "meta analysis",
     "sample": "databases",
     "snp": "rs2910164",
     "function": "c allele of rs2910164 is associated with reduced gastric cancer risk in heterozygote and dominant model",
@@ -927,8 +905,8 @@
     "miRNA_name": "miR-196a2",
     "cancer": "Gastric Cancer",
     "cancer_subtype": "",
-    "continent": "Meta-analysis",
-    "population": "Meta-analysis",
+    "continent": "meta analysis",
+    "population": "meta analysis",
     "sample": "databases",
     "snp": "rs11614913",
     "function": "rs11614913 increases intestinal type gastric cancer in dominant model",
@@ -941,34 +919,12 @@
     "continent": "Asia",
     "population": "china",
     "sample": "test (715 cases and 804 controls) and validation (940 cases and 1050 controls) subject sets",
-    "snp": "rs11185777",
+    "snp": "rs11185777, rs78591545, and rs2296616(in miR-107 promoter)",
     "function": "C allele of rs2296616 (T>C) was significantly associated with the decreased risk GAC among the test",
     "reference": "http://www.ncbi.nlm.nih.gov/pubmed/25771723"
   },
   {
-    "miRNA_name": "miR-107",
-    "cancer": "Gastric Cancer",
-    "cancer_subtype": "",
-    "continent": "Asia",
-    "population": "china",
-    "sample": "test (715 cases and 804 controls) and validation (940 cases and 1050 controls) subject sets",
-    "snp": "rs78591545",
-    "function": "C allele of rs2296616 (T>C) was significantly associated with the decreased risk GAC among the test",
-    "reference": "http://www.ncbi.nlm.nih.gov/pubmed/25771723"
-  },
-  {
-    "miRNA_name": "miR-107 Promoter",
-    "cancer": "Gastric Cancer",
-    "cancer_subtype": "",
-    "continent": "Asia",
-    "population": "china",
-    "sample": "test (715 cases and 804 controls) and validation (940 cases and 1050 controls) subject sets",
-    "snp": "rs2296616",
-    "function": "C allele of rs2296616 (T>C) was significantly associated with the decreased risk GAC among the test",
-    "reference": "http://www.ncbi.nlm.nih.gov/pubmed/25771723"
-  },
-  {
-    "miRNA_name": "pri-miR-34b/c",
+    "miRNA_name": "Pri-miR-34b/c",
     "cancer": "Gastric Cancer",
     "cancer_subtype": "",
     "continent": "Asia",
@@ -985,7 +941,7 @@
     "continent": "Asia",
     "population": "China",
     "sample": "753 cases and 854 controls in testing set; 940 cases and 1061 controls in validation set",
-    "snp": "rs35010275",
+    "snp": "rs35010275G<C",
     "function": "the functional rs35010275G>C polymorphism in MIR196A2 promoter was significantly associated with miR-196a expression and influenced the genetic susceptibility to G",
     "reference": "http://www.ncbi.nlm.nih.gov/pubmed/25474430"
   },
@@ -996,27 +952,16 @@
     "continent": "Asia",
     "population": "china",
     "sample": "278 gastric cases and 278 healthy matched controls",
-    "snp": "rs895819",
-    "function": "rs895819 inversely affect gc risk and the influence was closely related to their effect on miR-27a expression",
-    "reference": "http://www.ncbi.nlm.nih.gov/pubmed/25399405"
-  },
-  {
-    "miRNA_name": "miR-27a",
-    "cancer": "Gastric Cancer",
-    "cancer_subtype": "",
-    "continent": "Asia",
-    "population": "china",
-    "sample": "278 gastric cases and 278 healthy matched controls",
-    "snp": "rs11671784",
-    "function": "rs11671784G/A inversely affect gc risk and the influence was closely related to their effect on miR-27a expression",
+    "snp": "rs895819A/G,rs11671784G/A",
+    "function": "rs895819 and rs11671784G/A inversely affect gc risk and the influence was closely related to their effect on miR-27a expression",
     "reference": "http://www.ncbi.nlm.nih.gov/pubmed/25399405"
   },
   {
     "miRNA_name": "miR-146a",
     "cancer": "Gastric Cancer",
     "cancer_subtype": "",
-    "continent": "Meta-analysis",
-    "population": "Meta-analysis",
+    "continent": "meta analysis",
+    "population": "meta analysis",
     "sample": "comprising 4112 cases and 5811 controls",
     "snp": "rs2910164",
     "function": "miR-146a rs2910164 polymorphism is associated with increased gastric cancer risk",
@@ -1184,7 +1129,7 @@
     "population": "Iran",
     "sample": "130 patients with gastric cancer and 130 cancer-free individuals",
     "snp": "rs2910164",
-    "function": "No significant differences in genotype distributions of miR-146a rs2910164 were found between cases and controls, overexpression of UHRF1 correlated with stage &  grade of gc and  associated with  genotype distribution of rs2910164.",
+    "function": "No significant differences in genotype distributions of miR-146a rs2910164 were found between cases and controls, overexpression of UHRF1 correlated with stage &  grade of gc and  associated with  genotype distribution of rs2910164.",
     "reference": "https://www.ncbi.nlm.nih.gov/pubmed/26896831"
   },
   {
@@ -1305,7 +1250,7 @@
     "population": "China",
     "sample": "897 GC patients and 992 controls",
     "snp": "rs11134527",
-    "function": "rs11134527 in miR-218 was associated with GC survival, and the G/A and G/G genotypes of rs11134527 resulted in a decreased risk of death when compared with the A/A genotype (HR = 0.75, 95% CI: 0.61-0.95, P = 0.016)",
+    "function": "rs11134527 in miR-218 was associated with GC survival, and the G/A and G/G genotypes of rs11134527 resulted in a decreased risk of death when compared with the A/A genotype (HR = 0.75, 95% CI: 0.61-0.95, P = 0.016)",
     "reference": "https://www.ncbi.nlm.nih.gov/pubmed/28298809"
   },
   {
@@ -1325,9 +1270,9 @@
     "cancer_subtype": "",
     "continent": "Europe",
     "population": "Romania",
-    "sample": "430 individuals (142 gastric cancer patients and 288 age and gender matched cancer-free controls)",
+    "sample": "430 individuals (142 gastric cancer patients and 288 age and gender matched cancer-free controls)",
     "snp": "rs895819",
-    "function": "no association of the SNP with the risk of gastric cancer in a Romanian population",
+    "function": "no association of the SNP with the risk of gastric cancer in a Romanian population",
     "reference": "https://www.ncbi.nlm.nih.gov/pubmed/28922434"
   },
   {
@@ -1336,9 +1281,9 @@
     "cancer_subtype": "",
     "continent": "Europe",
     "population": "Romania",
-    "sample": "430 individuals (142 gastric cancer patients and 288 age and gender matched cancer-free controls)",
+    "sample": "430 individuals (142 gastric cancer patients and 288 age and gender matched cancer-free controls)",
     "snp": "rs2910164",
-    "function": "no association of the SNP with the risk of gastric cancer in a Romanian population",
+    "function": "no association of the SNP with the risk of gastric cancer in a Romanian population",
     "reference": "https://www.ncbi.nlm.nih.gov/pubmed/28922434"
   },
   {
@@ -1347,9 +1292,9 @@
     "cancer_subtype": "",
     "continent": "Europe",
     "population": "Romania",
-    "sample": "430 individuals (142 gastric cancer patients and 288 age and gender matched cancer-free controls)",
+    "sample": "430 individuals (142 gastric cancer patients and 288 age and gender matched cancer-free controls)",
     "snp": "rs11614913",
-    "function": "no association of the SNP with the risk of gastric cancer in a Romanian population",
+    "function": "no association of the SNP with the risk of gastric cancer in a Romanian population",
     "reference": "https://www.ncbi.nlm.nih.gov/pubmed/28922434"
   },
   {
@@ -1358,9 +1303,9 @@
     "cancer_subtype": "",
     "continent": "Europe",
     "population": "Romania",
-    "sample": "430 individuals (142 gastric cancer patients and 288 age and gender matched cancer-free controls)",
+    "sample": "430 individuals (142 gastric cancer patients and 288 age and gender matched cancer-free controls)",
     "snp": "rs3746444",
-    "function": "no association of the SNP with the risk of gastric cancer in a Romanian population",
+    "function": "no association of the SNP with the risk of gastric cancer in a Romanian population",
     "reference": "https://www.ncbi.nlm.nih.gov/pubmed/28922434"
   }
 ]
