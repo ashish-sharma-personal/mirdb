@@ -82,48 +82,48 @@ app.route("/snp")
         });
     });
 
-// var len = exprData.length;
-// for (var i = 0; i < len; i++) {
-//     var db = new expressionMongo();
-//     Object.assign(db, exprData[i]);
+var len = exprData.length;
+for (var i = 0; i < len; i++) {
+    var db = new expressionMongo();
+    Object.assign(db, exprData[i]);
 
-//     db.save(function (err) {
-//         if (err) {
-//             response = { "error": true, "message": "Error adding data" };
-//         } else {
-//             response = { "error": false, "message": "Data added" };
-//         }
-//     });
-// }
+    db.save(function (err) {
+        if (err) {
+            response = { "error": true, "message": "Error adding data" };
+        } else {
+            response = { "error": false, "message": "Data added" };
+        }
+    });
+}
 
-// var len = funcData.length;
-// for (var i = 0; i < len; i++) {
-//     var db = new miRNAmongo();
-//     Object.assign(db, funcData[i]);
-//     db.save(function (err) {
-//         if (err) {
-//             console.log('error');
-//             response = { "error": true, "message": "Error adding data" };
-//         } else {
-//             response = { "error": false, "message": "Data added" };
-//         }
+var len = funcData.length;
+for (var i = 0; i < len; i++) {
+    var db = new miRNAmongo();
+    Object.assign(db, funcData[i]);
+    db.save(function (err) {
+        if (err) {
+            console.log('error');
+            response = { "error": true, "message": "Error adding data" };
+        } else {
+            response = { "error": false, "message": "Data added" };
+        }
 
-//     });
-// }
+    });
+}
 
-// var len = snpData.length;
-// for (var i = 0; i < len; i++) {
-//     var db = new snpMongo();
-//     Object.assign(db, snpData[i]);
-//     db.save(function (err) {
-//         if (err) {
-//             response = { "error": true, "message": "Error adding data" };
-//         } else {
-//             response = { "error": false, "message": "Data added" };
-//         }
+var len = snpData.length;
+for (var i = 0; i < len; i++) {
+    var db = new snpMongo();
+    Object.assign(db, snpData[i]);
+    db.save(function (err) {
+        if (err) {
+            response = { "error": true, "message": "Error adding data" };
+        } else {
+            response = { "error": false, "message": "Data added" };
+        }
 
-//     });
-// }
+    });
+}
 
 
 
