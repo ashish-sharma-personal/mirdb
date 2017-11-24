@@ -156,7 +156,6 @@
 					$http.get('/expression', { params: searchData }).then(function (response) {
 						$scope.expResult = response.data;
 						$scope.setTable(1);
-						console.log(response.data);
 					});
 				}
 			}
