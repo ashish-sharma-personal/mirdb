@@ -18,7 +18,7 @@
 			};
 			$scope.snp = {
 				miRNADropValues: ["let-7 binding site", "miR-100", "miR-107", "miR-107 Promoter", "miR-1307", "miR-146", "miR-146a", "miR-149", "miR-181a", "miR-196A2", "miR-196a", "miR-196a2", "miR-196a3", "miR-218", "miR-219-1", "miR-25", "miR-27a", "miR-3190-5p binding site in ABCC4", "miR-330-3p binding site", "miR-34b/c", "miR-367 binding site", "miR-423", "miR-4293", "miR-449b", "miR-499", "miR-499a", "miR-502 binding Site in SET8", "miR-520a binding site", "miR-542-3p", "miR-603", "miR-605", "miR-608", "miR-92a", "miR-933", "miR-938", "miR-let-7a", "miR196A2", "miRNA _binding site in ITGB3", "miRNA_binding site in  INSR", "miRNA_binding site in CD86", "miRNA_binding site in ITGB1", "miRNA_binding sites of nucleotide excision repair gene  RPA2", "miRNA_binding sites of nucleotide excision repair gene GTF2H1", "mir-146a", "mir-149", "mir-196a2", "mir-492", "mir-499", "pre-miR-27a", "pre-miR-353", "pre-miR-423", "pre-miR-608", "pri-miR-100", "pri-miR-124", "pri-miR-34b/c", "pri-miR26a-1", "promoter region of miR-143/145"],
-				populationDropValues: ["Asia", "Eupope", "Europe and USA", "Meta-analysis", "USA", "Cancer Surveillance and Registry System (554 cases and 556 controls)", "China", "Chinese", "Chinese Han", "Chinese Hans population", "Chinese Meta-analysis", "Czech Republic", "Czech Republic.", "European population", "Greece", "Greek", "Han Chinese Population", "Iran", "Italy", "Japan", "Korea", "Meta-analysis", "Netherlands", "Romania", "Romanian population", "Southern Hans Chinese", "Spain", "USA", "china", "elderly japanese population", "subjects of European ancestry recruited through EPICOLON I/II projects at Spain and USA"],
+				populationDropValues: ["Asia", "Eupope", "Europe and USA", "USA", "Cancer Surveillance and Registry System (554 cases and 556 controls)", "China", "Chinese", "Chinese Han", "Chinese Hans population", "Chinese Meta-analysis", "Czech Republic", "Czech Republic.", "European population", "Greece", "Greek", "Han Chinese Population", "Iran", "Italy", "Japan", "Korea", "Meta-analysis", "Netherlands", "Romania", "Romanian population", "Southern Hans Chinese", "Spain", "china", "elderly japanese population", "subjects of European ancestry recruited through EPICOLON I/II projects at Spain and USA"],
 				snpDropValues: ["196a2C>T", "KRAS let-7 LCS6", "KRAS-rs712", "T8473C", "rs10001133", "rs1044129", "rs1051690", "rs1052918", "rs107822", "rs11014002", "rs11134527", "rs11185777", "rs112310158", "rs11614913", "rs11671784", "rs12220909", "rs12537", "rs12997", "rs141178472", "rs1614913", "rs16917496", "rs17281995", "rs17468", "rs17796757", "rs1834306", "rs2043556", "rs213210", "rs2289030", "rs2292832", "rs2296616", "rs2317676", "rs2505901", "rs2690164", "rs2910164", "rs35010275", "rs353292", "rs353293", "rs3733845", "rs3733846", "rs3742106", "rs374644", "rs3746444", "rs4127422", "rs41291957", "rs4596", "rs4705341", "rs4705343", "rs4919510", "rs4938723", "rs531564", "rs629367", "rs6505162", "rs67687202", "rs712", "rs7356", "rs7372209", "rs78591545", "rs7911488", "rs79402775", "rs895819", "rs9589207"]
 			};
 			$scope.functionDropArr = ['function', 'target'];
@@ -47,8 +47,8 @@
 				$scope.tableNo = tableId;
 			}
 
-			$scope.popChecker = function () {
-				if (this.exp2.population !== "") {
+			$scope.cancerSelected = function () {
+				if (this.exp2.cancer !== "") {
 					$scope.popdropdowns = true;
 				}
 				else {
