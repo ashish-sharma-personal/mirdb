@@ -2321,7 +2321,7 @@
   },
   {
     "miRNA_name": "miR-194",
-    "cancer": "colorectal canecer",
+    "cancer": "Colorectal Cancer",
     "cancer_subtype": "",
     "continent": "Asia",
     "population": "Iran",
@@ -2341,7 +2341,7 @@
   },
   {
     "miRNA_name": "miR-129b",
-    "cancer": "colorectal canecer",
+    "cancer": "Colorectal Cancer",
     "cancer_subtype": "",
     "continent": "Asia",
     "population": "Iran",
@@ -37181,7 +37181,7 @@
   },
   {
     "miRNA_name": "miR-194",
-    "cancer": "colorectal canecer",
+    "cancer": "Colorectal Cancer",
     "cancer_subtype": "",
     "continent": "Asia",
     "population": "Iran",
@@ -37201,7 +37201,7 @@
   },
   {
     "miRNA_name": "miR-129b",
-    "cancer": "colorectal canecer",
+    "cancer": "Colorectal Cancer",
     "cancer_subtype": "",
     "continent": "Asia",
     "population": "Iran",

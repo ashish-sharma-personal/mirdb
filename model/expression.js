@@ -4,7 +4,7 @@ mongoose.connect('mongodb://localhost:27017/demoDb');
 var mongoSchema = mongoose.Schema;
 
 var expressionSchema = {
-    "miRNA": String,
+    "miRNA_name": String,
     "cancer": String,
     "cancer_subtype": String,
     "continent": String,
