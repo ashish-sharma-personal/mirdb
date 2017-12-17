@@ -187,7 +187,7 @@
 												</label>
 												<label ng-show="popdropdowns" id="dropdownsLabel" class="row">
 													<label class="row" style="font-size: 12px">
-														Select one of the four:
+														Select any one of the four:
 													</label>
 													<div class="col-1-4">
 														<div class="wrap-col">
@@ -220,7 +220,7 @@
 													</div>
 													<div class="col-1-4">
 														<div class="wrap-col" required>
-															<select id="stage" name="stage" ng-model="exp2.tumor_size" ng-change="oneSelector(exp2.stage, 'stage')">
+															<select id="tumor_size" name="tumor_size" ng-model="exp2.tumor_size" ng-change="oneSelector(exp2.tumor_size, 'tumor_size')">
 																<option value="" default selected>Select stage/metastasis</option>
 																<option value="TNM/Stage">TNM/Stage</option>
 																<option value="Metastasis">Metastasis</option>
@@ -232,7 +232,7 @@
 												<label>
 													<div class="col-1-3">
 														<div class="wrap-col">
-															<button type="submit" id="btSubmit" class="sendButton btn">Search</button>
+															<button disabled type="submit" id="btSubmit" class="sendButton btn">Search</button>
 														</div>
 													</div>
 												</label>
@@ -321,10 +321,13 @@
 													</div>
 												</label>
 												<label class="row" id="functionDropdowns">
+													<label class="row" style="font-size: 12px">
+														Select any one of the two:
+													</label>
 													<div class="col-1-3">
 														<div class="wrap-col">
-															<select name="function" ng-model="RNA2.function" ng-change="functiononSelector(RNA2.function, 'function')" required>
-																<option value="" default selected>Select Function*</option>
+															<select name="function" ng-model="RNA2.function" ng-change="functiononSelector(RNA2.function, 'function')">
+																<option value="" default selected>Select Function</option>
 																<option value={{x}} ng-repeat="x in function.functionDropValues">{{x}}</option>
 															</select>
 														</div>
@@ -339,7 +342,7 @@
 													</div>
 													<div class="col-1-3">
 														<div class="wrap-col">
-															<button type="submit" id="functionbtSubmit" class="sendButton btn">Search</button>
+															<button type="submit" disabled id="functionbtSubmit" class="sendButton btn">Search</button>
 														</div>
 													</div>
 												</label>
@@ -481,44 +484,44 @@
 				<thead>
 					<tr>
 						<th class="EmpId">miRNA name</th>
-						<th class="EmpId">Cancer</th>
-						<th class="EmpId">Cancer Subtype</th>
-						<th class="EmpId">Continent</th>
-						<th class="EmpId">Country</th>
-						<th class="EmpId">Sample Type</th>
-						<th class="EmpId">Sample</th>
-						<th class="EmpId">Expression</th>
-						<th class="EmpId">Expression Details</th>
-						<th class="EmpId">Significance</th>
-						<th class="EmpId">Detection Method</th>
-						<th class="EmpId">Marker</th>
-						<th class="EmpId">Marker details</th>
-						<th class="EmpId">Therapy</th>
-						<th class="EmpId">Therapy_details</th>
-						<th class="EmpId">Tumor size</th>
-						<th class="EmpId">Tumor size details</th>
+						<th ng-show="showCancer" class="EmpId">Cancer</th>
+						<th ng-show="showCancer" class="EmpId">Cancer Subtype</th>
+						<th ng-show="showPopulation" class="EmpId">Continent</th>
+						<th ng-show="showPopulation" class="EmpId">Country</th>
+						<th ng-show="showSample" class="EmpId">Sample</th>
+						<th ng-show="showSample" class="EmpId">Sample Type</th>
+						<th ng-show="showExpression" class="EmpId">Expression</th>
+						<th ng-show="showExpressionDetail" class="EmpId">Expression Details</th>
+						<th ng-show="showSignificance" class="EmpId">Significance</th>
+						<th ng-show="showDetectionMethod" class="EmpId">Detection Method</th>
+						<th ng-show="showMarker" class="EmpId">Marker</th>
+						<th ng-show="showMarkerDetail" class="EmpId">Marker details</th>
+						<th ng-show="showTherapy" class="EmpId">Therapy</th>
+						<th ng-show="showTherapyDetail" class="EmpId">Therapy details</th>
+						<th ng-show="showTumorSize" class="EmpId">Tumor size</th>
+						<th ng-show="showTumorSizeDetail" class="EmpId">Tumor size details</th>
 						<th class="EmpId">Reference</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr ng-repeat="x in expResult">
 						<td>{{ x.miRNA_name }}</td>
-						<td>{{ x.cancer }}</td>
-						<td>{{ x.cancer_subtype }}</td>
-						<td>{{ x.continent }}</td>
-						<td>{{ x.population }}</td>
-						<td>{{ x.sample_type }}</td>
-						<td>{{ x.sample }}</td>
-						<td>{{ x.expression }}</td>
-						<td>{{ x.expression_details }}</td>
-						<td>{{ x.significance }}</td>
-						<td>{{ x.detection_method }}</td>
-						<td ng-show="showMarker">{{ x.marker_details }}</td>
-						<td ng-show="showMarker">{{ x.marker_details }}</td>
+						<td ng-show="showCancer">{{ x.cancer }}</td>
+						<td ng-show="showCancer">{{ x.cancer_subtype }}</td>
+						<td ng-show="showPopulation">{{ x.continent }}</td>
+						<td ng-show="showPopulation">{{ x.population }}</td>
+						<td ng-show="showSample">{{ x.sample }}</td>
+						<td ng-show="showSample">{{ x.sample_type }}</td>
+						<td ng-show="showExpression">{{ x.expression }}</td>
+						<td ng-show="showExpressionDetail">{{ x.expression_details }}</td>
+						<td ng-show="showSignificance">{{ x.significance }}</td>
+						<td ng-show="showDetectionMethod">{{ x.detection_method }}</td>
+						<td ng-show="showMarker">{{ x.marker }}</td>
+						<td ng-show="showMarkerDetail">{{ x.marker_details }}</td>
 						<td ng-show="showTherapy">{{ x.therapy }}</td>
-						<td ng-show="showTherapy">{{ x.therapy_details }}</td>
-						<td ng-show="showStage">{{ x.tumor_size }}</td>
-						<td ng-show="showStage">{{ x.tumor_size_details }}</td>
+						<td ng-show="showTherapyDetail">{{ x.therapy_details }}</td>
+						<td ng-show="showTumorSize">{{ x.tumor_size }}</td>
+						<td ng-show="showTumorSizeDetail">{{ x.tumor_size_details }}</td>
 						<td>{{ x.reference }}</td>
 					</tr>
 				</tbody>
@@ -527,26 +530,26 @@
 				<thead>
 					<tr>
 						<th class="EmpId">miRNA Name</th>
-						<th class="EmpId">Cancer</th>
-						<th class="EmpId">Cell Line</th>
-						<th class="EmpId">Target</th>
-						<th class="EmpId">Target Details</th>
-						<th class="EmpId">Technique</th>
-						<th class="EmpId">Function</th>
-						<th class="EmpId">Function details</th>
+						<th ng-show="showFuncCancer" class="EmpId">Cancer</th>
+						<th ng-show="showFuncCellLine" class="EmpId">Cell Line</th>
+						<th ng-show="showFuncTarget" class="EmpId">Target</th>
+						<th ng-show="showFuncTarget" class="EmpId">Target Details</th>
+						<th ng-show="showFuncTechnique" class="EmpId">Technique</th>
+						<th ng-show="showFuncFunction" class="EmpId">Function</th>
+						<th ng-show="showFuncFunction" class="EmpId">Function details</th>
 						<th class="EmpId">Reference</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr ng-repeat="x in miResult">
 						<td>{{ x.miRNA_name }}</td>
-						<td>{{ x.cancer }}</td>
-						<td>{{ x.cell_line }}</td>
-						<td>{{ x.target }}</td>
-						<td>{{ x.target_details }}</td>
-						<td>{{ x.technique }}</td>
-						<td>{{ x.function }}</td>
-						<td>{{ x.function_details }}</td>
+						<td ng-show="showFuncCancer">{{ x.cancer }}</td>
+						<td ng-show="showFuncCellLine">{{ x.cell_line }}</td>
+						<td ng-show="showFuncTarget">{{ x.target }}</td>
+						<td ng-show="showFuncTarget">{{ x.target_details }}</td>
+						<td ng-show="showFuncTechnique">{{ x.technique }}</td>
+						<td ng-show="showFuncFunction">{{ x.function }}</td>
+						<td ng-show="showFuncFunction">{{ x.function_details }}</td>
 						<td>{{ x.reference }}</td>
 					</tr>
 				</tbody>

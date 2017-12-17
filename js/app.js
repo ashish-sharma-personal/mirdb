@@ -5,7 +5,7 @@
 			$scope.tab = 4;
 			$scope.tableNo = 4;
 			$scope.popdropdowns = false;
-			$scope.dropArr = ['expression', 'marker', 'therapy', 'stage'];
+			$scope.dropArr = ['expression', 'marker', 'therapy', 'tumor_size'];
 			$scope.expression = {
 				expressionDropValues: ["Differential expression", "Downregulated", "No difference", "No significant difference", "Panel", "Re-elevated", "Signature", "Upregulated"],
 				population: ["Africa", "Asia", "Cell line", "Eurasia", "Europe", "Europe and Asia", "Europe and USA", "North America", "South America", "USA", "USA and Asia", "south America", "Australia", "Austria", "Austria, Czech Republic", "Baltimore,USA", "Brazil", "CAIRO study (ClinTrials.gov NCT00312000) of the Dutch Colorectal Cancer Group", "Canada", "Cell lines", "Changchun,China", "Chile", "China", "China (Kazakh)", "China-Japan union hospital", "Chinese", "Colombia", "Czech Republic", "Czech republic", "Danish", "Denmark", "Egypt", "Finland", "Fuzhou,China", "Germany", "Germany, Greece", "Greece", "Hangzhou, China", "Hiroshima (Japan)", "Hiroshima(Japan)", "Hong Kong", "Hongkong", "Hubei,China", "India", "Iran", "Iranian", "Ireland", "Israel", "Italian and American populations", "Italy", "Italy, UK, Romania, Austria", "Japan", "Japan(for NGS),korea(validation from qRT-PCR)", "Japanese", "Kazakh,s China", "Korea", "Malaya", "NCBI GEO", "Netherlands", "Netherlands, Germany", "Ningbo,China", "Norway", "Oita,Japan", "Paris", "Poland", "Portugal", "Rome,Italy", "Russia", "Saitama,Japan", "Shanghai,China", "Shanghai,china", "Singapore", "Slovak Republic", "South Korea", "Spain", "Sweden", "Sweden and Denmark", "TCGA Data", "Taiwan", "Taiwan.", "Tokyo", "Tokyo,Japan", "Tunisia", "Turkey", "UK", "USA and China", "Hong kong", "Washington, DC", "Cell line and bioinformatic analysis", "Chinese residing in Taiwan", "Nanjing, China"],
@@ -22,9 +22,28 @@
 				snpDropValues: ["196a2C>T", "KRAS let-7 LCS6", "KRAS-rs712", "T8473C", "rs10001133", "rs1044129", "rs1051690", "rs1052918", "rs107822", "rs11014002", "rs11134527", "rs11185777", "rs112310158", "rs11614913", "rs11671784", "rs12220909", "rs12537", "rs12997", "rs141178472", "rs1614913", "rs16917496", "rs17281995", "rs17468", "rs17796757", "rs1834306", "rs2043556", "rs213210", "rs2289030", "rs2292832", "rs2296616", "rs2317676", "rs2505901", "rs2690164", "rs2910164", "rs35010275", "rs353292", "rs353293", "rs3733845", "rs3733846", "rs3742106", "rs374644", "rs3746444", "rs4127422", "rs41291957", "rs4596", "rs4705341", "rs4705343", "rs4919510", "rs4938723", "rs531564", "rs629367", "rs6505162", "rs67687202", "rs712", "rs7356", "rs7372209", "rs78591545", "rs7911488", "rs79402775", "rs895819", "rs9589207"]
 			};
 			$scope.functionDropArr = ['function', 'target'];
-			$scope.showMarker = false;
-			$scope.showTherapy = false;
-			$scope.showStage = false;
+
+			// hide/show columns for expression tab results
+			$scope.showMarker = true;
+			$scope.showMarkerDetail = true;
+			$scope.showTherapy = true;
+			$scope.showTherapyDetail = true;
+			$scope.showTumorSize = true;
+			$scope.showTumorSizeDetail = true;
+			$scope.showExpression = true;
+			$scope.showExpressionDetail = true;
+			$scope.showCancer = true;
+			$scope.showPopulation = true;
+			$scope.showSample = true;
+			$scope.showSignificance = true;
+			$scope.showDetectionMethod = true;
+
+			// hide/show columns for function tab results
+			$scope.showFuncCancer = true;
+			$scope.showFuncCellLine = true;
+			$scope.showFuncTarget = true;
+			$scope.showFuncTechnique = true;
+			$scope.showFuncFunction = true;
 
 			$scope.setTab = function (tabId) {
 				$scope.tab = tabId;
@@ -87,6 +106,20 @@
 					}
 					else {
 						var searchData = this.RNA2;
+
+						$scope.showFuncCancer = false;
+						$scope.showFuncCellLine = false;
+						$scope.showFuncTarget = false;
+						$scope.showFuncTechnique = false;
+						$scope.showFuncFunction = false;
+
+						if (searchData.function !== "" && searchData.function != undefined) {
+							$scope.showFuncFunction = true;
+						}
+						else if (searchData.target !== "" && searchData.target != undefined) {
+							$scope.showFuncTechnique = true;
+						}
+
 					}
 					for (item in searchData) {
 						if (searchData[item] == '') {
@@ -103,7 +136,6 @@
 					if (formData.$name == 'form31') {
 						var searchData = this.SNP1;
 					}
-					// snp 3rd section here
 					else if (formData.$name == 'form32') {
 						var searchData = this.SNP2;
 					} else {
@@ -127,26 +159,41 @@
 					}
 					else {
 						var searchData = this.exp2;
-						if (searchData.marker !== "" && searchData.marker != undefined) {
-							$scope.showMarker = true;
-							$scope.showTherapy = false;
-							$scope.showStage = false;
+
+						$scope.showMarker = false;
+						$scope.showMarkerDetail = false;
+						$scope.showTherapy = false;
+						$scope.showTherapyDetail = false;
+						$scope.showTumorSize = false;
+						$scope.showTumorSizeDetail = false;
+						$scope.showExpression = false;
+						$scope.showExpressionDetail = false;
+						$scope.showCancer = false;
+						$scope.showPopulation = false;
+						$scope.showSample = false;
+						$scope.showSignificance = false;
+						$scope.showDetectionMethod = false;
+
+						if (searchData.marker !== "" && searchData.expression != undefined) {
+							$scope.showExpression = true;
+							$scope.showSignificance = true;
 						}
-						else if (searchData.stage !== "" && searchData.stage != undefined) {
-							$scope.showStage = true;
-							$scope.showTherapy = false;
-							$scope.showMarker = false;
+						else if (searchData.marker !== "" && searchData.marker != undefined) {
+							$scope.showExpression = true;
+							$scope.showMarkerDetail = true;
 						}
 						else if (searchData.therapy !== "" && searchData.therapy != undefined) {
-							$scope.showTherapy = true;
-							$scope.showStage = false;
-							$scope.showMarker = false;
+							$scope.showTherapyDetail = true;
+							$scope.showExpression = true;
 						}
-						else {
-							$scope.showTherapy = false;
-							$scope.showStage = false;
-							$scope.showMarker = false;
+						else if (searchData.tumor_size !== "" && searchData.tumor_size != undefined) {
+							$scope.showTumorSizeDetail = true;
 						}
+						// else {
+						// 	$scope.showTherapy = false;
+						// 	$scope.showTumorSize = false;
+						// 	$scope.showMarker = false;
+						// }
 					}
 					for (item in searchData) {
 						if (searchData[item] == '') {
