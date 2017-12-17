@@ -82,6 +82,7 @@ app.route("/snp")
         });
     });
 
+/*
 var len = exprData.length;
 for (var i = 0; i < len; i++) {
     var db = new expressionMongo();
@@ -124,6 +125,8 @@ for (var i = 0; i < len; i++) {
 
     });
 }
+
+*/
 
 
 
