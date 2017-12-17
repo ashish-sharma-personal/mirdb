@@ -125,9 +125,9 @@ label.row {
   color: #666;
   font-size: 16px;
 }
-.sepLine::after {
+/* .sepLine::after {
     content:'Advanced search';
-}
+} */
 /* ---------------------------------------------------------------------------- */
 /* -------------------------------------Footer--------------------------------- */
 /* ---------------------------------------------------------------------------- */
@@ -173,7 +173,20 @@ a.button.bt2 {background: #0000ff;color: #ffffff;}
 #ff textarea {display:block;width:100%;height:200px; border-radius:4px;-webkit-border-radius:4px;-moz-border-radius:4px;background-color:#fff; color:#000;	border:1px solid #AFAFAF;padding:10px;margin: 5px 0 25px 0;}
 
 #ff .sendButton {cursor:pointer;background-color: #469646;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;color:#ffffff;}
+#ff .sendButton.btn.disabled, #ff .sendButton.btn[disabled], fieldset[disabled] .btn {
+    background-color: #568056;
+    cursor:not-allowed;
+}
 #ff .sendButton:hover {opacity: 0.8;}
+
+/* select.ng-invalid-required {
+    border-color: red !important;
+} */
+
+select.ng-valid-required {
+    border-color: #568056 !important;
+    border-width: 2px !important;
+}
 
 .tableContainer{width:90%;margin-left: 5%;}
 

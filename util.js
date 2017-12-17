@@ -11,9 +11,9 @@ functionData.map((x, i) => {
 })
 
 
-function uniq(a) {
+function uniq(a, field) {
     var seen = {};
-    return a.filter(function(item) {
+    return a.map((c) => c[field]).filter(function(item) {
         return seen.hasOwnProperty(item) ? false : (seen[item] = true);
     }).sort();
 }

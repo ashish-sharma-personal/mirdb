@@ -10,7 +10,7 @@ var miRNASchema = {
     "target": String,
     "target_details": String,
     "technique": String,
-    "function_of_miRNA": String,
+    "function": String,
     "function_details": String,
     "reference": String
 };
