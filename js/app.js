@@ -55,7 +55,7 @@
 			// hide/show columns for function tab results
 			$scope.showFuncCancer = true;
 			$scope.showFuncCellLine = true;
-			$scope.showFuncTarget = true;
+			$scope.showFuncTargetDetails = true;
 			$scope.showFuncTechnique = true;
 			$scope.showFuncFunction = true;
 
@@ -124,7 +124,7 @@
 
 						$scope.showFuncCancer = false;
 						$scope.showFuncCellLine = false;
-						// $scope.showFuncTarget = false;
+						$scope.showFuncTargetDetails = false;
 						$scope.showFuncTechnique = false;
 						$scope.showFuncFunction = false;
 
