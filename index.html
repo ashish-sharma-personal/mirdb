@@ -319,7 +319,7 @@
 												<label class="row">
 													<div class="col-2-5">
 														<div class="wrap-col">
-                                                            <select name="cancer" ng-model="RNA2.cancer" required>
+                                                            <select name="cancer" ng-model="RNA2.cancer" required g-change="funcCancerSelected()">
                                                                 <option value="" default selected>Select Cancer Type*</option>
                                                                 <option value="Colon Cancer">Colon Cancer</option>
                                                                 <option value="Colorectal Cancer">Colorectal Cancer</option>
@@ -330,7 +330,7 @@
 														</div>
 													</div>
 												</label>
-												<label class="row" id="functionDropdowns">
+												<label class="row" ng-show="showFuncDropdowns" id="functionDropdowns">
 													<label class="row" style="font-size: 12px">
 														Select any one of the two:
 													</label>
@@ -543,7 +543,7 @@
 						<td ng-show="showTherapyDetail">{{ x.therapy_details }}</td>
 						<td ng-show="showTumorSize">{{ x.tumor_size }}</td>
 						<td ng-show="showTumorSizeDetail">{{ x.tumor_size_details }}</td>
-						<td>{{ x.reference }}</td>
+						<td><a target="_blank" href="{{ x.reference }}">{{ x.reference }}</a></td>
 					</tr>
 				</tbody>
 			</table>
@@ -555,7 +555,7 @@
 						<th ng-show="showFuncCellLine" class="EmpId">Cell Line</th>
 						<th ng-show="showFuncTarget" class="EmpId">Target</th>
 						<th ng-show="showFuncTarget" class="EmpId">Target Details</th>
-						<th ng-show="showFuncTechnique" class="EmpId">Technique</th>
+						<th ng-show="showFuncTechnique" class="EmpId">Technique used</th>
 						<th ng-show="showFuncFunction" class="EmpId">Function</th>
 						<th ng-show="showFuncFunction" class="EmpId">Function details</th>
 						<th class="EmpId">Reference</th>
@@ -576,7 +576,7 @@
 						<td ng-show="showFuncTechnique">{{ x.technique }}</td>
 						<td ng-show="showFuncFunction">{{ x.function }}</td>
 						<td ng-show="showFuncFunction">{{ x.function_details }}</td>
-						<td>{{ x.reference }}</td>
+						<td><a target="_blank" href="{{ x.reference }}">{{ x.reference }}</a></td>
 					</tr>
 				</tbody>
 			</table>
@@ -609,7 +609,7 @@
 						<td>{{ x.sample }}</td>
 						<td>{{ x.snp }}</td>
 						<td>{{ x.function }}</td>
-						<td>{{ x.reference }}</td>
+						<td><a target="_blank" href="{{ x.reference }}">{{ x.reference }}</a></td>
 						</th>
 					</tr>
 				</tbody>

@@ -40,7 +40,7 @@ app.get("/", function (req, res, next) {
     req.requireAuthorization(req, res, next);
 });
 
-app.route("/miRNA")
+app.route("/function")
     .get(function (req, res) {
         var response = {};
         functionMongo.find(parseQuery(req.query), function (err, data) {

@@ -13,9 +13,11 @@ functionData.map((x, i) => {
 
 function uniq(a, field) {
     var seen = {};
-    return a.map((c) => c[field]).filter(function(item) {
-        return seen.hasOwnProperty(item) ? false : (seen[item] = true);
-    }).sort();
+    return JSON.stringify({
+        data: a.map((c) => c[field]).filter(function (item) {
+            return seen.hasOwnProperty(item) ? false : (seen[item] = true);
+        }).sort()
+    });
 }
 
 var str = '';
@@ -26,4 +28,17 @@ for ( var key in funcData ) {
 var str = '';
 for ( var key in funcData ) {
     str += '<td>{{ x.' + key + ' }}</td>';
+}
+
+function uniqJSON(data) {
+    const result = [];
+    data.map(currentRecord => {
+        if ($.inArray(currentRecord, funcData))
+            result.push(currentRecord);
+    })
+    return JSON.stringify({ data: result});
+}
+
+function toTitleCase(str) {
+    return str.replace(/\w\S*/g, function (txt) { return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase(); });
 }
