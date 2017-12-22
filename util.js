@@ -1,17 +1,28 @@
 functionData.map((x, i) => {
-	const arr = x.target.split(' ');
+	const arr = x.target.split(' and ');
 	if (arr.length > 1) {
-		x.target = arr[0];
+		x.target = arr[0].trim();
 		arr.map((ex, j) => {
 			if (j > 0) {
-                functionData.push(Object.assign({}, x, {target: ex}));
+                functionData.push(Object.assign({}, x, {target: ex.trim()}));
             }
         });
 	}
 })
 
+funcData.map((x, i) => {
+    const arr = x.function.split(' ');
+    if (arr.length > 1) {
+        x.function = arr[0].trim();
+        arr.map((ex, j) => {
+            if (j > 0) {
+                funcData.push(Object.assign({}, x, { function: ex.trim() }));
+            }
+        });
+    }
+})
 
-function uniq(a, field) {
+function buildDropDown(a, field) {
     var seen = {};
     return JSON.stringify({
         data: a.map((c) => c[field]).filter(function (item) {

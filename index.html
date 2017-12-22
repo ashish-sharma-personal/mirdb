@@ -189,7 +189,7 @@
 														</div>
 													</div>
 												</label>
-												<label ng-show="popdropdowns" id="dropdownsLabel" class="row">
+												<label ng-show="showExpDropDowns" id="dropdownsLabel" class="row">
 													<label class="row" style="font-size: 12px">
 														Select any one of the four:
 													</label>
@@ -319,7 +319,7 @@
 												<label class="row">
 													<div class="col-2-5">
 														<div class="wrap-col">
-                                                            <select name="cancer" ng-model="RNA2.cancer" required g-change="funcCancerSelected()">
+                                                            <select name="cancer" ng-model="RNA2.cancer" required ng-change="funcCancerSelected()">
                                                                 <option value="" default selected>Select Cancer Type*</option>
                                                                 <option value="Colon Cancer">Colon Cancer</option>
                                                                 <option value="Colorectal Cancer">Colorectal Cancer</option>
