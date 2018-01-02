@@ -503,19 +503,19 @@
 						<th ng-show="showCancer" class="EmpId">Cancer</th>
 						<th ng-show="showCancer" class="EmpId">Cancer Subtype</th>
 						<th ng-show="showPopulation" class="EmpId">Continent</th>
-						<th ng-show="showPopulation" class="EmpId">Country</th>
-						<th ng-show="showSample" class="EmpId">Sample</th>
+						<th ng-show="showPopulation" class="EmpId">Population</th>
 						<th ng-show="showSample" class="EmpId">Sample Type</th>
+						<th ng-show="showSample" class="EmpId">Sample</th>
 						<th ng-show="showExpression" class="EmpId">Expression</th>
 						<th ng-show="showExpressionDetail" class="EmpId">Expression Details</th>
 						<th ng-show="showSignificance" class="EmpId">Significance</th>
 						<th ng-show="showDetectionMethod" class="EmpId">Detection Method</th>
 						<th ng-show="showMarker" class="EmpId">Marker</th>
 						<th ng-show="showMarkerDetail" class="EmpId">Marker details</th>
-						<th ng-show="showTherapy" class="EmpId">Therapy</th>
-						<th ng-show="showTherapyDetail" class="EmpId">Therapy details</th>
-						<th ng-show="showTumorSize" class="EmpId">Tumor size</th>
-						<th ng-show="showTumorSizeDetail" class="EmpId">Tumor size details</th>
+						<th ng-show="showTherapy" class="EmpId">Response To Therapy</th>
+						<th ng-show="showTherapyDetail" class="EmpId">Details of Response To Therapy</th>
+						<th ng-show="showTumorSize" class="EmpId">Tumor-Size/TNM Stage/Metastasis/Recurrence</th>
+						<th ng-show="showTumorSizeDetail" class="EmpId">Details of Tumor-Size/TNM Stage/Metastasis/Recurrence</th>
 						<th class="EmpId">Reference</th>
 					</tr>
 				</thead>
@@ -531,8 +531,8 @@
 						<td ng-show="showCancer">{{ x.cancer_subtype }}</td>
 						<td ng-show="showPopulation">{{ x.continent }}</td>
 						<td ng-show="showPopulation">{{ x.population }}</td>
-						<td ng-show="showSample">{{ x.sample }}</td>
 						<td ng-show="showSample">{{ x.sample_type }}</td>
+						<td ng-show="showSample">{{ x.sample }}</td>
 						<td ng-show="showExpression">{{ x.expression }}</td>
 						<td ng-show="showExpressionDetail">{{ x.expression_details }}</td>
 						<td ng-show="showSignificance">{{ x.significance }}</td>
