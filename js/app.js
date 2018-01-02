@@ -233,34 +233,34 @@
 					else {
 						var searchData = this.exp2;
 
-						// $scope.showMarker = false;
-						// $scope.showMarkerDetail = false;
-						// $scope.showTherapy = false;
-						// $scope.showTherapyDetail = false;
-						// $scope.showTumorSize = false;
-						// $scope.showTumorSizeDetail = false;
-						// $scope.showExpression = false;
-						// $scope.showExpressionDetail = false;
-						// $scope.showCancer = false;
-						// $scope.showPopulation = false;
-						// $scope.showSample = false;
-						// $scope.showSignificance = false;
-						// $scope.showDetectionMethod = false;
+						$scope.showMarker = false;
+						$scope.showMarkerDetail = false;
+						$scope.showTherapy = false;
+						$scope.showTherapyDetail = false;
+						$scope.showTumorSize = false;
+						$scope.showTumorSizeDetail = false;
+						$scope.showExpression = false;
+						$scope.showExpressionDetail = false;
+						$scope.showCancer = false;
+						$scope.showPopulation = false;
+						$scope.showSample = false;
+						$scope.showSignificance = false;
+						$scope.showDetectionMethod = false;
 
 						if (searchData.marker !== "" && searchData.expression != undefined) {
-							// $scope.showExpression = true;
-							// $scope.showSignificance = true;
+							$scope.showExpression = true;
+							$scope.showSignificance = true;
 						}
 						else if (searchData.marker !== "" && searchData.marker != undefined) {
-							// $scope.showExpression = true;
-							// $scope.showMarkerDetail = true;
+							$scope.showExpression = true;
+							$scope.showMarkerDetail = true;
 						}
 						else if (searchData.therapy !== "" && searchData.therapy != undefined) {
-							// $scope.showTherapyDetail = true;
-							// $scope.showExpression = true;
+							$scope.showTherapyDetail = true;
+							$scope.showExpression = true;
 						}
 						else if (searchData.tumor_size !== "" && searchData.tumor_size != undefined) {
-							// $scope.showTumorSizeDetail = true;
+							$scope.showTumorSizeDetail = true;
 						}
 					}
 					for (item in searchData) {
