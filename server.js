@@ -2,15 +2,46 @@ var express = require("express");
 var app = express();
 var bodyParser = require("body-parser");
 var router = express.Router();
-var functionMongo = require("./model/function");
-var expressionMongo = require("./model/expression");
-var snpMongo = require("./model/snp");
 var fs = require('fs');
+var basicAuth = require('connect-basic-auth');
+
+var functionModel = require("./model/function");
+var expressionModel = require("./model/expression");
+var expRegulationModel = require("./model/expRegulation");
+var expMarkerModel = require("./model/expMarker");
+var expTherapyModel = require("./model/expTherapy");
+var expTumorSizeModel = require("./model/expTumorSize");
+var snpModel = require("./model/snp");
+
+/*
 var funcData = require('./function.json');
 var exprData = require('./expression.json');
+var expRegulationData = require('./expRegulation.json');
+var expMarkerData = require('./expMarker.json');
+var expTherapyData = require('./expTherapy.json');
+var expTumorSizeData = require('./expTumorSize.json');
 var snpData = require('./snp.json');
 
-var basicAuth = require('connect-basic-auth');
+function saveJSONToDB(json, model) {
+    for (var i = 0; i < json.length; i++) {
+        var db = new model();
+        Object.assign(db, json[i]);
+        db.save(function (err) {
+            if (err) {
+                console.log('error');
+            }
+        });
+    }
+}
+saveJSONToDB(exprData, expressionModel);
+saveJSONToDB(expRegulationData, expRegulationModel);
+saveJSONToDB(expMarkerData, expMarkerModel);
+saveJSONToDB(expTherapyData, expRegulationModel);
+saveJSONToDB(expTumorSizeData, expTumorSizeModel);
+
+saveJSONToDB(funcData, functionModel);
+saveJSONToDB(snpData, snpModel);
+*/
 
 app.use(bodyParser.json());
 app.use(express.static('css'));
@@ -43,8 +74,7 @@ app.get("/", function (req, res, next) {
 app.route("/function")
     .get(function (req, res) {
         var response = {};
-        functionMongo.find(parseQuery(req.query), function (err, data) {
-            // Mongo command to fetch all data from collection.
+        functionModel.find(parseQuery(req.query), function (err, data) {
             if (err) {
                 response = { "error": true, "message": "Error fetching data" };
             } else {
@@ -56,9 +86,21 @@ app.route("/function")
 
 app.route("/expression")
     .get(function (req, res) {
-        var response = {};
-        expressionMongo.find(parseQuery(req.query), function (err, data) {
-            // Mongo command to fetch all data from collection.
+        var response = {},
+            query = parseQuery(req.query),
+            model = expressionModel;
+
+        if (query.marker) {
+            model = expMarkerModel;
+        } else if (query.expression) {
+            model = expRegulationModel;
+        } else if (query.therapy) {
+            model = expTherapyModel;
+        } else if (query.tumor_size) {
+            model = expTumorSizeModel;
+        }
+
+        model.find(query, function (err, data) {
             if (err) {
                 response = { "error": true, "message": "Error fetching data" };
             } else {
@@ -71,8 +113,7 @@ app.route("/expression")
 app.route("/snp")
     .get(function (req, res) {
         var response = {};
-        snpMongo.find(parseQuery(req.query), function (err, data) {
-            // Mongo command to fetch all data from collection.
+        snpModel.find(parseQuery(req.query), function (err, data) {
             if (err) {
                 response = { "error": true, "message": "Error fetching data" };
             } else {
@@ -82,67 +123,5 @@ app.route("/snp")
         });
     });
 
-/*
-var len = exprData.length;
-for (var i = 0; i < len; i++) {
-    var db = new expressionMongo();
-    Object.assign(db, exprData[i]);
-
-    db.save(function (err) {
-        if (err) {
-            response = { "error": true, "message": "Error adding data" };
-        } else {
-            response = { "error": false, "message": "Data added" };
-        }
-    });
-}
-
-var len = funcData.length;
-for (var i = 0; i < len; i++) {
-    var db = new functionMongo();
-    Object.assign(db, funcData[i]);
-    db.save(function (err) {
-        if (err) {
-            console.log('error');
-            response = { "error": true, "message": "Error adding data" };
-        } else {
-            response = { "error": false, "message": "Data added" };
-        }
-
-    });
-}
-
-var len = snpData.length;
-for (var i = 0; i < len; i++) {
-    var db = new snpMongo();
-    Object.assign(db, snpData[i]);
-    db.save(function (err) {
-        if (err) {
-            response = { "error": true, "message": "Error adding data" };
-        } else {
-            response = { "error": false, "message": "Data added" };
-        }
-
-    });
-}
-
-*/
-
-
-
-// app.use('/',router);
-
-// fs.readFile('./index.html', function (err, html) {
-//     if (err) {
-//         throw err; 
-//     }       
-//     http.createServer(function(request, response) {  
-//         response.writeHeader(200, {"Content-Type": "text/html"});  
-//         response.write(html);  
-//         response.end();  
-//     }).listen(8000);
-// });
-
-
-app.listen(80);
-console.log("80");
+app.listen(3000);
+console.log("3000");
