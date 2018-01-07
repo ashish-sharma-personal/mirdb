@@ -188,7 +188,7 @@ select.ng-valid-required {
     border-width: 2px !important;
 }
 
-.tableContainer{width:90%;margin-left: 5px;font-size: 12px}
+.tableContainer{margin-right: 5px;margin-left: 5px;font-size: 12px}
 
 /* ---------------------------------------------------------------------------- */
 /* ------------------------------------Subcribe-------------------------------- */
