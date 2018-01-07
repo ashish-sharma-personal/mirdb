@@ -13,7 +13,7 @@ var expTherapyModel = require("./model/expTherapy");
 var expTumorSizeModel = require("./model/expTumorSize");
 var snpModel = require("./model/snp");
 
-/*
+
 var funcData = require('./function.json');
 var exprData = require('./expression.json');
 var expRegulationData = require('./expRegulation.json');
@@ -29,19 +29,14 @@ function saveJSONToDB(json, model) {
         db.save(function (err) {
             if (err) {
                 console.log('error');
+                response = { "error": true, "message": "Error adding data" };
+            } else {
+                response = { "error": false, "message": "Data added" };
             }
         });
     }
 }
-saveJSONToDB(exprData, expressionModel);
-saveJSONToDB(expRegulationData, expRegulationModel);
-saveJSONToDB(expMarkerData, expMarkerModel);
-saveJSONToDB(expTherapyData, expRegulationModel);
-saveJSONToDB(expTumorSizeData, expTumorSizeModel);
 
-saveJSONToDB(funcData, functionModel);
-saveJSONToDB(snpData, snpModel);
-*/
 
 app.use(bodyParser.json());
 app.use(express.static('css'));
@@ -100,7 +95,7 @@ app.route("/expression")
             model = expTumorSizeModel;
         }
 
-        model.find(query, function (err, data) {
+        model.find(parseQuery(query), function (err, data) {
             if (err) {
                 response = { "error": true, "message": "Error fetching data" };
             } else {
@@ -122,6 +117,14 @@ app.route("/snp")
             res.json(data);
         });
     });
-
+/*
+saveJSONToDB(exprData, expressionModel);
+saveJSONToDB(expRegulationData, expRegulationModel);
+saveJSONToDB(expMarkerData, expMarkerModel);
+saveJSONToDB(expTherapyData, expRegulationModel);
+saveJSONToDB(expTumorSizeData, expTumorSizeModel);
+saveJSONToDB(funcData, functionModel);
+saveJSONToDB(snpData, snpModel);
+*/
 app.listen(3000);
 console.log("3000");

@@ -420,7 +420,7 @@
     "reference": "https://www.ncbi.nlm.nih.gov/pubmed/18695884"
   },
   {
-    "miRNA_name": "miR141",
+    "miRNA_name": "miR-141",
     "cancer": "Colorectal Cancer",
     "therapy": "Surgery",
     "therapy_details": "Decreased after curative surgery",
@@ -852,20 +852,6 @@
     "continent": "Asia",
     "population": "China",
     "reference": "https://www.ncbi.nlm.nih.gov/pubmed/19956872"
-  },
-  {
-    "miRNA_name": "miR-197",
-    "cancer": "Gastric Cancer",
-    "therapy": "Chemotherapy",
-    "therapy_details": "miR-197 increases 5FU sensitivity in SGC7901/5FU",
-    "expression": "Downregulated",
-    "significance": "p<0.05",
-    "detection_method": "MTT,qRT-PCR",
-    "sample_type": "Cell-line",
-    "sample": "SGC7901/5-FU,SGc7901",
-    "continent": "Cell-line",
-    "population": "Cell-line",
-    "reference": "http://www.ncbi.nlm.nih.gov/pubmed/26151540"
   },
   {
     "miRNA_name": "miR-197",
