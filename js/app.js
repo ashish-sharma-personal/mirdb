@@ -255,10 +255,8 @@
 							$scope.showTherapyDetail = false;
 							$scope.showTumorSize = false;
 							$scope.showTumorSizeDetail = false;
-							$scope.showExpression = false;
 						}
 						else if (searchData.marker !== "" && searchData.marker != undefined) {
-							$scope.showMarker = false;
 							$scope.showTherapy = false;
 							$scope.showTherapyDetail = false;
 							$scope.showTumorSize = false;
@@ -271,7 +269,6 @@
 							$scope.showTumorSize = false;
 							$scope.showTumorSizeDetail = false;
 							$scope.showExpressionDetail = false;
-							$scope.showTherapy = false;
 						}
 						else if (searchData.tumor_size !== "" && searchData.tumor_size != undefined) {
 							$scope.showMarker = false;
