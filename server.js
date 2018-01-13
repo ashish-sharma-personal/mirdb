@@ -98,7 +98,6 @@ app.route("/expression")
         } else if (query.sample_type) {
             model = expSampleTypeModel;
         }
-
         model.find(parseQuery(query), function (err, data) {
             if (err) {
                 response = { "error": true, "message": "Error fetching data" };
@@ -126,7 +125,7 @@ saveJSONToDB(exprData, expressionModel);
 saveJSONToDB(expRegulationData, expRegulationModel);
 saveJSONToDB(expMarkerData, expMarkerModel);
 saveJSONToDB(expTherapyData, expRegulationModel);
-saveJSONToDB(expTumorSizeData, expTumorSizeModel);
+saveJSONToDB(expSampleTypeData, expSampleTypeModel);
 saveJSONToDB(expTumorSizeData, expTumorSizeModel);
 saveJSONToDB(funcData, functionModel);
 saveJSONToDB(snpData, snpModel);
