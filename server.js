@@ -11,6 +11,7 @@ var expRegulationModel = require("./model/expRegulation");
 var expMarkerModel = require("./model/expMarker");
 var expTherapyModel = require("./model/expTherapy");
 var expTumorSizeModel = require("./model/expTumorSize");
+var expSampleTypeModel = require("./model/expSampleType");
 var snpModel = require("./model/snp");
 
 
@@ -19,7 +20,8 @@ var exprData = require('./expression.json');
 var expRegulationData = require('./expRegulation.json');
 var expMarkerData = require('./expMarker.json');
 var expTherapyData = require('./expTherapy.json');
-var expTumorSizeData = require('./expTumorSize.json');
+var expTumorSizeData = require('./expSampleType.json');
+var expSampleTypeData = require('./expTumorSize.json');
 var snpData = require('./snp.json');
 
 function saveJSONToDB(json, model) {
@@ -93,6 +95,8 @@ app.route("/expression")
             model = expTherapyModel;
         } else if (query.tumor_size) {
             model = expTumorSizeModel;
+        } else if (query.sample_type) {
+            model = expSampleTypeModel;
         }
 
         model.find(parseQuery(query), function (err, data) {
@@ -122,6 +126,7 @@ saveJSONToDB(exprData, expressionModel);
 saveJSONToDB(expRegulationData, expRegulationModel);
 saveJSONToDB(expMarkerData, expMarkerModel);
 saveJSONToDB(expTherapyData, expRegulationModel);
+saveJSONToDB(expTumorSizeData, expTumorSizeModel);
 saveJSONToDB(expTumorSizeData, expTumorSizeModel);
 saveJSONToDB(funcData, functionModel);
 saveJSONToDB(snpData, snpModel);
