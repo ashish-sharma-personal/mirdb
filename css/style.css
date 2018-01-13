@@ -174,7 +174,7 @@ a.button.bt2 {background: #0000ff;color: #ffffff;}
 
 #ff .sendButton {cursor:pointer;background-color: #469646;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;color:#ffffff;}
 #ff .sendButton.btn.disabled, #ff .sendButton.btn[disabled], fieldset[disabled] .btn {
-    background-color: #568056;
+    background-color: #364436;
     cursor:not-allowed;
 }
 #ff .sendButton:hover {opacity: 0.8;}

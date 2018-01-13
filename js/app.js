@@ -295,11 +295,11 @@
 					}
 					var context = this;
 					$http.get('/expression', { params: searchData }).then(function (response) {
-						delete context.exp2.marker;
-						delete context.exp2.expression;
-						delete context.exp2.therapy;
-						delete context.exp2.tumor_size;
-						delete context.exp2.sample_type;
+						delete searchData.marker;
+						delete searchData.expression;
+						delete searchData.therapy;
+						delete searchData.tumor_size;
+						delete searchData.sample_type;
 						$scope.expResult = response.data.sort(sortByMIRNA);
 						window.location.hash = "resultTable";
 						$scope.setTable(1);
