@@ -120,17 +120,15 @@ app.route("/snp")
             res.json(data);
         });
     });
-
+/*
 saveJSONToDB(exprData, expressionModel);
 saveJSONToDB(expRegulationData, expRegulationModel);
 saveJSONToDB(expMarkerData, expMarkerModel);
 saveJSONToDB(expTherapyData, expRegulationModel);
-
 saveJSONToDB(expSampleTypeData, expSampleTypeModel);
-
 saveJSONToDB(expTumorSizeData, expTumorSizeModel);
 saveJSONToDB(funcData, functionModel);
 saveJSONToDB(snpData, snpModel);
-
+*/
 app.listen(3000);
 console.log("3000");
