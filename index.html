@@ -64,7 +64,7 @@
 								<span>A cancer database</span>
 							</div>
 						</div>
-						<article class="description-container">
+						<article class="description-container" style="margin-bottom: 20px;">
 							<p>
 								<b>GI-miRDB</b>, is a manually curated database, which provides a comprehensive resource of miRNA deregulation along
 								with detailed information about miRNA function and SNPs in gastrointestinal cancers viz. Esophageal Cancer, Gastric
@@ -94,15 +94,15 @@
 
 					<div ng-show="isSet(1)">
 						<div class="row">
-							<div class="col-2-5">
+							<div class="col-1-2">
 								<div class="wrap-col">
 									<article class="description-container">
 										<p>Each miRNA entry in the “expression” field is subdivided into 11 fields providing information about: 1) miRNA name
 											2) Cancer 3) Population 4) Sample type 5) Sample information 6) Expression 7) Significance 8) Detection Method
 											9) Marker (Diagnostic/Prognostic) 10) Response to therapy and 11) TNM stage/Metastasis/Recurrence.</p>
 										<ul>
-											<li>• All entries can be retrieved by miRNA ID and Cancer type.</li>
-											<li>• For easy access and data analysis, a second window is provided which can be used to retrieve data using following
+											<li>All entries can be retrieved by miRNA ID and Cancer type.</li>
+											<li>For easy access and data analysis, a second window is provided which can be used to retrieve data using following
 												options
 												<ol>
 													<li>
@@ -123,7 +123,7 @@
 									</article>
 								</div>
 							</div>
-							<div class="col-3-5">
+							<div class="col-1-2">
 								<div class="wrap-col">
 									<div class="contact">
 										<div id="contact_form">
@@ -266,8 +266,8 @@
 										</p>
 
 										<ul>
-											<li>• All entries can be retrieved by miRNA ID and Cancer type using upper window.</li>
-											<li>• For easy access and data analysis, a second window is provided which can be used to retrieve data using following
+											<li>All entries can be retrieved by miRNA ID and Cancer type using upper window.</li>
+											<li>For easy access and data analysis, a second window is provided which can be used to retrieve data using following
 												options:
 												<ol>
 													<li>
@@ -301,8 +301,8 @@
 													</div>
 													<div class="col-2-5">
 														<div class="wrap-col">
-															<select name="cancer" ng-model="RNA1.cancer" required>
-                                                                <option value="" default selected>Select Cancer Type*</option>
+															<select name="cancer" ng-model="RNA1.cancer">
+                                                                <option value="" default selected>Select Cancer Type</option>
                                                                 <option value="Colon Cancer">Colon Cancer</option>
                                                                 <option value="Colorectal Cancer">Colorectal Cancer</option>
                                                                 <option value="Esophageal Cancer">Esophageal Cancer</option>
@@ -381,10 +381,10 @@
 										<p>The SNP field gives information about: 1) miRNA name 2) Cancer 3) Population 4) SNP name and 5) Function.
 										</p>
 										<ul>
-											<li>• All entries can be retrieved by miRNA ID and Cancer type using upper window.</li>
-											<li>• For easy access and data analysis, a second window is provided which can be used to retrieve cancer specific
+											<li>All entries can be retrieved by miRNA ID and Cancer type using upper window.</li>
+											<li>For easy access and data analysis, a second window is provided which can be used to retrieve cancer specific
 												miRNA associated with a particular SNP</li>
-											<li>• A third search option is also provided to retrieve miRNAs and their respective SNPs associated with a particular
+											<li>A third search option is also provided to retrieve miRNAs and their respective SNPs associated with a particular
 												cancer.
 											</li>
 										</ul>
@@ -410,8 +410,8 @@
 													</div>
 													<div class="col-2-5">
 														<div class="wrap-col">
-															<select name="cancer" ng-model="SNP1.cancer" required>
-                                                                <option value="" default selected>Select Cancer Type*</option>
+															<select name="cancer" ng-model="SNP1.cancer">
+                                                                <option value="" default selected>Select Cancer Type</option>
                                                                 <option value="Colon Cancer">Colon Cancer</option>
                                                                 <option value="Colorectal Cancer">Colorectal Cancer</option>
                                                                 <option value="Esophageal Cancer">Esophageal Cancer</option>
@@ -529,7 +529,7 @@
 				</thead>
 				<tbody>
                     <tr ng-show="!expResult.length">
-                        <td colspan=100 style="text-align: center;">
+                        <td colspan=100 style="text-align: center; color: red">
                             No result found for this entry
                         </td>
                     </tr>
