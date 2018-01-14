@@ -68,6 +68,7 @@
 			$scope.showExpression = true;
 			$scope.showExpressionDetail = true;
 			$scope.showCancer = true;
+			$scope.showCancerSubtype = true;
 			$scope.showPopulation = true;
 			$scope.showSample = true;
 			$scope.showSignificance = true;
@@ -243,10 +244,15 @@
 						$scope.showExpression = true;
 						$scope.showExpressionDetail = true;
 						$scope.showCancer = true;
+						$scope.showCancerSubtype = true;
 						$scope.showPopulation = true;
 						$scope.showSample = true;
 						$scope.showSignificance = true;
 						$scope.showDetectionMethod = true;
+
+						if (searchData.cancer !== 'Esophageal Cancer') {
+							$scope.showCancerSubtype = false;
+						}
 
 						if (searchData.expression !== "" && searchData.expression != undefined) {
 							$scope.showMarker = false;
@@ -278,7 +284,7 @@
 							$scope.showTumorSize = false;
 							$scope.showSignificance = false;
 						}
-						else if (searchData.sample_type !== "" && searchData.tumor_size != undefined) {
+						else if (searchData.sample_type !== "" && searchData.sample_type != undefined) {
 							$scope.showTherapy = false;
 							$scope.showTherapyDetail = false;
 							$scope.showTumorSize = false;

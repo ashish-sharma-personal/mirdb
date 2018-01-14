@@ -509,7 +509,7 @@
 					<tr>
 						<th class="EmpId">miRNA name</th>
 						<th ng-show="showCancer" class="EmpId">Cancer</th>
-						<th ng-show="showCancer" class="EmpId">Cancer Subtype</th>
+						<th ng-show="showCancerSubtype" class="EmpId">Cancer Subtype</th>
 						<th ng-show="showPopulation" class="EmpId">Continent</th>
 						<th ng-show="showPopulation" class="EmpId">Population</th>
 						<th ng-show="showSample" class="EmpId">Sample Type</th>
@@ -536,7 +536,7 @@
 					<tr ng-repeat="x in expResult">
 						<td>{{ x.miRNA_name }}</td>
 						<td ng-show="showCancer">{{ x.cancer }}</td>
-						<td ng-show="showCancer">{{ x.cancer_subtype }}</td>
+						<td ng-show="showCancerSubtype">{{ x.cancer_subtype }}</td>
 						<td ng-show="showPopulation">{{ x.continent }}</td>
 						<td ng-show="showPopulation">{{ x.population }}</td>
 						<td ng-show="showSample">{{ x.sample_type }}</td>
