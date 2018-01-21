@@ -1,10 +1,10 @@
-functionData.map((x, i) => {
+funcData.map((x, i) => {
 	const arr = x.target.split(' and ');
 	if (arr.length > 1) {
 		x.target = arr[0].trim();
 		arr.map((ex, j) => {
 			if (j > 0) {
-                functionData.push(Object.assign({}, x, {target: ex.trim()}));
+                funcData.push(Object.assign({}, x, {target: ex.trim()}));
             }
         });
 	}
@@ -21,6 +21,8 @@ funcData.map((x, i) => {
         });
     }
 })
+
+JSON.stringify({data: funcData})
 
 function buildDropDown(a, field) {
     var seen = {};
