@@ -9616,7 +9616,7 @@
     {
       "miRNA_name": "miR-454",
       "cancer": "Colorectal Cancer",
-      "cell_line": "FHC, SW403, HT-29, COLO320DM,\nCOLO205, SW480, KM202L, SW620",
+      "cell_line": "FHC, SW403, HT-29, COLO320DM, \nCOLO205, SW480, KM202L, SW620",
       "target": "CYLD",
       "target_details": "CYLD",
       "technique": "Western blot analysis and Luciferase reporter assay",
@@ -28041,7 +28041,7 @@
     {
       "miRNA_name": "miR-454",
       "cancer": "Colorectal Cancer",
-      "cell_line": "FHC, SW403, HT-29, COLO320DM,\nCOLO205, SW480, KM202L, SW620",
+      "cell_line": "FHC, SW403, HT-29, COLO320DM, \nCOLO205, SW480, KM202L, SW620",
       "target": "CYLD",
       "target_details": "CYLD",
       "technique": "Western blot analysis and Luciferase reporter assay",

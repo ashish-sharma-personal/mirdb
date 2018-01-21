@@ -27,7 +27,7 @@
     "cancer_subtype": "",
     "continent": "Meta-analysis",
     "population": "Meta-analysis",
-    "sample": "6,022 cases and 7,290 controls",
+    "sample": "6, 022 cases and 7, 290 controls",
     "snp": "rs11614913",
     "function": "additive model: OR = 1.197, 95%CI 1.084 ~ 1.32, P < 0.001; dominant model: OR = 1.247, 95%CI 1.065 ~ 1.46, P = 0.006; recessive model: OR = 1.298, 95%CI 1.101 ~ 1.531, P = 0.002",
     "reference": "https://www.ncbi.nlm.nih.gov/pubmed/26208586"
@@ -38,7 +38,7 @@
     "cancer_subtype": "",
     "continent": "Meta-analysis",
     "population": "Meta-analysis",
-    "sample": "5,486 CRC patients and 7,184 controls",
+    "sample": "5, 486 CRC patients and 7, 184 controls",
     "snp": "rs2910164",
     "function": "Significant association with risk, OR = 1.24, 95% CI = 1.03-1.49",
     "reference": "https://www.ncbi.nlm.nih.gov/pubmed/26078942"
@@ -49,7 +49,7 @@
     "cancer_subtype": "",
     "continent": "Meta-analysis",
     "population": "Meta-analysis",
-    "sample": "5,486 CRC patients and 7,184 controls",
+    "sample": "5, 486 CRC patients and 7, 184 controls",
     "snp": "rs2292832",
     "function": "high risk factor, OR = 1.18, 95% CI = 1.08-1.38",
     "reference": "https://www.ncbi.nlm.nih.gov/pubmed/26078942"
@@ -60,7 +60,7 @@
     "cancer_subtype": "",
     "continent": "Meta-analysis",
     "population": "Meta-analysis",
-    "sample": "5,486 CRC patients and 7,184 controls",
+    "sample": "5, 486 CRC patients and 7, 184 controls",
     "snp": "rs11614913",
     "function": "may reduce the risk of CRC",
     "reference": "https://www.ncbi.nlm.nih.gov/pubmed/26078942"
@@ -71,7 +71,7 @@
     "cancer_subtype": "",
     "continent": "Meta-analysis",
     "population": "Meta-analysis",
-    "sample": "5,486 CRC patients and 7,184 controls",
+    "sample": "5, 486 CRC patients and 7, 184 controls",
     "snp": "rs3746444",
     "function": "associated with cancer risk OR = 0.57, 95% CI = 0.34-0.98",
     "reference": "https://www.ncbi.nlm.nih.gov/pubmed/26078942"
@@ -192,7 +192,7 @@
     "cancer_subtype": "",
     "continent": "Meta-analysis",
     "population": "Meta-analysis",
-    "sample": "2,143 cases and 2,457 controls",
+    "sample": "2, 143 cases and 2, 457 controls",
     "snp": "rs11614913",
     "function": "Decreased risk of CRC",
     "reference": "https://www.ncbi.nlm.nih.gov/pubmed/24399071"
@@ -236,7 +236,7 @@
     "cancer_subtype": "",
     "continent": "Asia",
     "population": "China",
-    "sample": "Clinical Trial,  whole blood (n = 2,834) and paired tumor tissue (n = 977)",
+    "sample": "Clinical Trial,  whole blood (n = 2, 834) and paired tumor tissue (n = 977)",
     "snp": "",
     "function": "G-allele carriers were significantly more frequent in Caucasians versus other races",
     "reference": "https://www.ncbi.nlm.nih.gov/pubmed/24727325"
@@ -445,7 +445,7 @@
     "cancer_subtype": "",
     "continent": "Asia",
     "population": "China",
-    "sample": "1,147 CRC patients and 1,203 cancer-free controls",
+    "sample": "1, 147 CRC patients and 1, 203 cancer-free controls",
     "snp": "rs2910164",
     "function": "significantly associated with the reduced CRC risk [GC/CC versus GG",
     "reference": "https://www.ncbi.nlm.nih.gov/pubmed/23306950"
@@ -599,7 +599,7 @@
     "cancer_subtype": "",
     "continent": "Europe",
     "population": "Netherlands",
-    "sample": "409 early stage, 182 stage III, and 69 stage IV cases, and 1,886 subcohort members",
+    "sample": "409 early stage, 182 stage III, and 69 stage IV cases, and 1, 886 subcohort members",
     "snp": "KRAS let-7 LCS6",
     "function": "let-7 microRNA SNP in the KRAS 3'UTR, Early-stage cases with the KRAS-LCS6 variant had a lower CRC risk and a better survival",
     "reference": "https://www.ncbi.nlm.nih.gov/pubmed/21994416"
@@ -865,7 +865,7 @@
     "population": "China",
     "sample": "444 sporadic ESCC patients and 468 matched cancer-free controls",
     "snp": "rs2910164",
-    "function": "rs2910164 GG associated with increased ESCC risk as compared to CC genotype,correlation between rs2910164 C/G & clinical TNM stage(p<0.01)",
+    "function": "rs2910164 GG associated with increased ESCC risk as compared to CC genotype, correlation between rs2910164 C/G & clinical TNM stage(p<0.01)",
     "reference": "https://www.ncbi.nlm.nih.gov/pubmed/20680470"
   },
   {
@@ -885,7 +885,7 @@
     "cancer_subtype": "",
     "continent": "Asia",
     "population": "Japan",
-    "sample": "583 gastric cancer patients and age- and sex-frequency-matched 1,742 control outpatients",
+    "sample": "583 gastric cancer patients and age- and sex-frequency-matched 1, 742 control outpatients",
     "snp": "rs2910164",
     "function": "combined effect of miR-146a rs2910164 G/C polymorphism and toll like receptor 4+3725c allele on the increased risk of severe gastric atrophy",
     "reference": "http://www.ncbi.nlm.nih.gov/pubmed/20721625"
@@ -896,7 +896,7 @@
     "cancer_subtype": "",
     "continent": "Asia",
     "population": "China",
-    "sample": "2,380 participants with diverse gastric lesions",
+    "sample": "2, 380 participants with diverse gastric lesions",
     "snp": "rs2910164",
     "function": "miR-146a rs2910164 polymorphism may contribute to the evolution of H.Pylori associated gastric lesions in the chinese population",
     "reference": "http://www.ncbi.nlm.nih.gov/pubmed/23613822"
@@ -1030,7 +1030,7 @@
     "population": "China",
     "sample": "419 gastric cancer patients and 402 age- and sex-matched cancer-free controls",
     "snp": "rs4938723",
-    "function": "CC genotype and C allele of miR-34b/c rs4938723 were associated with significantly decreased risk of GC compared with TT genotype and T allele(CC vs TT:P=0.006,adjusted OR=0.53,95% CI=0.34-0.83 and C vs T:P=0.005,sdjusted OR=0.75,95% CI=0.61-0.92)",
+    "function": "CC genotype and C allele of miR-34b/c rs4938723 were associated with significantly decreased risk of GC compared with TT genotype and T allele(CC vs TT:P=0.006, adjusted OR=0.53, 95% CI=0.34-0.83 and C vs T:P=0.005, sdjusted OR=0.75, 95% CI=0.61-0.92)",
     "reference": "http://www.ncbi.nlm.nih.gov/pubmed/25190020"
   },
   {
@@ -1107,7 +1107,7 @@
     "population": "China",
     "sample": "940 cases and 1046 controls",
     "snp": "rs11614913",
-    "function": "miR-196A2 rs11614913 CC was associated significantly with reduced risk of GC in both sets (OR=0.78,95% CI=0.62-0.99 for test set and 0.64,0.52-0.80 for validation set)compared with CT/TT genotype also CC was significantly associated with increased survival of gastric cancer compared with CT/TT genotypes",
+    "function": "miR-196A2 rs11614913 CC was associated significantly with reduced risk of GC in both sets (OR=0.78, 95% CI=0.62-0.99 for test set and 0.64, 0.52-0.80 for validation set)compared with CT/TT genotype also CC was significantly associated with increased survival of gastric cancer compared with CT/TT genotypes",
     "reference": "https://www.ncbi.nlm.nih.gov/pubmed/23423813"
   },
   {
@@ -1118,7 +1118,7 @@
     "population": "China",
     "sample": "374 GC patients and 999 cancer-free controls",
     "snp": "rs79402775",
-    "function": "rs79402775 decreased the risk of gastric cancer  ,serve as biomarker for Gc prognosis, Compared with the wild-type GG, GA genotype was associated with a significantly decreased risk of GC (OR=0.542, 95% CI=0.299-0.983, p=0.044) in female subjects",
+    "function": "rs79402775 decreased the risk of gastric cancer  , serve as biomarker for Gc prognosis, Compared with the wild-type GG, GA genotype was associated with a significantly decreased risk of GC (OR=0.542, 95% CI=0.299-0.983, p=0.044) in female subjects",
     "reference": "https://www.ncbi.nlm.nih.gov/pubmed/28534360"
   },
   {
@@ -1305,7 +1305,7 @@
     "population": "China",
     "sample": "897 GC patients and 992 controls",
     "snp": "rs11134527",
-    "function": "rs11134527 in miR-218 was associated with GC survival, and the G/A and G/G genotypes of rs11134527 resulted in a decreased risk of death when compared with the A/A genotype (HR = 0.75, 95% CI: 0.61-0.95,P= 0.016)",
+    "function": "rs11134527 in miR-218 was associated with GC survival, and the G/A and G/G genotypes of rs11134527 resulted in a decreased risk of death when compared with the A/A genotype (HR = 0.75, 95% CI: 0.61-0.95, P= 0.016)",
     "reference": "https://www.ncbi.nlm.nih.gov/pubmed/28298809"
   },
   {

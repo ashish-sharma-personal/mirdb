@@ -67,18 +67,14 @@ header{}
 header .wrap-header{}
 
 td.ellipsis {
-    max-width: 700px;
+    /* max-width: 700px; */
     overflow: hidden;
     text-overflow: ellipsis;
     /* white-space: nowrap; */
 }
 
-td.miRNA {
-  max-width: 90px;
-}
-
 td.continent {
-  max-width: 90px;
+  max-width: 80px;
 }
 
 td.cancer {
@@ -86,7 +82,7 @@ td.cancer {
 }
 
 td.population {
-  max-width: 80px;
+  max-width: 90px;
 }
 
 td.sample {
