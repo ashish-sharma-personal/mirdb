@@ -183,10 +183,11 @@
 													</div>
 													<div class="col-1-2">
 														<div class="wrap-col">
-															<select name="population" ng-model="exp2.population_continent">
+															<select name="population" ng-model="exp2.population">
 																<option value="" default selected>
                                                                     Select Population (optional)
                                                                 </option>
+																<option value={{x}} ng-repeat="x in expression.continents">{{x}}</option>
 																<option value={{x}} ng-repeat="x in expression.population">{{x}}</option>
 															</select>
 														</div>
@@ -230,10 +231,10 @@
 															<select id="tumor_size" name="tumor_size" ng-model="exp2.tumor_size" ng-change="oneSelector(exp2.tumor_size, 'tumor_size')">
 																<option value="" default selected>Select stage/metastasis</option>
 																<option value="Metastasis">Metastasis</option>
-																<option value="Recurrance">Recurrence</option>
+																<option value="Recurrence">Recurrence</option>
 																<option value="TNM/Stage">TNM/Stage</option>
 																<option value="Tumor Location">Tumor Location</option>
-																<option value="Tumor-size">Tumor-size</option>
+																<option value="Tumor Size">Tumor size</option>
 															</select>
 														</div>
 													</div>
@@ -536,24 +537,24 @@
                         </td>
                     </tr>
 					<tr ng-repeat="x in expResult">
-						<td>{{ x.miRNA_name }}</td>
-						<td ng-show="showCancer">{{ x.cancer }}</td>
-						<td ng-show="showCancerSubtype">{{ x.cancer_subtype }}</td>
-						<td ng-show="showPopulation">{{ x.continent }}</td>
-						<td ng-show="showPopulation">{{ x.population }}</td>
-						<td ng-show="showSample">{{ x.sample_type }}</td>
-						<td ng-show="showSample">{{ x.sample }}</td>
-						<td ng-show="showExpression">{{ x.expression }}</td>
-						<td ng-show="showExpressionDetail">{{ x.expression_details }}</td>
-						<td ng-show="showSignificance">{{ x.significance }}</td>
-						<td ng-show="showDetectionMethod">{{ x.detection_method }}</td>
-						<td ng-show="showMarker">{{ x.marker }}</td>
-						<td ng-show="showMarkerDetail">{{ x.marker_details }}</td>
-						<td ng-show="showTherapy">{{ x.therapy }}</td>
-						<td ng-show="showTherapyDetail">{{ x.therapy_details }}</td>
-						<td ng-show="showTumorSize">{{ x.tumor_size }}</td>
-						<td ng-show="showTumorSizeDetail">{{ x.tumor_size_details }}</td>
-						<td><a target="_blank" href="{{ x.reference }}">Link</a></td>
+						<td title="{{ x.miRNA_name }}" class="miRNA ellipsis">{{ x.miRNA_name }}</td>
+						<td title="{{ x.cancer }}" class="ellipsis cancer" ng-show="showCancer">{{ x.cancer }}</td>
+						<td title="{{ x.cancer_subtype }}" class="ellipsis" ng-show="showCancerSubtype">{{ x.cancer_subtype }}</td>
+						<td title="{{ x.continent }}" class="ellipsis continent" ng-show="showPopulation">{{ x.continent }}</td>
+						<td title="{{ x.population }}" class="ellipsis population" ng-show="showPopulation">{{ x.population }}</td>
+						<td title="{{ x.sample_type }}" class="ellipsis sample" ng-show="showSample">{{ x.sample_type }}</td>
+						<td title="{{ x.sample }}" class="ellipsis" ng-show="showSample">{{ x.sample }}</td>
+						<td title="{{ x.expression }}" class="ellipsis" ng-show="showExpression">{{ x.expression }}</td>
+						<td title="{{ x.expression_details }}" class="ellipsis" ng-show="showExpressionDetail">{{ x.expression_details }}</td>
+						<td title="{{ x.significance }}" class="ellipsis" ng-show="showSignificance">{{ x.significance }}</td>
+						<td title="{{ x.detection_method }}" class="ellipsis" ng-show="showDetectionMethod">{{ x.detection_method }}</td>
+						<td title="{{ x.marker }}" class="ellipsis marker" ng-show="showMarker">{{ x.marker }}</td>
+						<td title="{{ x.marker_details }}" class="ellipsis" ng-show="showMarkerDetail">{{ x.marker_details }}</td>
+						<td title="{{ x.therapy }}" class="ellipsis" ng-show="showTherapy">{{ x.therapy }}</td>
+						<td title="{{ x.therapy_details }}" class="ellipsis" ng-show="showTherapyDetail">{{ x.therapy_details }}</td>
+						<td title="{{ x.tumor_size }}" class="ellipsis" ng-show="showTumorSize">{{ x.tumor_size }}</td>
+						<td title="{{ x.tumor_size_details }}" class="ellipsis" ng-show="showTumorSizeDetail">{{ x.tumor_size_details }}</td>
+						<td class="link"><a title="{{ x.reference }}" target="_blank" href="{{ x.reference }}">Link</a></td>
 					</tr>
 				</tbody>
 			</table>
@@ -573,20 +574,20 @@
 				</thead>
 				<tbody>
                     <tr ng-show="!miResult.length">
-                        <td colspan=100 style="text-align: center;">
+                        <td colspan=100 style="text-align: center; color: red">
                             No result found for this entry
                         </td>
                     </tr>
 					<tr ng-repeat="x in miResult">
-						<td>{{ x.miRNA_name }}</td>
-						<td ng-show="showFuncCancer">{{ x.cancer }}</td>
-						<td ng-show="showFuncCellLine">{{ x.cell_line }}</td>
-						<td ng-show="showFuncTarget">{{ x.target }}</td>
-						<td ng-show="showFuncTargetDetails">{{ x.target_details }}</td>
-						<td ng-show="showFuncTechnique">{{ x.technique }}</td>
-						<td ng-show="showFuncFunction">{{ x.function }}</td>
-						<td ng-show="showFuncFunction">{{ x.function_details }}</td>
-						<td><a target="_blank" href="{{ x.reference }}">Link</a></td>
+						<td title="{{ x.miRNA_name }}" class="miRNA ellipsis">{{ x.miRNA_name }}</td>
+						<td title="{{ x.cancer }}" class="ellipsis cancer" ng-show="showFuncCancer">{{ x.cancer }}</td>
+						<td title="{{ x.cell_line }}" class="ellipsis" ng-show="showFuncCellLine">{{ x.cell_line }}</td>
+						<td title="{{ x.target }}" class="ellipsis" ng-show="showFuncTarget">{{ x.target }}</td>
+						<td title="{{ x.target_details }}" class="ellipsis" ng-show="showFuncTargetDetails">{{ x.target_details }}</td>
+						<td title="{{ x.technique }}" class="ellipsis" ng-show="showFuncTechnique">{{ x.technique }}</td>
+						<td title="{{ x.function }}" class="ellipsis" ng-show="showFuncFunction">{{ x.function }}</td>
+						<td title="{{ x.function_details }}" class="ellipsis" ng-show="showFuncFunction">{{ x.function_details }}</td>
+						<td class="link"><a title="{{ x.reference }}" target="_blank" href="{{ x.reference }}">Link</a></td>
 					</tr>
 				</tbody>
 			</table>
@@ -606,21 +607,20 @@
 				</thead>
 				<tbody>
                     <tr ng-show="!snpResult.length">
-                        <td colspan=100 style="text-align: center;">
+                        <td colspan=100 style="text-align: center; color: red">
                             No result found for this entry
                         </td>
                     </tr>
 					<tr ng-repeat="x in snpResult">
-						<td>{{ x.miRNA_name }}</td>
-						<td>{{ x.cancer }}</td>
-						<td>{{ x.cancer_subtype }}</td>
-						<td>{{ x.continent }}</td>
-						<td>{{ x.population }}</td>
-						<td>{{ x.sample }}</td>
-						<td>{{ x.snp }}</td>
-						<td>{{ x.function }}</td>
-						<td><a target="_blank" href="{{ x.reference }}">Link</a></td>
-						</th>
+						<td title="{{ x.miRNA_name }}" class="miRNA ellipsis">{{ x.miRNA_name }}</td>
+						<td title="{{ x.cancer }}" class="ellipsis cancer">{{ x.cancer }}</td>
+						<td title="{{ x.cancer_subtype }}" class="ellipsis">{{ x.cancer_subtype }}</td>
+						<td title="{{ x.continent }}" class="ellipsis continent">{{ x.continent }}</td>
+						<td title="{{ x.population }}" class="ellipsis population">{{ x.population }}</td>
+						<td title="{{ x.sample }}" class="ellipsis">{{ x.sample }}</td>
+						<td title="{{ x.snp }}" class="ellipsis">{{ x.snp }}</td>
+						<td title="{{ x.function }}" class="ellipsis">{{ x.function }}</td>
+						<td class="link"><a title="{{ x.reference }}" target="_blank" href="{{ x.reference }}">Link</a></td>
 					</tr>
 				</tbody>
 			</table>

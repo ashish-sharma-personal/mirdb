@@ -6,6 +6,8 @@ var fs = require('fs');
 var basicAuth = require('connect-basic-auth');
 
 var functionModel = require("./model/function");
+var funcFunctionModel = require("./model/funcFunction");
+var funcTargetModel = require("./model/funcTarget");
 var expressionModel = require("./model/expression");
 var expRegulationModel = require("./model/expRegulation");
 var expMarkerModel = require("./model/expMarker");
@@ -16,6 +18,8 @@ var snpModel = require("./model/snp");
 
 
 var funcData = require('./function.json');
+var funcFunctionData = require('./funcFunction.json');
+var funcTargetData = require('./funcTarget.json');
 var exprData = require('./expression.json');
 var expRegulationData = require('./expRegulation.json');
 var expMarkerData = require('./expMarker.json');
@@ -70,8 +74,15 @@ app.get("/", function (req, res, next) {
 
 app.route("/function")
     .get(function (req, res) {
-        var response = {};
-        functionModel.find(parseQuery(req.query), function (err, data) {
+        var response = {},
+            query = parseQuery(req.query),
+            model = functionModel;
+        if (query.function) {
+            model = funcFunctionModel;
+        } else if (query.target) {
+            model = funcTargetModel;
+        }
+        model.find(parseQuery(req.query), function (err, data) {
             if (err) {
                 response = { "error": true, "message": "Error fetching data" };
             } else {
@@ -128,6 +139,8 @@ saveJSONToDB(expTherapyData, expRegulationModel);
 saveJSONToDB(expSampleTypeData, expSampleTypeModel);
 saveJSONToDB(expTumorSizeData, expTumorSizeModel);
 saveJSONToDB(funcData, functionModel);
+saveJSONToDB(funcFunctionData, funcFunctionModel);
+saveJSONToDB(funcTargetData, funcTargetModel);
 saveJSONToDB(snpData, snpModel);
 */
 app.listen(3000);

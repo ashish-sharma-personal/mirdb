@@ -17,8 +17,8 @@ var expressionSchema = {
     "detection_method": String,
     "marker": String,
     "marker_details": String,
-    "response_to_therapy": String,
-    "response_to_therapy_details": String,
+    "therapy": String,
+    "therapy_details": String,
     "tumor_size": String,
     "tumor_size_details": String,
     "reference": String

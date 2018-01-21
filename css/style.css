@@ -66,6 +66,40 @@ body .wrap-body{}
 header{}
 header .wrap-header{}
 
+td.ellipsis {
+    max-width: 117px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+td.miRNA {
+  max-width: 90px;
+}
+
+td.continent {
+  max-width: 90px;
+}
+
+td.cancer {
+  max-width: 90px;
+}
+
+td.population {
+  max-width: 80px;
+}
+
+td.sample {
+  max-width: 90px;
+}
+
+td.marker {
+  max-width: 70px;
+}
+
+td.link {
+  max-width: 70px;
+}
 
 header .logo img{
   height: 80px;
