@@ -3636,7 +3636,7 @@
     "target": "FSCN1",
     "target_details": "FSCN1",
     "technique": "Luciferase reporter assay, Western blot analysis",
-    "function": "Tumor-suppressor Proliferation Migration Invasion",
+    "function": "Tumor-Suppressor Proliferation Migration Invasion",
     "function_details": "anti-oncogenic role  in gastric carcinoma via inhibition of FSCN1,inhibits proliferation,migration & invasion",
     "reference": "https://www.ncbi.nlm.nih.gov/pubmed/26647829"
   },
@@ -3878,7 +3878,7 @@
     "target": "c-Myc",
     "target_details": "c-Myc and ERK5",
     "technique": "Western blot analysis",
-    "function": "Proliferation Apoptosis Replacement-therapy",
+    "function": "Proliferation Apoptosis Replacement-Therapy",
     "function_details": "Reduced tumor proliferation and increased apoptosis. MicroRNA Replacement-Therapy for miR-145 is efficacious in a model of colon carcinoma.",
     "reference": "https://www.ncbi.nlm.nih.gov/pubmed/21690566"
   },
@@ -9092,7 +9092,7 @@
     "target": "DHFR",
     "target_details": "DHFR",
     "technique": "qRT-PCR and Western blot analysis",
-    "function": "Tumor-Supressor Proliferation Cell-cycle-arrest Chemosensitivity",
+    "function": "Tumor-Suppressor Proliferation Cell-cycle-arrest Chemosensitivity",
     "function_details": "Tumor Supressor, inhibited cell proliferation and resulted in G2/S cell cycle arrest. regulates p53-independent cellular proliferation by regulating an S-phase enzyme, dihydrofolate reductase (DHFR) a target of the chemotherapeutic drug methotrexate.",
     "reference": "https://www.ncbi.nlm.nih.gov/pubmed/20041160"
   },
@@ -15670,7 +15670,7 @@
     "target": "ERK5",
     "target_details": "c-Myc and ERK5",
     "technique": "Western blot analysis",
-    "function": "Proliferation Apoptosis Replacement-therapy",
+    "function": "Proliferation Apoptosis Replacement-Therapy",
     "function_details": "Reduced tumor proliferation and increased apoptosis. MicroRNA Replacement-Therapy for miR-145 is efficacious in a model of colon carcinoma.",
     "reference": "https://www.ncbi.nlm.nih.gov/pubmed/21690566"
   },
