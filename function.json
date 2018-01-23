@@ -517,7 +517,7 @@
         "reference": "https://www.ncbi.nlm.nih.gov/pubmed/22930392"
     },
     {
-        "miRNA_name": "miR‑101",
+        "miRNA_name": "miR-101",
         "cancer": "Colorectal Cancer",
         "cell_line": "SW620",
         "target": "EZH2",
@@ -2295,7 +2295,7 @@
         "target_details": "MUC13",
         "technique": "Luciferase reporter assay, Western blot analysis",
         "function": "Migration Signaling",
-        "function_details": "Inhibition of miR‑132‑3p enhanced GC cell migration through activation of HER2,ERK and Akt serine/threonine kinase (Akt) signaling, which was a similar effect to that of MUC13 overexpression",
+        "function_details": "Inhibition of miR-132-3p enhanced GC cell migration through activation of HER2,ERK and Akt serine/threonine kinase (Akt) signaling, which was a similar effect to that of MUC13 overexpression",
         "reference": "https://www.ncbi.nlm.nih.gov/pubmed/28339011"
     },
     {
@@ -2596,14 +2596,14 @@
         "reference": "https://www.ncbi.nlm.nih.gov/pubmed/27894087"
     },
     {
-        "miRNA_name": "miR‑133b",
+        "miRNA_name": "miR-133b",
         "cancer": "Colorectal Cancer",
         "cell_line": "HT-29, SW480, SW620, Caco-2 and HCT-116,",
         "target": "EGFR",
         "target_details": "EGFR",
         "technique": "Luciferase reporter assay",
         "function": "Growth Invasion",
-        "function_details": "miR‑133b and cetuximab has increased inhibitory effects on the growth and invasion",
+        "function_details": "miR-133b and cetuximab has increased inhibitory effects on the growth and invasion",
         "reference": "https://www.ncbi.nlm.nih.gov/pubmed/26151111"
     },
     {
@@ -3322,7 +3322,7 @@
         "reference": "https://www.ncbi.nlm.nih.gov/pubmed/18483486"
     },
     {
-        "miRNA_name": "miR‑141",
+        "miRNA_name": "miR-141",
         "cancer": "Colorectal Cancer",
         "cell_line": "Cancer stem cells",
         "target": "CCND2",
@@ -3333,7 +3333,7 @@
         "reference": "https://www.ncbi.nlm.nih.gov/pubmed/28112364"
     },
     {
-        "miRNA_name": "miR‑141",
+        "miRNA_name": "miR-141",
         "cancer": "Esophageal Cancer",
         "cell_line": "KYSE140,YES2",
         "target": "SOX17",
@@ -3835,7 +3835,7 @@
         "target_details": "FSCN1",
         "technique": "Luciferase reporter assay, Western blot analysis",
         "function": "Tumor-suppressor Proliferation Migration Invasion",
-        "function_details": "anti‑oncogenic role  in gastric carcinoma via inhibition of FSCN1,inhibits proliferation,migration & invasion",
+        "function_details": "anti-oncogenic role  in gastric carcinoma via inhibition of FSCN1,inhibits proliferation,migration & invasion",
         "reference": "https://www.ncbi.nlm.nih.gov/pubmed/26647829"
     },
     {
@@ -4961,7 +4961,7 @@
         "reference": "https://www.ncbi.nlm.nih.gov/pubmed/23036199"
     },
     {
-        "miRNA_name": "miR‑155",
+        "miRNA_name": "miR-155",
         "cancer": "Colorectal Cancer",
         "cell_line": "SW480, SW620, HT-29, HCT-116, CCD-18Co, HEK-293T",
         "target": "HBP1",
@@ -5874,7 +5874,7 @@
         "reference": "http://www.ncbi.nlm.nih.gov/pubmed/23846337"
     },
     {
-        "miRNA_name": "miR‑185",
+        "miRNA_name": "miR-185",
         "cancer": "Colon Cancer",
         "cell_line": "SW620, SW480, LOVO, HCT8 and HT29",
         "target": "HIF2α",
@@ -6055,7 +6055,7 @@
         "cell_line": "CRC cell line",
         "target": "TBPL1",
         "target_details": "TBPL1",
-        "technique": "qRT‑PCR and Western blot analysis",
+        "technique": "qRT-PCR and Western blot analysis",
         "function": "Proliferation Invasion Migration",
         "function_details": "inhibited cell proliferation, invasion and migration",
         "reference": "http://www.ncbi.nlm.nih.gov/pubmed/26398009"
@@ -6435,14 +6435,14 @@
         "reference": "https://www.ncbi.nlm.nih.gov/pubmed/24025765"
     },
     {
-        "miRNA_name": "miR‑195",
+        "miRNA_name": "miR-195",
         "cancer": "Colorectal Cancer",
         "cell_line": "SW480 and HT29",
         "target": "CRAM3",
         "target_details": "CRAM3",
         "technique": "Western blot analysis and Luciferase reporter assay",
-        "function": "Proliferation colony‑formation Invasion",
-        "function_details": "suppressed cell proliferation, colony‑formation and invasion",
+        "function": "Proliferation colony-formation Invasion",
+        "function_details": "suppressed cell proliferation, colony-formation and invasion",
         "reference": "https://www.ncbi.nlm.nih.gov/pubmed/24787958"
     },
     {
@@ -9790,9 +9790,9 @@
         "reference": "https://www.ncbi.nlm.nih.gov/pubmed/24817781"
     },
     {
-        "miRNA_name": "miR‑224",
+        "miRNA_name": "miR-224",
         "cancer": "Colorectal Cancer",
-        "cell_line": "HCT‑116 and SW‑480",
+        "cell_line": "HCT-116 and SW-480",
         "target": "P21",
         "target_details": "CDKN1A (P21WAF1/CIP1)",
         "technique": "Western blot analysis and Luciferase reporter assay",
@@ -10945,11 +10945,11 @@
         "reference": "https://www.ncbi.nlm.nih.gov/pubmed/27840154"
     },
     {
-        "miRNA_name": "miR‑302a",
+        "miRNA_name": "miR-302a",
         "cancer": "Colon Cancer",
         "cell_line": "HCT116 and HT29",
         "target": "IGF1R",
-        "target_details": "IGF‑1R",
+        "target_details": "IGF-1R",
         "technique": "Luciferase reporter assay and Immunoblotting",
         "function": "Chemosensitivity",
         "function_details": "enhances 5-fluorouracil-induced cell death",
@@ -11898,7 +11898,7 @@
         "target_details": "CDK6,CCND,PIM1",
         "technique": "qRT-PCR, Western blot analysis, Luciferase reporter assay",
         "function": "Proliferation Cell-cycle-arrest",
-        "function_details": "overexpression of miR‑33a decreased CDK‑6, CCND1 and PIM1 expression & inhibit GC cell proliferation by G1 phase arrest.",
+        "function_details": "overexpression of miR-33a decreased CDK-6, CCND1 and PIM1 expression & inhibit GC cell proliferation by G1 phase arrest.",
         "reference": "https://www.ncbi.nlm.nih.gov/pubmed/26352175"
     },
     {
@@ -13156,7 +13156,7 @@
         "reference": "https://www.ncbi.nlm.nih.gov/pubmed/25991585"
     },
     {
-        "miRNA_name": "miR‑409-3p",
+        "miRNA_name": "miR-409-3p",
         "cancer": "Colon Cancer",
         "cell_line": "LoVo, HCT 116, DLD-1, SW480, HT-29, RKO, FHC and CCD-18Co",
         "target": "BECN1",
@@ -15037,7 +15037,7 @@
         "reference": "https://www.ncbi.nlm.nih.gov/pubmed/26247730"
     },
     {
-        "miRNA_name": "miR‑590‑3p",
+        "miRNA_name": "miR-590-3p",
         "cancer": "Colon Cancer",
         "cell_line": "SW480",
         "target": "TFAM",
@@ -15561,7 +15561,7 @@
         "target_details": "BDNF",
         "technique": "Luciferase reporter assay, qRT-PCR, Western blot analysis",
         "function": "Proliferation Invasion",
-        "function_details": "miR‑744 expression inhibited cell proliferation and invasion in vitro.",
+        "function_details": "miR-744 expression inhibited cell proliferation and invasion in vitro.",
         "reference": "https://www.ncbi.nlm.nih.gov/pubmed/28791400"
     },
     {
