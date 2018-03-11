@@ -3,16 +3,16 @@ mongoose.connect('mongodb://localhost:27017/demoDb');
 // create instance of Schema
 var mongoSchema = mongoose.Schema;
 
-var snpDataSchema = {
+var funcFunction = {
     "miRNA_name": String,
     "cancer": String,
-    "cancer": String,
-    "continent": String,
-    "population": String,
-    "sample": String,
+    "cell_line": String,
+    "target": String,
+    "target_details": String,
+    "technique": String,
     "function": String,
-    "snp": String,
+    "function_details": String,
     "reference": String
 };
 
-module.exports = mongoose.model('snpAllData', snpDataSchema);
+module.exports = mongoose.model('funcFunctionData', funcFunction);
