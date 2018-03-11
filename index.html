@@ -146,12 +146,12 @@
 													<div class="col-2-5">
 														<div class="wrap-col">
 															<select name="cancer" ng-model="exp1.cancer">
-                                                                <option value="" default selected>Select Cancer Type</option>
-                                                                <option value="Colon Cancer">Colon Cancer</option>
-                                                                <option value="Colorectal Cancer">Colorectal Cancer</option>
-                                                                <option value="Esophageal Cancer">Esophageal Cancer</option>
-                                                                <option value="Gastric Cancer">Gastric Cancer</option>
-                                                                <option value="Rectal Cancer">Rectal Cancer</option>
+																<option value="" default selected>Select Cancer Type</option>
+																<option value="Colon Cancer">Colon Cancer</option>
+																<option value="Colorectal Cancer">Colorectal Cancer</option>
+																<option value="Esophageal Cancer">Esophageal Cancer</option>
+																<option value="Gastric Cancer">Gastric Cancer</option>
+																<option value="Rectal Cancer">Rectal Cancer</option>
 															</select>
 														</div>
 													</div>
@@ -164,20 +164,20 @@
 											</form>
 											<label class="row">
 												<div class="sepLine">
-                                                    Advanced search
-                                                </div>
+													Advanced search
+												</div>
 											</label>
 											<form name="form12" id="ff" ng-submit="searchQuery(form12)">
 												<label class="row">
 													<div class="col-1-2">
 														<div class="wrap-col">
 															<select name="cancer" ng-model="exp2.cancer" required ng-change="cancerSelected()">
-                                                                <option value="" default selected>Select Cancer Type*</option>
-                                                                <option value="Colon Cancer">Colon Cancer</option>
-                                                                <option value="Colorectal Cancer">Colorectal Cancer</option>
-                                                                <option value="Esophageal Cancer">Esophageal Cancer</option>
-                                                                <option value="Gastric Cancer">Gastric Cancer</option>
-                                                                <option value="Rectal Cancer">Rectal Cancer</option>
+																<option value="" default selected>Select Cancer Type*</option>
+																<option value="Colon Cancer">Colon Cancer</option>
+																<option value="Colorectal Cancer">Colorectal Cancer</option>
+																<option value="Esophageal Cancer">Esophageal Cancer</option>
+																<option value="Gastric Cancer">Gastric Cancer</option>
+																<option value="Rectal Cancer">Rectal Cancer</option>
 															</select>
 														</div>
 													</div>
@@ -185,8 +185,8 @@
 														<div class="wrap-col">
 															<select name="population" ng-model="exp2.population">
 																<option value="" default selected>
-                                                                    Select Population (optional)
-                                                                </option>
+																	Select Population (optional)
+																</option>
 																<option value={{x}} ng-repeat="x in expression.continents">{{x}}</option>
 																<option value={{x}} ng-repeat="x in expression.population">{{x}}</option>
 															</select>
@@ -212,6 +212,7 @@
 																<option value="" default selected>Select Marker</option>
 																<option value="Diagnostic">Diagnostic</option>
 																<option value="Prognostic">Prognostic</option>
+																<option value="Screening">Screening</option>
 															</select>
 														</div>
 													</div>
@@ -219,10 +220,11 @@
 														<div class="wrap-col">
 															<select id="therapy" name="therapy" ng-model="exp2.therapy" ng-change="oneSelector(exp2.therapy, 'therapy')" required>
 																<option value="" default selected>Select Therapy</option>
-																<option value="CT">Chemotherapy</option>
-																<option value="CRT">Chemoradiotherapy</option>
-																<option value="RT">Radiotherapy</option>
+																<option value="Chemotherapy">Chemotherapy</option>
+																<option value="Chemoradiotherapy">Chemoradiotherapy</option>
+																<option value="Radiotherapy">Radiotherapy</option>
 																<option value="Surgery">Surgery</option>
+																<option value="Vaccine Treatment">Vaccine Treatment</option>
 															</select>
 														</div>
 													</div>
@@ -306,12 +308,12 @@
 													<div class="col-2-5">
 														<div class="wrap-col">
 															<select name="cancer" ng-model="RNA1.cancer">
-                                                                <option value="" default selected>Select Cancer Type</option>
-                                                                <option value="Colon Cancer">Colon Cancer</option>
-                                                                <option value="Colorectal Cancer">Colorectal Cancer</option>
-                                                                <option value="Esophageal Cancer">Esophageal Cancer</option>
-                                                                <option value="Gastric Cancer">Gastric Cancer</option>
-                                                                <option value="Rectal Cancer">Rectal Cancer</option>
+																<option value="" default selected>Select Cancer Type</option>
+																<option value="Colon Cancer">Colon Cancer</option>
+																<option value="Colorectal Cancer">Colorectal Cancer</option>
+																<option value="Esophageal Cancer">Esophageal Cancer</option>
+																<option value="Gastric Cancer">Gastric Cancer</option>
+																<option value="Rectal Cancer">Rectal Cancer</option>
 															</select>
 														</div>
 													</div>
@@ -324,21 +326,21 @@
 											</form>
 											<label class="row">
 												<div class="sepLine">
-                                                    Advanced search
-                                                </div>
+													Advanced search
+												</div>
 											</label>
 											<form name="form22" id="ff" ng-submit="searchQuery(form22)">
 												<label class="row">
 													<div class="col-2-5">
 														<div class="wrap-col">
-                                                            <select name="cancer" ng-model="RNA2.cancer" required ng-change="funcCancerSelected()">
-                                                                <option value="" default selected>Select Cancer Type*</option>
-                                                                <option value="Colon Cancer">Colon Cancer</option>
-                                                                <option value="Colorectal Cancer">Colorectal Cancer</option>
-                                                                <option value="Esophageal Cancer">Esophageal Cancer</option>
-                                                                <option value="Gastric Cancer">Gastric Cancer</option>
-                                                                <option value="Rectal Cancer">Rectal Cancer</option>
-                                                            </select>
+															<select name="cancer" ng-model="RNA2.cancer" required ng-change="funcCancerSelected()">
+																<option value="" default selected>Select Cancer Type*</option>
+																<option value="Colon Cancer">Colon Cancer</option>
+																<option value="Colorectal Cancer">Colorectal Cancer</option>
+																<option value="Esophageal Cancer">Esophageal Cancer</option>
+																<option value="Gastric Cancer">Gastric Cancer</option>
+																<option value="Rectal Cancer">Rectal Cancer</option>
+															</select>
 														</div>
 													</div>
 												</label>
@@ -386,9 +388,10 @@
 										</p>
 										<ul>
 											<li>All entries can be retrieved by miRNA ID and Cancer type using upper window.</li>
-											<li>For easy access and data analysis, a second window is provided which can be used to retrieve cancer specific
-												miRNA associated with a particular SNP</li>
-											<li>A third search option is also provided to retrieve miRNA related SNPs within a population. Population field is optional.
+											<li>For easy access and data analysis, a second window is provided which can be used to retrieve cancer specific miRNA
+												associated with a particular SNP</li>
+											<li>A third search option is also provided to retrieve miRNA related SNPs within a population. Population field is
+												optional.
 											</li>
 										</ul>
 									</article>
@@ -414,12 +417,12 @@
 													<div class="col-2-5">
 														<div class="wrap-col">
 															<select name="cancer" ng-model="SNP1.cancer">
-                                                                <option value="" default selected>Select Cancer Type</option>
-                                                                <option value="Colon Cancer">Colon Cancer</option>
-                                                                <option value="Colorectal Cancer">Colorectal Cancer</option>
-                                                                <option value="Esophageal Cancer">Esophageal Cancer</option>
-                                                                <option value="Gastric Cancer">Gastric Cancer</option>
-                                                                <option value="Rectal Cancer">Rectal Cancer</option>
+																<option value="" default selected>Select Cancer Type</option>
+																<option value="Colon Cancer">Colon Cancer</option>
+																<option value="Colorectal Cancer">Colorectal Cancer</option>
+																<option value="Esophageal Cancer">Esophageal Cancer</option>
+																<option value="Gastric Cancer">Gastric Cancer</option>
+																<option value="Rectal Cancer">Rectal Cancer</option>
 															</select>
 														</div>
 													</div>
@@ -431,9 +434,9 @@
 												</label>
 											</form>
 											<label class="row">
-                                                <div class="sepLine">
-                                                    Search option 2
-                                                </div>
+												<div class="sepLine">
+													Search option 2
+												</div>
 											</label>
 											<form name="form32" id="ff" ng-submit="searchQuery(form32)">
 												<label class="row">
@@ -448,12 +451,12 @@
 													<div class="col-2-5">
 														<div class="wrap-col">
 															<select name="cancer" ng-model="SNP2.cancer" required>
-                                                                <option value="" default selected>Select Cancer Type*</option>
-                                                                <option value="Colon Cancer">Colon Cancer</option>
-                                                                <option value="Colorectal Cancer">Colorectal Cancer</option>
-                                                                <option value="Esophageal Cancer">Esophageal Cancer</option>
-                                                                <option value="Gastric Cancer">Gastric Cancer</option>
-                                                                <option value="Rectal Cancer">Rectal Cancer</option>
+																<option value="" default selected>Select Cancer Type*</option>
+																<option value="Colon Cancer">Colon Cancer</option>
+																<option value="Colorectal Cancer">Colorectal Cancer</option>
+																<option value="Esophageal Cancer">Esophageal Cancer</option>
+																<option value="Gastric Cancer">Gastric Cancer</option>
+																<option value="Rectal Cancer">Rectal Cancer</option>
 															</select>
 														</div>
 													</div>
@@ -465,9 +468,9 @@
 												</label>
 											</form>
 											<label class="row">
-                                                <div class="sepLine">
-                                                    Search option 3
-                                                </div>
+												<div class="sepLine">
+													Search option 3
+												</div>
 											</label>
 											<form name="form33" id="ff" ng-submit="searchQuery(form33)">
 												<label class="row">
@@ -483,8 +486,8 @@
 														<div class="wrap-col">
 															<select name="population" ng-model="SNP3.population">
 																<option value="" default selected>
-                                                                     Select Population (optional)
-                                                                </option>
+																	Select Population (optional)
+																</option>
 																<option value={{x}} ng-repeat="x in snp.populationDropValues">{{x}}</option>
 															</select>
 														</div>
@@ -531,11 +534,11 @@
 					</tr>
 				</thead>
 				<tbody>
-                    <tr ng-show="!expResult.length">
-                        <td colspan=100 style="text-align: center; color: red">
-                            No result found for this entry
-                        </td>
-                    </tr>
+					<tr ng-show="!expResult.length">
+						<td colspan=100 style="text-align: center; color: red">
+							No result found for this entry
+						</td>
+					</tr>
 					<tr ng-repeat="x in expResult">
 						<td title="{{ x.miRNA_name }}" class="miRNA ellipsis">{{ x.miRNA_name }}</td>
 						<td title="{{ x.cancer }}" class="ellipsis cancer" ng-show="showCancer">{{ x.cancer }}</td>
@@ -554,7 +557,9 @@
 						<td title="{{ x.therapy_details }}" class="ellipsis" ng-show="showTherapyDetail">{{ x.therapy_details }}</td>
 						<td title="{{ x.tumor_size }}" class="ellipsis" ng-show="showTumorSize">{{ x.tumor_size }}</td>
 						<td title="{{ x.tumor_size_details }}" class="ellipsis" ng-show="showTumorSizeDetail">{{ x.tumor_size_details }}</td>
-						<td class="link"><a title="{{ x.reference }}" target="_blank" href="{{ x.reference }}">Link</a></td>
+						<td class="link">
+							<a title="{{ x.reference }}" target="_blank" href="{{ x.reference }}">Link</a>
+						</td>
 					</tr>
 				</tbody>
 			</table>
@@ -573,11 +578,11 @@
 					</tr>
 				</thead>
 				<tbody>
-                    <tr ng-show="!miResult.length">
-                        <td colspan=100 style="text-align: center; color: red">
-                            No result found for this entry
-                        </td>
-                    </tr>
+					<tr ng-show="!miResult.length">
+						<td colspan=100 style="text-align: center; color: red">
+							No result found for this entry
+						</td>
+					</tr>
 					<tr ng-repeat="x in miResult">
 						<td title="{{ x.miRNA_name }}" class="miRNA ellipsis">{{ x.miRNA_name }}</td>
 						<td title="{{ x.cancer }}" class="ellipsis cancer" ng-show="showFuncCancer">{{ x.cancer }}</td>
@@ -587,7 +592,9 @@
 						<td title="{{ x.technique }}" class="ellipsis" ng-show="showFuncTechnique">{{ x.technique }}</td>
 						<td title="{{ x.function }}" class="ellipsis" ng-show="showFuncFunction">{{ x.function }}</td>
 						<td title="{{ x.function_details }}" class="ellipsis" ng-show="showFuncFunction">{{ x.function_details }}</td>
-						<td class="link"><a title="{{ x.reference }}" target="_blank" href="{{ x.reference }}">Link</a></td>
+						<td class="link">
+							<a title="{{ x.reference }}" target="_blank" href="{{ x.reference }}">Link</a>
+						</td>
 					</tr>
 				</tbody>
 			</table>
@@ -606,11 +613,11 @@
 					</tr>
 				</thead>
 				<tbody>
-                    <tr ng-show="!snpResult.length">
-                        <td colspan=100 style="text-align: center; color: red">
-                            No result found for this entry
-                        </td>
-                    </tr>
+					<tr ng-show="!snpResult.length">
+						<td colspan=100 style="text-align: center; color: red">
+							No result found for this entry
+						</td>
+					</tr>
 					<tr ng-repeat="x in snpResult">
 						<td title="{{ x.miRNA_name }}" class="miRNA ellipsis">{{ x.miRNA_name }}</td>
 						<td title="{{ x.cancer }}" class="ellipsis cancer">{{ x.cancer }}</td>
@@ -620,7 +627,9 @@
 						<td title="{{ x.sample }}" class="ellipsis">{{ x.sample }}</td>
 						<td title="{{ x.snp }}" class="ellipsis">{{ x.snp }}</td>
 						<td title="{{ x.function }}" class="ellipsis">{{ x.function }}</td>
-						<td class="link"><a title="{{ x.reference }}" target="_blank" href="{{ x.reference }}">Link</a></td>
+						<td class="link">
+							<a title="{{ x.reference }}" target="_blank" href="{{ x.reference }}">Link</a>
+						</td>
 					</tr>
 				</tbody>
 			</table>
@@ -638,7 +647,8 @@
 						</br>
 						<span>
 							<strong>Designed and developed by -
-                                <a href="https://www.facebook.com/shubhdw">Shubham Dubey</a> & <a href="https://www.linkedin.com/in/ashish-sharma-web-dev">Ashish Sharma</a>
+								<a href="https://www.facebook.com/shubhdw">Shubham Dubey</a> &
+								<a href="https://www.linkedin.com/in/ashish-sharma-web-dev">Ashish Sharma</a>
 							</strong>
 						</span>
 					</div>
