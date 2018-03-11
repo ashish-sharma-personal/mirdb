@@ -51,10 +51,10 @@ app.use(express.static('images'));
 app.use(bodyParser.urlencoded({ "extended": false }));
 
 function parseQuery(originalQuery) {
-    const query = {};
-    for (const key in originalQuery) {
-        query[key] = new RegExp(originalQuery[key], 'i');
-    }
+    // const query = {};
+    // for (const key in originalQuery) {
+    //     query[key] = new RegExp(originalQuery[key], 'i');
+    // }
     return originalQuery; //query;
 }
 
@@ -131,17 +131,17 @@ app.route("/snp")
             res.json(data);
         });
     });
-/*
+
 saveJSONToDB(exprData, expressionModel);
 saveJSONToDB(expRegulationData, expRegulationModel);
 saveJSONToDB(expMarkerData, expMarkerModel);
-saveJSONToDB(expTherapyData, expRegulationModel);
+saveJSONToDB(expTherapyData, expTherapyModel);
 saveJSONToDB(expSampleTypeData, expSampleTypeModel);
 saveJSONToDB(expTumorSizeData, expTumorSizeModel);
 saveJSONToDB(funcData, functionModel);
 saveJSONToDB(funcFunctionData, funcFunctionModel);
 saveJSONToDB(funcTargetData, funcTargetModel);
 saveJSONToDB(snpData, snpModel);
-*/
+
 app.listen(3000);
 console.log("3000");
