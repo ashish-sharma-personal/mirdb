@@ -2134,7 +2134,7 @@
     "reference": "https://www.ncbi.nlm.nih.gov/pubmed/25446103"
   },
   {
-    "miRNA_name": "let7g",
+    "miRNA_name": "let-7g",
     "cancer": "Colorectal Cancer",
     "cell_line": "SW480 and SW837 cells were treated with 5-FU and irradiated",
     "target": "N/A",
@@ -16896,7 +16896,7 @@
     "reference": "https://www.ncbi.nlm.nih.gov/pubmed/25446103"
   },
   {
-    "miRNA_name": "let7g",
+    "miRNA_name": "let-7g",
     "cancer": "Colorectal Cancer",
     "cell_line": "SW480 and SW837 cells were treated with 5-FU and irradiated",
     "target": "N/A",

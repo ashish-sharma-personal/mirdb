@@ -1606,7 +1606,7 @@
     "sample_type": "Tissue",
     "sample": "53 GC &  matched non tumor tissues",
     "continent": "Asia",
-    "population": "Tokyo and Japan",
+    "population": "Japan",
     "reference": "https://www.ncbi.nlm.nih.gov/pubmed/23001726"
   },
   {
@@ -1928,7 +1928,7 @@
     "sample_type": "Tissue",
     "sample": "84 ESCC tumors",
     "continent": "Asia",
-    "population": "Tokyo",
+    "population": "Japan",
     "reference": "https://www.ncbi.nlm.nih.gov/pubmed/28760781"
   },
   {

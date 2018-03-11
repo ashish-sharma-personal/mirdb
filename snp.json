@@ -22,7 +22,7 @@
     "reference": "http://www.ncbi.nlm.nih.gov/pubmed/26543374"
   },
   {
-    "miRNA_name": "mir-196a2",
+    "miRNA_name": "miR-196a2",
     "cancer": "Colorectal Cancer",
     "cancer_subtype": "",
     "continent": "Meta-analysis",
@@ -33,7 +33,7 @@
     "reference": "https://www.ncbi.nlm.nih.gov/pubmed/26208586"
   },
   {
-    "miRNA_name": "mir-146a",
+    "miRNA_name": "miR-146a",
     "cancer": "Colorectal Cancer",
     "cancer_subtype": "",
     "continent": "Meta-analysis",
@@ -44,7 +44,7 @@
     "reference": "https://www.ncbi.nlm.nih.gov/pubmed/26078942"
   },
   {
-    "miRNA_name": "mir-149",
+    "miRNA_name": "miR-149",
     "cancer": "Colorectal Cancer",
     "cancer_subtype": "",
     "continent": "Meta-analysis",
@@ -55,7 +55,7 @@
     "reference": "https://www.ncbi.nlm.nih.gov/pubmed/26078942"
   },
   {
-    "miRNA_name": "mir-196a2",
+    "miRNA_name": "miR-196a2",
     "cancer": "Colorectal Cancer",
     "cancer_subtype": "",
     "continent": "Meta-analysis",
@@ -66,7 +66,7 @@
     "reference": "https://www.ncbi.nlm.nih.gov/pubmed/26078942"
   },
   {
-    "miRNA_name": "mir-499",
+    "miRNA_name": "miR-499",
     "cancer": "Colorectal Cancer",
     "cancer_subtype": "",
     "continent": "Meta-analysis",
@@ -114,7 +114,7 @@
     "cancer": "Colorectal Cancer",
     "cancer_subtype": "",
     "continent": "Europe and USA",
-    "population": "subjects of European ancestry recruited through EPICOLON I/II projects at Spain and USA",
+    "population": "Subjects of European ancestry recruited through EPICOLON I/II projects at Spain and USA",
     "sample": "308 patients with non-familial MSS CRCs and 423 healthy controls",
     "snp": "rs67687202",
     "function": "moderate increase in CRC risk (OR = 1.68; 95% CI = 1.13-2.50; P = 0.010)",
@@ -147,7 +147,7 @@
     "cancer": "Colorectal Cancer",
     "cancer_subtype": "",
     "continent": "Europe",
-    "population": "Greek",
+    "population": "Greece",
     "sample": "157 CRC patients and 299 healthy controls",
     "snp": "rs2910164",
     "function": "risk for CRC was higher for carriers of miR-146a rs2910164 CC genotype and C allele",
@@ -187,7 +187,7 @@
     "reference": "https://www.ncbi.nlm.nih.gov/pubmed/25222241"
   },
   {
-    "miRNA_name": "mir-196a2",
+    "miRNA_name": "miR-196a2",
     "cancer": "Colorectal Cancer",
     "cancer_subtype": "",
     "continent": "Meta-analysis",
@@ -671,7 +671,7 @@
     "reference": "https://www.ncbi.nlm.nih.gov/pubmed/20177422"
   },
   {
-    "miRNA_name": "mir-492",
+    "miRNA_name": "miR-492",
     "cancer": "Colorectal Cancer",
     "cancer_subtype": "",
     "continent": "Asia",
@@ -869,7 +869,7 @@
     "reference": "https://www.ncbi.nlm.nih.gov/pubmed/20680470"
   },
   {
-    "miRNA_name": "mir-499",
+    "miRNA_name": "miR-499",
     "cancer": "Gastric Cancer",
     "cancer_subtype": "",
     "continent": "Asia",
@@ -1082,7 +1082,7 @@
     "cancer": "Gastric Cancer",
     "cancer_subtype": "",
     "continent": "Europe",
-    "population": "Greek",
+    "population": "Greece",
     "sample": "163 patients; 480 controls",
     "snp": "rs2292832",
     "function": "risk for GC was significantly higher for the carriers of miR-149 rs2292832CC(p=0.009) as well as carrier for rs2292832 CCC and GTC halotype(p<0.0001 and p=0.03 respectively), the rs2292832 CTT and CCT haplotypes seems to have a protective role against GC (p = 0.002 and p = 0.001, respectively)",
@@ -1093,7 +1093,7 @@
     "cancer": "Gastric Cancer",
     "cancer_subtype": "",
     "continent": "Europe",
-    "population": "Greek",
+    "population": "Greece",
     "sample": "163 patients; 480 controls",
     "snp": "rs1614913",
     "function": "risk for GC was significantly higher for the carriers of  miR-196a rs11614913CC(p<0.0001) as well as carrier for rs1614913 CCC and GTC halotype(p<0.0001 and p=0.03 respectively), the rs11614913 CTT and CCT haplotypes seems to have a protective role against GC (p = 0.002 and p = 0.001, respectively)",
@@ -1126,7 +1126,7 @@
     "cancer": "Gastric Cancer",
     "cancer_subtype": "",
     "continent": "Eupope",
-    "population": "Romanian population",
+    "population": "Romania",
     "sample": "142 patients with gastric adenocarcinoma and 288 healthy controls",
     "snp": "rs2292832",
     "function": "rs2292832 C>T not associated with susceptibility to GC",
@@ -1313,7 +1313,7 @@
     "cancer": "Gastric Cancer",
     "cancer_subtype": "",
     "continent": "Asia",
-    "population": "Southern Hans Chinese",
+    "population": "Chine",
     "sample": "500 cases and 502 controls",
     "snp": "rs12537",
     "function": "rs12537 is associated with susceptibility and prognosis of GC in southern Han Chinese",

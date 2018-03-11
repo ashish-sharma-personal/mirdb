@@ -417,7 +417,7 @@
 													<div class="col-2-5">
 														<div class="wrap-col">
 															<select name="cancer" ng-model="SNP1.cancer">
-																<option value="" default selected>Select Cancer Type</option>
+																<option value="" default selected>Select Cancer Type (optional)</option>
 																<option value="Colon Cancer">Colon Cancer</option>
 																<option value="Colorectal Cancer">Colorectal Cancer</option>
 																<option value="Esophageal Cancer">Esophageal Cancer</option>
@@ -476,8 +476,8 @@
 												<label class="row">
 													<div class="col-2-5">
 														<div class="wrap-col">
-															<select name="snp" ng-model="SNP3.snp" required>
-																<option value="" default selected>Select SNP*</option>
+															<select name="snp" ng-model="SNP3.snp">
+																<option value="" default selected>Select SNP (optional)</option>
 																<option value={{x}} ng-repeat="x in snp.snpDropValues">{{x}}</option>
 															</select>
 														</div>

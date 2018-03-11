@@ -8186,7 +8186,7 @@
     "sample_type": "Serum",
     "sample": "Serum samples from 61 CRC patients with primary CRC at UICC stages II/III (41 non-early relapsed and 20 early relapsed patients) before they received surgery",
     "continent": "Asia",
-    "population": "China residing in Taiwan",
+    "population": "Chinese residing in Taiwan",
     "reference": "https://www.ncbi.nlm.nih.gov/pubmed/23840538"
   },
   {
