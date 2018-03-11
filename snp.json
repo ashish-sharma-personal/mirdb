@@ -1362,5 +1362,60 @@
     "snp": "rs3746444",
     "function": "no association of the SNP with the risk of gastric cancer in a Romanian population",
     "reference": "https://www.ncbi.nlm.nih.gov/pubmed/28922434"
+  },
+  {
+    "miRNA_name": "Promoter region of miR-17-92",
+    "cancer": "Colorectal Cancer",
+    "cancer_subtype": "",
+    "continent": "Asia",
+    "population": "China",
+    "sample": "CRC tissues from 874 cases and 1132 controls",
+    "snp": "rs9588884",
+    "function": "Significantly reduced CRC risk with the rs9588884 (GG vs. CC: adjusted OR = 0.46)",
+    "reference": "https://www.ncbi.nlm.nih.gov/pubmed/29137282"
+  },
+  {
+    "miRNA_name": "Promoter region of miR-17-92",
+    "cancer": "Colorectal Cancer",
+    "cancer_subtype": "",
+    "continent": "Asia",
+    "population": "China",
+    "sample": "CRC tissues from 874 cases and 1132 controls",
+    "snp": "rs982873",
+    "function": "Significantly reduced CRC risk with the rs982873 (CC vs. TT: adjusted OR = 0.60)",
+    "reference": "https://www.ncbi.nlm.nih.gov/pubmed/29137282"
+  },
+  {
+    "miRNA_name": "miR-196a2",
+    "cancer": "Gastric Cancer",
+    "cancer_subtype": "",
+    "continent": "Meta-analysis",
+    "population": "Meta-analysis",
+    "sample": "56 studies with 21958/26436 cases/controls",
+    "snp": "rs11614913",
+    "function": "Associated with decreases risk for gastric cancer",
+    "reference": "https://www.ncbi.nlm.nih.gov/pubmed/29371991"
+  },
+  {
+    "miRNA_name": "miR-196a2",
+    "cancer": "Colorectal Cancer",
+    "cancer_subtype": "",
+    "continent": "Meta-analysis",
+    "population": "Meta-analysis",
+    "sample": "56 studies with 21958/26436 cases/controls",
+    "snp": "rs11614913",
+    "function": "Associated with decreases risk for colorectal cancer",
+    "reference": "https://www.ncbi.nlm.nih.gov/pubmed/29371991"
+  },
+  {
+    "miRNA_name": "miR-1269a",
+    "cancer": "Gastric Cancer",
+    "cancer_subtype": "",
+    "continent": "Asia",
+    "population": "China",
+    "sample": "373 GC and 402 healthy subjects",
+    "snp": "rs73239138",
+    "function": "Downregulation decreases susceptibility to gastric cancer via targeting ZNF70",
+    "reference": "https://www.ncbi.nlm.nih.gov/pubmed/29344113"
   }
 ]
