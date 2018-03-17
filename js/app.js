@@ -189,7 +189,7 @@
 					$scope.showTumorSize = true;
 					$scope.showTumorSizeDetail = true;
 					$scope.showExpression = true;
-					$scope.showExpressionDetail = true;
+					$scope.showExpressionDetail = false;
 					$scope.showCancer = true;
 					$scope.showCancerSubtype = true;
 					$scope.showPopulation = true;
@@ -202,10 +202,6 @@
 					}
 					else {
 						var searchData = this.exp2;
-
-						if (searchData.cancer !== 'Esophageal Cancer') {
-							$scope.showCancerSubtype = false;
-						}
 
 						if (searchData.expression !== "" && searchData.expression != undefined) {
 							$scope.showMarker = false;
@@ -252,6 +248,11 @@
 							delete searchData.population;
 						}
 					}
+
+					if (searchData.cancer !== 'Esophageal Cancer') {
+						$scope.showCancerSubtype = false;
+					}
+
 					for (item in searchData) {
 						if (searchData[item] == '') {
 							delete searchData[item];
