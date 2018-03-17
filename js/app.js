@@ -59,30 +59,6 @@
 			};
 			$scope.functionDropArr = ['function', 'target'];
 
-			// hide/show columns for expression tab results
-			$scope.showMarker = true;
-			$scope.showMarkerDetail = true;
-			$scope.showTherapy = true;
-			$scope.showTherapyDetail = true;
-			$scope.showTumorSize = true;
-			$scope.showTumorSizeDetail = true;
-			$scope.showExpression = true;
-			$scope.showExpressionDetail = true;
-			$scope.showCancer = true;
-			$scope.showCancerSubtype = true;
-			$scope.showPopulation = true;
-			$scope.showSample = true;
-			$scope.showSignificance = true;
-			$scope.showDetectionMethod = true;
-
-			// hide/show columns for function tab results
-			$scope.showFuncCancer = true;
-			$scope.showFuncCellLine = true;
-			$scope.showFuncTarget = true;
-			$scope.showFuncTargetDetails = true;
-			$scope.showFuncTechnique = true;
-			$scope.showFuncFunction = true;
-
 			$scope.setTab = function (tabId) {
 				$scope.tab = tabId;
 				$scope.setTable(4);
@@ -152,24 +128,20 @@
 
 			$scope.searchQuery = function (formData) {
 				if ($scope.tab == "2") {
+
+					$scope.showFuncCancer = true;
+					$scope.showFuncCellLine = true;
+					$scope.showFuncTarget = true;
+					$scope.showFuncTargetDetails = true;
+					$scope.showFuncTechnique = true;
+					$scope.showFuncFunction = true;
+
 					if (formData.$name == 'form21') {
 						var searchData = this.RNA1;
 					}
 					else {
 						var searchData = this.RNA2;
-
-						// $scope.showFuncCancer = false;
-						// $scope.showFuncCellLine = false;
 						$scope.showFuncTargetDetails = true;
-						// $scope.showFuncTechnique = false;
-						// $scope.showFuncFunction = false;
-
-						// if (searchData.function !== "" && searchData.function != undefined) {
-						// 	$scope.showFuncFunction = true;
-						// }
-						// else if (searchData.target !== "" && searchData.target != undefined) {
-						// 	$scope.showFuncTechnique = true;
-						// }
 						if (searchData.target !== "" && searchData.target != undefined) {
 							$scope.showFuncTargetDetails = false;
 						}
@@ -187,33 +159,6 @@
 						$scope.setTable(2);
 						$('#functionDropdowns').find('select').prop('disabled', false);
 						$('#dropdownsLabel').find('select').prop('disabled', false);
-						
-						// console.table(response.data);
-
-						// if (!$scope.showFuncCancer) {
-						// 	removeField(response.data, 'cancer');
-						// }
-						// if (!$scope.showFuncCellLine) {
-						// 	removeField(response.data, 'cell_line');
-						// }
-						// if (!$scope.showFuncTarget) {
-						// 	removeField(response.data, 'target');
-						// 	removeField(response.data, 'target_details');
-						// }
-						// if (!$scope.showFuncTechnique) {
-						// 	removeField(response.data, 'technique');
-						// }
-						// if (!$scope.showFuncFunction) {
-						// 	removeField(response.data, 'function');
-						// 	removeField(response.data, 'function_details');
-						// }
-						// removeField(response.data, '_id');
-						// startWorker(response.data, (data) => {
-						// 	$scope.miResult = data.sort(sortByMIRNA);
-						// 	window.location.hash = "resultTable";
-						// 	$scope.setTable(2);
-						// 	// console.table(response.data);
-						// })
 					});
 				}
 				else if ($scope.tab == "3") {
@@ -234,30 +179,29 @@
 						$scope.snpResult = response.data.sort(sortByMIRNA);
 						window.location.hash = "resultTable";
 						$scope.setTable(3);
-						// console.table(response.data);
 					});
 				}
 				else if ($scope.tab == "1") {
+					$scope.showMarker = true;
+					$scope.showMarkerDetail = true;
+					$scope.showTherapy = true;
+					$scope.showTherapyDetail = true;
+					$scope.showTumorSize = true;
+					$scope.showTumorSizeDetail = true;
+					$scope.showExpression = true;
+					$scope.showExpressionDetail = true;
+					$scope.showCancer = true;
+					$scope.showCancerSubtype = true;
+					$scope.showPopulation = true;
+					$scope.showSample = true;
+					$scope.showSignificance = true;
+					$scope.showDetectionMethod = true;
+
 					if (formData.$name == 'form11') {
 						var searchData = this.exp1;
 					}
 					else {
 						var searchData = this.exp2;
-
-						$scope.showMarker = true;
-						$scope.showMarkerDetail = true;
-						$scope.showTherapy = true;
-						$scope.showTherapyDetail = true;
-						$scope.showTumorSize = true;
-						$scope.showTumorSizeDetail = true;
-						$scope.showExpression = true;
-						$scope.showExpressionDetail = true;
-						$scope.showCancer = true;
-						$scope.showCancerSubtype = true;
-						$scope.showPopulation = true;
-						$scope.showSample = true;
-						$scope.showSignificance = true;
-						$scope.showDetectionMethod = true;
 
 						if (searchData.cancer !== 'Esophageal Cancer') {
 							$scope.showCancerSubtype = false;
@@ -326,54 +270,7 @@
 						$scope.setTable(1);
 						// console.table(response.data);
 						$('#dropdownsLabel').find('select').prop('disabled', false);
-						// $('#dropdownsLabel').find('select').val('');
 						$("#btSubmit").prop('disabled', true);
-						// if (!$scope.showMarker) {
-						// 	removeField(response.data, 'marker');
-						// }
-						// if (!$scope.showMarkerDetail) {
-						// 	removeField(response.data, 'marker_details');
-						// }
-						// if (!$scope.showTherapy) {
-						// 	removeField(response.data, 'therapy');
-						// }
-						// if (!$scope.showTherapyDetail) {
-						// 	removeField(response.data, 'therapy_details');
-						// }
-						// if (!$scope.showTumorSize) {
-						// 	removeField(response.data, 'tumor_size');
-						// }
-						// if (!$scope.showTumorSizeDetail) {
-						// 	removeField(response.data, 'tumor_size_details');
-						// }
-						// if (!$scope.showExpression) {
-						// 	removeField(response.data, 'expression');
-						// }
-						// if (!$scope.showExpressionDetail) {
-						// 	removeField(response.data, 'expression_details');
-						// }
-						// if (!$scope.showCancer) {
-						// 	removeField(response.data, 'cancer');
-						// }
-						// if (!$scope.showPopulation) {
-						// 	removeField(response.data, 'population');
-						// }
-						// if (!$scope.showSample) {
-						// 	removeField(response.data, 'sample');
-						// }
-						// if (!$scope.showSignificance) {
-						// 	removeField(response.data, 'significance');
-						// }
-						// if (!$scope.showDetectionMethod) {
-						// 	removeField(response.data, 'detection_method');
-						// }
-						// removeField(response.data, '_id');
-						// startWorker(response.data, (data) => {
-						// 	$scope.expResult = data.sort(sortByMIRNA);
-						// 	window.location.hash = "resultTable";
-						// 	$scope.setTable(1);
-						// 	console.table(response.data);
-						// })
 					});
 				}
 			}
