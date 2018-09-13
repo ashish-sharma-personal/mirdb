@@ -32,6 +32,7 @@
 	<script src="jquery-latest.min.js"></script>
 	<!-- <script src="js/script.js"></script> -->
 	<script src="app.js"></script>
+	<script src="export-to-csv.js"></script>
 
 
 
@@ -44,618 +45,651 @@
 		<!--////////////////////////////////////Header-->
 		<header>
 			<div class="wrap-header zerogrid">
+				<div style="float: right; clear: both; font-size: 16px; margin: 10px 0;">
+					<a ng-click="setPage('home')" style="cursor: pointer;">Home</a>
+					<a ng-click="setPage('aboutUs')" style="cursor: pointer; border-left: 1px solid; padding-left: 10px; margin-left: 10px">About us</a>
+				</div>
 				<div class="row">
 					<div class="logo">
 						<img src="logo2.png" />
+					</div>
+				</div>
+				<div class="row wrap-content">
+					<!--Start Box-->
+					<div class="header">
+						<span>A cancer database</span>
 					</div>
 				</div>
 			</div>
 		</header>
 
 
-		<!--////////////////////////////////////Container-->
-		<section id="container">
-			<div class="zerogrid">
-				<div class="wrap-container clearfix">
-					<div id="main-content">
-						<div class="row wrap-content">
-							<!--Start Box-->
-							<div class="header">
-								<span>A cancer database</span>
+		<div id="homePage" class="page">
+			<!--////////////////////////////////////Container-->
+			<section id="container">
+				<div class="zerogrid">
+					<div class="wrap-container clearfix">
+						<div id="main-content">
+
+							<article class="description-container" style="margin-bottom: 20px;">
+								<p>
+									<b>GI-miRDB</b>, is a manually curated database, which provides a comprehensive resource of miRNA deregulation
+									along
+									with detailed information about miRNA function and SNPs in gastrointestinal cancers viz. Esophageal Cancer,
+									Gastric
+									Cancer, Colon Cancer, Colorectal and Rectal Cancer. GI- miRDB is divided into three major fields including
+									information
+									about: 1) Expression 2) Function and 3) SNPs present in miRNAs or miRNA binding sites. Each major field is
+									subdivided
+									into multiple sub- fields to provide a categorized and easily accessible information in different contexts of
+									miRNA
+									expression and functionality depending on user requirement.</p>
+							</article>
+						</div>
+					</div>
+				</div>
+			</section>
+			<div role="tabpanel" class="zerogrid">
+				<ul class="nav nav-tabs tabFont" role="tablist">
+					<li role="presentation" ng-click="setTab(1)" ng-class="{'active':tab == 1}">
+						<a data-target="#tab" aria-controls="home" role="tab" data-toggle="tab">Expression</a>
+					</li>
+					<li role="presentation" ng-click="setTab(2)" ng-class="{'active':tab == 2}">
+						<a data-target="#tab" aria-controls="home" role="tab" data-toggle="tab">Function</a>
+					</li>
+					<li role="presentation" ng-click="setTab(3)" ng-class="{'active':tab == 3}">
+						<a data-target="#tab" aria-controls="home" role="tab" data-toggle="tab">SNP</a>
+					</li>
+				</ul>
+				<div class="tab-content">
+					<div role="tabpanel" class="tab-pane active" id="tab">
+
+						<div ng-show="isSet(1)">
+							<div class="row">
+								<div class="col-1-2">
+									<div class="wrap-col">
+										<article class="description-container">
+											<p>Each miRNA entry in the “expression” field is subdivided into 11 fields providing information about: 1)
+												miRNA name
+												2) Cancer 3) Population 4) Sample type 5) Sample information 6) Expression 7) Significance 8) Detection
+												Method
+												9) Marker (Diagnostic/Prognostic) 10) Response to therapy and 11) TNM stage/Metastasis/Recurrence.</p>
+											<ul>
+												<li>All entries can be retrieved by miRNA ID and Cancer type.</li>
+												<li>For easy access and data analysis, a second window is provided which can be used to retrieve data using
+													following
+													options
+													<ol>
+														<li>
+															1) To retrieve miRNAs deregulated in a cancer
+														</li>
+														<li>
+															2) To retrieve Diagnostic/Prognostic marker associated with a cancer with in a population.
+														</li>
+														<li>
+															3) To retrieve miRNAs associated with response to therapy viz. chemotherapy, radiotherapy or
+															chemoradiotherapy.
+														</li>
+														<li>
+															4) To retrieve miRNAs associated with TNM, Stage, Metastasis or Recurrence.
+														</li>
+														<li>
+															5) To retrieve miRNAs according to sample type used for analysis.
+														</li>
+													</ol>
+												</li>
+											</ul>
+										</article>
+									</div>
+								</div>
+								<div class="col-1-2">
+									<div class="wrap-col">
+										<div class="contact">
+											<div id="contact_form">
+												<label class="row">
+													Search
+												</label>
+												<form name="form11" id="ff" ng-submit="searchQuery(form11)">
+													<label class="row">
+														<div class="col-2-5">
+															<div class="wrap-col">
+																<select name="miRNA_name" ng-model="exp1.miRNA_name" required>
+																	<option value="" default selected>Select miRNA*</option>
+																	<option value={{x}} ng-repeat="x in expression.miRNADropValues">{{x}}</option>
+																</select>
+															</div>
+														</div>
+														<div class="col-2-5">
+															<div class="wrap-col">
+																<select name="cancer" ng-model="exp1.cancer">
+																	<option value="" default selected>Select Cancer Type</option>
+																	<option value="Colon Cancer">Colon Cancer</option>
+																	<option value="Colorectal Cancer">Colorectal Cancer</option>
+																	<option value="Esophageal Cancer">Esophageal Cancer</option>
+																	<option value="Gastric Cancer">Gastric Cancer</option>
+																	<option value="Rectal Cancer">Rectal Cancer</option>
+																</select>
+															</div>
+														</div>
+														<div class="col-1-5">
+															<div class="wrap-col">
+																<button type="submit" class="sendButton btn">Search</button>
+															</div>
+														</div>
+													</label>
+												</form>
+												<label class="row">
+													<div class="sepLine">
+														Advanced search
+													</div>
+												</label>
+												<form name="form12" id="ff" ng-submit="searchQuery(form12)">
+													<label class="row">
+														<div class="col-1-2">
+															<div class="wrap-col">
+																<select name="cancer" ng-model="exp2.cancer" required ng-change="cancerSelected()">
+																	<option value="" default selected>Select Cancer Type*</option>
+																	<option value="Colon Cancer">Colon Cancer</option>
+																	<option value="Colorectal Cancer">Colorectal Cancer</option>
+																	<option value="Esophageal Cancer">Esophageal Cancer</option>
+																	<option value="Gastric Cancer">Gastric Cancer</option>
+																	<option value="Rectal Cancer">Rectal Cancer</option>
+																</select>
+															</div>
+														</div>
+														<div class="col-1-2">
+															<div class="wrap-col">
+																<select name="population" ng-model="exp2.population">
+																	<option value="" default selected>
+																		Select Population (optional)
+																	</option>
+																	<option value={{x}} ng-repeat="x in expression.continents">{{x}}</option>
+																	<option value={{x}} ng-repeat="x in expression.population">{{x}}</option>
+																</select>
+															</div>
+														</div>
+													</label>
+													<label ng-show="showExpDropDowns" id="dropdownsLabel" class="row">
+														<label class="row" style="font-size: 12px">
+															Select any one of the four:
+														</label>
+														<div class="col-1-2">
+															<div class="wrap-col">
+																<select id="expression" name="expression" ng-model="exp2.expression" ng-change="oneSelector(exp2.expression, 'expression')"
+																 required>
+																	<option value="" default selected>Select Regulation</option>
+																	<option value={{x}} ng-repeat="x in expression.expressionDropValues">{{x}}</option>
+																</select>
+															</div>
+														</div>
+														<div class="col-1-2">
+															<div class="wrap-col">
+																<select id="marker" name="marker" ng-model="exp2.marker" ng-change="oneSelector(exp2.marker, 'marker')"
+																 required>
+																	<option value="" default selected>Select Marker</option>
+																	<option value="Diagnostic">Diagnostic</option>
+																	<option value="Prognostic">Prognostic</option>
+																	<option value="Screening">Screening</option>
+																</select>
+															</div>
+														</div>
+														<div class="col-1-2">
+															<div class="wrap-col">
+																<select id="therapy" name="therapy" ng-model="exp2.therapy" ng-change="oneSelector(exp2.therapy, 'therapy')"
+																 required>
+																	<option value="" default selected>Select Therapy</option>
+																	<option value="Chemotherapy">Chemotherapy</option>
+																	<option value="Chemoradiotherapy">Chemoradiotherapy</option>
+																	<option value="Radiotherapy">Radiotherapy</option>
+																	<option value="Surgery">Surgery</option>
+																	<option value="Vaccine Treatment">Vaccine Treatment</option>
+																</select>
+															</div>
+														</div>
+														<div class="col-1-2">
+															<div class="wrap-col" required>
+																<select id="tumor_size" name="tumor_size" ng-model="exp2.tumor_size" ng-change="oneSelector(exp2.tumor_size, 'tumor_size')">
+																	<option value="" default selected>Select stage/metastasis</option>
+																	<option value="Metastasis">Metastasis</option>
+																	<option value="Recurrence">Recurrence</option>
+																	<option value="TNM/Stage">TNM/Stage</option>
+																	<option value="Tumor Location">Tumor Location</option>
+																	<option value="Tumor Size">Tumor size</option>
+																</select>
+															</div>
+														</div>
+														<div class="col-1-2">
+															<div class="wrap-col" required>
+																<select id="sample_type" name="sample_type" ng-model="exp2.sample_type" ng-change="oneSelector(exp2.sample_type, 'sample_type')">
+																	<option value="" default selected>Select sample type</option>
+																	<option value={{x}} ng-repeat="x in expression.sampleDropValues">{{x}}</option>
+																</select>
+															</div>
+														</div>
+														<div class="col-1-2" style="float: right">
+															<div class="wrap-col">
+																<button disabled type="submit" id="btSubmit" class="sendButton btn">Search</button>
+															</div>
+														</div>
+													</label>
+												</form>
+											</div>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
-						<article class="description-container" style="margin-bottom: 20px;">
-							<p>
-								<b>GI-miRDB</b>, is a manually curated database, which provides a comprehensive resource of miRNA deregulation along
-								with detailed information about miRNA function and SNPs in gastrointestinal cancers viz. Esophageal Cancer, Gastric
-								Cancer, Colon Cancer, Colorectal and Rectal Cancer. GI- miRDB is divided into three major fields including information
-								about: 1) Expression 2) Function and 3) SNPs present in miRNAs or miRNA binding sites. Each major field is subdivided
-								into multiple sub- fields to provide a categorized and easily accessible information in different contexts of miRNA
-								expression and functionality depending on user requirement.</p>
-						</article>
+
+						<div ng-show="isSet(2)">
+							<div class="row">
+								<div class="col-2-5">
+									<div class="wrap-col">
+										<article class="description-container">
+											<p>The Function tab provides information about: 1) miRNA name 2) Cancer 3) Cell lines used 4) Target mRNA 5)
+												Technique
+												used to validate the target and 6) Function of miRNA.
+											</p>
+
+											<ul>
+												<li>All entries can be retrieved by miRNA ID and Cancer type using upper window.</li>
+												<li>For easy access and data analysis, a second window is provided which can be used to retrieve data using
+													following
+													options:
+													<ol>
+														<li>
+															1) Cancer and miRNA Function: To retrieve cancer specific miRNAs involved in a particular function.
+														</li>
+														<li>
+															2) Cancer and Target: To retrieve cancer specific miRNAs regulating a particular target.
+														</li>
+													</ol>
+												</li>
+											</ul>
+										</article>
+									</div>
+								</div>
+								<div class="col-3-5">
+									<div class="wrap-col">
+										<div class="contact">
+											<div id="contact_form">
+												<label class="row">
+													Search
+												</label>
+												<form name="form21" id="ff" ng-submit="searchQuery(form21)">
+													<label class="row">
+														<div class="col-2-5">
+															<div class="wrap-col">
+																<select name="miRNA_name" ng-model="RNA1.miRNA_name" required>
+																	<option value="" default selected>Select miRNA*</option>
+																	<option value={{x}} ng-repeat="x in function.miRNADropValues">{{x}}</option>
+																</select>
+															</div>
+														</div>
+														<div class="col-2-5">
+															<div class="wrap-col">
+																<select name="cancer" ng-model="RNA1.cancer">
+																	<option value="" default selected>Select Cancer Type</option>
+																	<option value="Colon Cancer">Colon Cancer</option>
+																	<option value="Colorectal Cancer">Colorectal Cancer</option>
+																	<option value="Esophageal Cancer">Esophageal Cancer</option>
+																	<option value="Gastric Cancer">Gastric Cancer</option>
+																	<option value="Rectal Cancer">Rectal Cancer</option>
+																</select>
+															</div>
+														</div>
+														<div class="col-1-5">
+															<div class="wrap-col">
+																<button type="submit" class="sendButton btn">Search</button>
+															</div>
+														</div>
+													</label>
+												</form>
+												<label class="row">
+													<div class="sepLine">
+														Advanced search
+													</div>
+												</label>
+												<form name="form22" id="ff" ng-submit="searchQuery(form22)">
+													<label class="row">
+														<div class="col-2-5">
+															<div class="wrap-col">
+																<select name="cancer" ng-model="RNA2.cancer" required ng-change="funcCancerSelected()">
+																	<option value="" default selected>Select Cancer Type*</option>
+																	<option value="Colon Cancer">Colon Cancer</option>
+																	<option value="Colorectal Cancer">Colorectal Cancer</option>
+																	<option value="Esophageal Cancer">Esophageal Cancer</option>
+																	<option value="Gastric Cancer">Gastric Cancer</option>
+																	<option value="Rectal Cancer">Rectal Cancer</option>
+																</select>
+															</div>
+														</div>
+													</label>
+													<label class="row" ng-show="showFuncDropdowns" id="functionDropdowns">
+														<label class="row" style="font-size: 12px">
+															Select any one of the two:
+														</label>
+														<div class="col-2-5">
+															<div class="wrap-col">
+																<select name="function" ng-model="RNA2.function" ng-change="functiononSelector(RNA2.function, 'function')">
+																	<option value="" default selected>Select Function</option>
+																	<option value={{x}} ng-repeat="x in function.functionDropValues">{{x}}</option>
+																</select>
+															</div>
+														</div>
+														<div class="col-2-5">
+															<div class="wrap-col">
+																<select name="target" ng-model="RNA2.target" ng-change="functiononSelector(RNA2.target, 'target')">
+																	<option value="" default selected>Select Target</option>
+																	<option value={{x}} ng-repeat="x in function.targetDropValues">{{x}}</option>
+																</select>
+															</div>
+														</div>
+														<div class="col-1-5">
+															<div class="wrap-col">
+																<button type="submit" disabled id="functionbtSubmit" class="sendButton btn">Search</button>
+															</div>
+														</div>
+													</label>
+												</form>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+
+						<div ng-show="isSet(3)">
+							<div class="row">
+								<div class="col-2-5">
+									<div class="wrap-col">
+										<article class="description-container">
+											<p>The SNP field gives information about: 1) miRNA name 2) Cancer 3) Population 4) SNP name and 5) Function.
+											</p>
+											<ul>
+												<li>All entries can be retrieved by miRNA ID and Cancer type using upper window.</li>
+												<li>For easy access and data analysis, a second window is provided which can be used to retrieve cancer
+													specific miRNA
+													associated with a particular SNP</li>
+												<li>A third search option is also provided to retrieve miRNA related SNPs within a population. Population
+													field is
+													optional.
+												</li>
+											</ul>
+										</article>
+									</div>
+								</div>
+								<div class="col-3-5">
+									<div class="wrap-col">
+										<div class="contact">
+											<div id="contact_form">
+												<label class="row">
+													Search option 1
+												</label>
+												<form name="form31" id="ff" ng-submit="searchQuery(form31)">
+													<label class="row">
+														<div class="col-2-5">
+															<div class="wrap-col">
+																<select name="miRNA_name" ng-model="SNP1.miRNA_name" required>
+																	<option value="" default selected>Select miRNA*</option>
+																	<option value={{x}} ng-repeat="x in snp.miRNADropValues">{{x}}</option>
+																</select>
+															</div>
+														</div>
+														<div class="col-2-5">
+															<div class="wrap-col">
+																<select name="cancer" ng-model="SNP1.cancer">
+																	<option value="" default selected>Select Cancer Type</option>
+																	<option value="Colon Cancer">Colon Cancer</option>
+																	<option value="Colorectal Cancer">Colorectal Cancer</option>
+																	<option value="Esophageal Cancer">Esophageal Cancer</option>
+																	<option value="Gastric Cancer">Gastric Cancer</option>
+																	<option value="Rectal Cancer">Rectal Cancer</option>
+																</select>
+															</div>
+														</div>
+														<div class="col-1-5">
+															<div class="wrap-col">
+																<button type="submit" class="sendButton btn">Search</button>
+															</div>
+														</div>
+													</label>
+												</form>
+												<label class="row">
+													<div class="sepLine">
+														Search option 2
+													</div>
+												</label>
+												<form name="form32" id="ff" ng-submit="searchQuery(form32)">
+													<label class="row">
+														<div class="col-2-5">
+															<div class="wrap-col">
+																<select name="snp" ng-model="SNP2.snp" required>
+																	<option value="" default selected>Select SNP*</option>
+																	<option value={{x}} ng-repeat="x in snp.snpDropValues">{{x}}</option>
+																</select>
+															</div>
+														</div>
+														<div class="col-2-5">
+															<div class="wrap-col">
+																<select name="cancer" ng-model="SNP2.cancer" required>
+																	<option value="" default selected>Select Cancer Type*</option>
+																	<option value="Colon Cancer">Colon Cancer</option>
+																	<option value="Colorectal Cancer">Colorectal Cancer</option>
+																	<option value="Esophageal Cancer">Esophageal Cancer</option>
+																	<option value="Gastric Cancer">Gastric Cancer</option>
+																	<option value="Rectal Cancer">Rectal Cancer</option>
+																</select>
+															</div>
+														</div>
+														<div class="col-1-5">
+															<div class="wrap-col">
+																<button type="submit" class="sendButton btn">Search</button>
+															</div>
+														</div>
+													</label>
+												</form>
+												<label class="row">
+													<div class="sepLine">
+														Search option 3
+													</div>
+												</label>
+												<form name="form33" id="ff" ng-submit="searchQuery(form33)">
+													<label class="row">
+														<div class="col-2-5">
+															<div class="wrap-col">
+																<select name="snp" ng-model="SNP3.snp" required>
+																	<option value="" default selected>Select SNP*</option>
+																	<option value={{x}} ng-repeat="x in snp.snpDropValues">{{x}}</option>
+																</select>
+															</div>
+														</div>
+														<div class="col-2-5">
+															<div class="wrap-col">
+																<select name="population" ng-model="SNP3.population">
+																	<option value="" default selected>
+																		Select Population (optional)
+																	</option>
+																	<option value={{x}} ng-repeat="x in snp.populationDropValues">{{x}}</option>
+																</select>
+															</div>
+														</div>
+														<div class="col-1-5">
+															<div class="wrap-col">
+																<button type="submit" class="sendButton btn">Search</button>
+															</div>
+														</div>
+													</label>
+												</form>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
 					</div>
 				</div>
 			</div>
-		</section>
-		<div role="tabpanel" class="zerogrid">
-			<ul class="nav nav-tabs tabFont" role="tablist">
-				<li role="presentation" ng-click="setTab(1)" ng-class="{'active':tab == 1}">
-					<a data-target="#tab" aria-controls="home" role="tab" data-toggle="tab">Expression</a>
-				</li>
-				<li role="presentation" ng-click="setTab(2)" ng-class="{'active':tab == 2}">
-					<a data-target="#tab" aria-controls="home" role="tab" data-toggle="tab">Function</a>
-				</li>
-				<li role="presentation" ng-click="setTab(3)" ng-class="{'active':tab == 3}">
-					<a data-target="#tab" aria-controls="home" role="tab" data-toggle="tab">SNP</a>
-				</li>
-			</ul>
-			<div class="tab-content">
-				<div role="tabpanel" class="tab-pane active" id="tab">
-
-					<div ng-show="isSet(1)">
-						<div class="row">
-							<div class="col-1-2">
-								<div class="wrap-col">
-									<article class="description-container">
-										<p>Each miRNA entry in the “expression” field is subdivided into 11 fields providing information about: 1) miRNA name
-											2) Cancer 3) Population 4) Sample type 5) Sample information 6) Expression 7) Significance 8) Detection Method
-											9) Marker (Diagnostic/Prognostic) 10) Response to therapy and 11) TNM stage/Metastasis/Recurrence.</p>
-										<ul>
-											<li>All entries can be retrieved by miRNA ID and Cancer type.</li>
-											<li>For easy access and data analysis, a second window is provided which can be used to retrieve data using following
-												options
-												<ol>
-													<li>
-														1) To retrieve miRNAs deregulated in a cancer
-													</li>
-													<li>
-														2) To retrieve Diagnostic/Prognostic marker associated with a cancer with in a population.
-													</li>
-													<li>
-														3) To retrieve miRNAs associated with response to therapy viz. chemotherapy, radiotherapy or chemoradiotherapy.
-													</li>
-													<li>
-														4) To retrieve miRNAs associated with TNM, Stage, Metastasis or Recurrence.
-													</li>
-													<li>
-														5) To retrieve miRNAs according to sample type used for analysis.
-													</li>
-												</ol>
-											</li>
-										</ul>
-									</article>
-								</div>
-							</div>
-							<div class="col-1-2">
-								<div class="wrap-col">
-									<div class="contact">
-										<div id="contact_form">
-											<label class="row">
-												Search
-											</label>
-											<form name="form11" id="ff" ng-submit="searchQuery(form11)">
-												<label class="row">
-													<div class="col-2-5">
-														<div class="wrap-col">
-															<select name="miRNA_name" ng-model="exp1.miRNA_name" required>
-																<option value="" default selected>Select miRNA*</option>
-																<option value={{x}} ng-repeat="x in expression.miRNADropValues">{{x}}</option>
-															</select>
-														</div>
-													</div>
-													<div class="col-2-5">
-														<div class="wrap-col">
-															<select name="cancer" ng-model="exp1.cancer">
-																<option value="" default selected>Select Cancer Type</option>
-																<option value="Colon Cancer">Colon Cancer</option>
-																<option value="Colorectal Cancer">Colorectal Cancer</option>
-																<option value="Esophageal Cancer">Esophageal Cancer</option>
-																<option value="Gastric Cancer">Gastric Cancer</option>
-																<option value="Rectal Cancer">Rectal Cancer</option>
-															</select>
-														</div>
-													</div>
-													<div class="col-1-5">
-														<div class="wrap-col">
-															<button type="submit" class="sendButton btn">Search</button>
-														</div>
-													</div>
-												</label>
-											</form>
-											<label class="row">
-												<div class="sepLine">
-													Advanced search
-												</div>
-											</label>
-											<form name="form12" id="ff" ng-submit="searchQuery(form12)">
-												<label class="row">
-													<div class="col-1-2">
-														<div class="wrap-col">
-															<select name="cancer" ng-model="exp2.cancer" required ng-change="cancerSelected()">
-																<option value="" default selected>Select Cancer Type*</option>
-																<option value="Colon Cancer">Colon Cancer</option>
-																<option value="Colorectal Cancer">Colorectal Cancer</option>
-																<option value="Esophageal Cancer">Esophageal Cancer</option>
-																<option value="Gastric Cancer">Gastric Cancer</option>
-																<option value="Rectal Cancer">Rectal Cancer</option>
-															</select>
-														</div>
-													</div>
-													<div class="col-1-2">
-														<div class="wrap-col">
-															<select name="population" ng-model="exp2.population">
-																<option value="" default selected>
-																	Select Population (optional)
-																</option>
-																<option value={{x}} ng-repeat="x in expression.continents">{{x}}</option>
-																<option value={{x}} ng-repeat="x in expression.population">{{x}}</option>
-															</select>
-														</div>
-													</div>
-												</label>
-												<label ng-show="showExpDropDowns" id="dropdownsLabel" class="row">
-													<label class="row" style="font-size: 12px">
-														Select any one of the four:
-													</label>
-													<div class="col-1-2">
-														<div class="wrap-col">
-															<select id="expression" name="expression" ng-model="exp2.expression" ng-change="oneSelector(exp2.expression, 'expression')"
-															 required>
-																<option value="" default selected>Select Regulation</option>
-																<option value={{x}} ng-repeat="x in expression.expressionDropValues">{{x}}</option>
-															</select>
-														</div>
-													</div>
-													<div class="col-1-2">
-														<div class="wrap-col">
-															<select id="marker" name="marker" ng-model="exp2.marker" ng-change="oneSelector(exp2.marker, 'marker')" required>
-																<option value="" default selected>Select Marker</option>
-																<option value="Diagnostic">Diagnostic</option>
-																<option value="Prognostic">Prognostic</option>
-																<option value="Screening">Screening</option>
-															</select>
-														</div>
-													</div>
-													<div class="col-1-2">
-														<div class="wrap-col">
-															<select id="therapy" name="therapy" ng-model="exp2.therapy" ng-change="oneSelector(exp2.therapy, 'therapy')" required>
-																<option value="" default selected>Select Therapy</option>
-																<option value="Chemotherapy">Chemotherapy</option>
-																<option value="Chemoradiotherapy">Chemoradiotherapy</option>
-																<option value="Radiotherapy">Radiotherapy</option>
-																<option value="Surgery">Surgery</option>
-																<option value="Vaccine Treatment">Vaccine Treatment</option>
-															</select>
-														</div>
-													</div>
-													<div class="col-1-2">
-														<div class="wrap-col" required>
-															<select id="tumor_size" name="tumor_size" ng-model="exp2.tumor_size" ng-change="oneSelector(exp2.tumor_size, 'tumor_size')">
-																<option value="" default selected>Select stage/metastasis</option>
-																<option value="Metastasis">Metastasis</option>
-																<option value="Recurrence">Recurrence</option>
-																<option value="TNM/Stage">TNM/Stage</option>
-																<option value="Tumor Location">Tumor Location</option>
-																<option value="Tumor Size">Tumor size</option>
-															</select>
-														</div>
-													</div>
-													<div class="col-1-2">
-														<div class="wrap-col" required>
-															<select id="sample_type" name="sample_type" ng-model="exp2.sample_type" ng-change="oneSelector(exp2.sample_type, 'sample_type')">
-																<option value="" default selected>Select sample type</option>
-																<option value={{x}} ng-repeat="x in expression.sampleDropValues">{{x}}</option>
-															</select>
-														</div>
-													</div>
-													<div class="col-1-2" style="float: right">
-														<div class="wrap-col">
-															<button disabled type="submit" id="btSubmit" class="sendButton btn">Search</button>
-														</div>
-													</div>
-												</label>
-											</form>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div ng-show="isSet(2)">
-						<div class="row">
-							<div class="col-2-5">
-								<div class="wrap-col">
-									<article class="description-container">
-										<p>The Function tab provides information about: 1) miRNA name 2) Cancer 3) Cell lines used 4) Target mRNA 5) Technique
-											used to validate the target and 6) Function of miRNA.
-										</p>
-
-										<ul>
-											<li>All entries can be retrieved by miRNA ID and Cancer type using upper window.</li>
-											<li>For easy access and data analysis, a second window is provided which can be used to retrieve data using following
-												options:
-												<ol>
-													<li>
-														1) Cancer and miRNA Function: To retrieve cancer specific miRNAs involved in a particular function.
-													</li>
-													<li>
-														2) Cancer and Target: To retrieve cancer specific miRNAs regulating a particular target.
-													</li>
-												</ol>
-											</li>
-										</ul>
-									</article>
-								</div>
-							</div>
-							<div class="col-3-5">
-								<div class="wrap-col">
-									<div class="contact">
-										<div id="contact_form">
-											<label class="row">
-												Search
-											</label>
-											<form name="form21" id="ff" ng-submit="searchQuery(form21)">
-												<label class="row">
-													<div class="col-2-5">
-														<div class="wrap-col">
-															<select name="miRNA_name" ng-model="RNA1.miRNA_name" required>
-																<option value="" default selected>Select miRNA*</option>
-																<option value={{x}} ng-repeat="x in function.miRNADropValues">{{x}}</option>
-															</select>
-														</div>
-													</div>
-													<div class="col-2-5">
-														<div class="wrap-col">
-															<select name="cancer" ng-model="RNA1.cancer">
-																<option value="" default selected>Select Cancer Type</option>
-																<option value="Colon Cancer">Colon Cancer</option>
-																<option value="Colorectal Cancer">Colorectal Cancer</option>
-																<option value="Esophageal Cancer">Esophageal Cancer</option>
-																<option value="Gastric Cancer">Gastric Cancer</option>
-																<option value="Rectal Cancer">Rectal Cancer</option>
-															</select>
-														</div>
-													</div>
-													<div class="col-1-5">
-														<div class="wrap-col">
-															<button type="submit" class="sendButton btn">Search</button>
-														</div>
-													</div>
-												</label>
-											</form>
-											<label class="row">
-												<div class="sepLine">
-													Advanced search
-												</div>
-											</label>
-											<form name="form22" id="ff" ng-submit="searchQuery(form22)">
-												<label class="row">
-													<div class="col-2-5">
-														<div class="wrap-col">
-															<select name="cancer" ng-model="RNA2.cancer" required ng-change="funcCancerSelected()">
-																<option value="" default selected>Select Cancer Type*</option>
-																<option value="Colon Cancer">Colon Cancer</option>
-																<option value="Colorectal Cancer">Colorectal Cancer</option>
-																<option value="Esophageal Cancer">Esophageal Cancer</option>
-																<option value="Gastric Cancer">Gastric Cancer</option>
-																<option value="Rectal Cancer">Rectal Cancer</option>
-															</select>
-														</div>
-													</div>
-												</label>
-												<label class="row" ng-show="showFuncDropdowns" id="functionDropdowns">
-													<label class="row" style="font-size: 12px">
-														Select any one of the two:
-													</label>
-													<div class="col-2-5">
-														<div class="wrap-col">
-															<select name="function" ng-model="RNA2.function" ng-change="functiononSelector(RNA2.function, 'function')">
-																<option value="" default selected>Select Function</option>
-																<option value={{x}} ng-repeat="x in function.functionDropValues">{{x}}</option>
-															</select>
-														</div>
-													</div>
-													<div class="col-2-5">
-														<div class="wrap-col">
-															<select name="target" ng-model="RNA2.target" ng-change="functiononSelector(RNA2.target, 'target')">
-																<option value="" default selected>Select Target</option>
-																<option value={{x}} ng-repeat="x in function.targetDropValues">{{x}}</option>
-															</select>
-														</div>
-													</div>
-													<div class="col-1-5">
-														<div class="wrap-col">
-															<button type="submit" disabled id="functionbtSubmit" class="sendButton btn">Search</button>
-														</div>
-													</div>
-												</label>
-											</form>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-
-					</div>
-
-					<div ng-show="isSet(3)">
-						<div class="row">
-							<div class="col-2-5">
-								<div class="wrap-col">
-									<article class="description-container">
-										<p>The SNP field gives information about: 1) miRNA name 2) Cancer 3) Population 4) SNP name and 5) Function.
-										</p>
-										<ul>
-											<li>All entries can be retrieved by miRNA ID and Cancer type using upper window.</li>
-											<li>For easy access and data analysis, a second window is provided which can be used to retrieve cancer specific miRNA
-												associated with a particular SNP</li>
-											<li>A third search option is also provided to retrieve miRNA related SNPs within a population. Population field is
-												optional.
-											</li>
-										</ul>
-									</article>
-								</div>
-							</div>
-							<div class="col-3-5">
-								<div class="wrap-col">
-									<div class="contact">
-										<div id="contact_form">
-											<label class="row">
-												Search option 1
-											</label>
-											<form name="form31" id="ff" ng-submit="searchQuery(form31)">
-												<label class="row">
-													<div class="col-2-5">
-														<div class="wrap-col">
-															<select name="miRNA_name" ng-model="SNP1.miRNA_name" required>
-																<option value="" default selected>Select miRNA*</option>
-																<option value={{x}} ng-repeat="x in snp.miRNADropValues">{{x}}</option>
-															</select>
-														</div>
-													</div>
-													<div class="col-2-5">
-														<div class="wrap-col">
-															<select name="cancer" ng-model="SNP1.cancer">
-																<option value="" default selected>Select Cancer Type</option>
-																<option value="Colon Cancer">Colon Cancer</option>
-																<option value="Colorectal Cancer">Colorectal Cancer</option>
-																<option value="Esophageal Cancer">Esophageal Cancer</option>
-																<option value="Gastric Cancer">Gastric Cancer</option>
-																<option value="Rectal Cancer">Rectal Cancer</option>
-															</select>
-														</div>
-													</div>
-													<div class="col-1-5">
-														<div class="wrap-col">
-															<button type="submit" class="sendButton btn">Search</button>
-														</div>
-													</div>
-												</label>
-											</form>
-											<label class="row">
-												<div class="sepLine">
-													Search option 2
-												</div>
-											</label>
-											<form name="form32" id="ff" ng-submit="searchQuery(form32)">
-												<label class="row">
-													<div class="col-2-5">
-														<div class="wrap-col">
-															<select name="snp" ng-model="SNP2.snp" required>
-																<option value="" default selected>Select SNP*</option>
-																<option value={{x}} ng-repeat="x in snp.snpDropValues">{{x}}</option>
-															</select>
-														</div>
-													</div>
-													<div class="col-2-5">
-														<div class="wrap-col">
-															<select name="cancer" ng-model="SNP2.cancer" required>
-																<option value="" default selected>Select Cancer Type*</option>
-																<option value="Colon Cancer">Colon Cancer</option>
-																<option value="Colorectal Cancer">Colorectal Cancer</option>
-																<option value="Esophageal Cancer">Esophageal Cancer</option>
-																<option value="Gastric Cancer">Gastric Cancer</option>
-																<option value="Rectal Cancer">Rectal Cancer</option>
-															</select>
-														</div>
-													</div>
-													<div class="col-1-5">
-														<div class="wrap-col">
-															<button type="submit" class="sendButton btn">Search</button>
-														</div>
-													</div>
-												</label>
-											</form>
-											<label class="row">
-												<div class="sepLine">
-													Search option 3
-												</div>
-											</label>
-											<form name="form33" id="ff" ng-submit="searchQuery(form33)">
-												<label class="row">
-													<div class="col-2-5">
-														<div class="wrap-col">
-															<select name="snp" ng-model="SNP3.snp" required>
-																<option value="" default selected>Select SNP*</option>
-																<option value={{x}} ng-repeat="x in snp.snpDropValues">{{x}}</option>
-															</select>
-														</div>
-													</div>
-													<div class="col-2-5">
-														<div class="wrap-col">
-															<select name="population" ng-model="SNP3.population">
-																<option value="" default selected>
-																	Select Population (optional)
-																</option>
-																<option value={{x}} ng-repeat="x in snp.populationDropValues">{{x}}</option>
-															</select>
-														</div>
-													</div>
-													<div class="col-1-5">
-														<div class="wrap-col">
-															<button type="submit" class="sendButton btn">Search</button>
-														</div>
-													</div>
-												</label>
-											</form>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-
+			<div id='resultTable' class="tableContainer">
+				<div ng-show="isTable(1) || isTable(2) || isTable(3)" class="zerogrid" style="font-size: 13px;">
+					<a ng-click="downloadCSV()" style="float: right; clear: both; cursor: pointer; text-decoration: underline;">Download</a>
 				</div>
+				<table ng-show="isTable(1)" class="table  table-hover data-table myTable">
+					<thead>
+						<tr>
+							<th class="EmpId">miRNA name</th>
+							<th ng-show="showCancer" class="EmpId">Cancer</th>
+							<th ng-show="showCancerSubtype" class="EmpId">Cancer Subtype</th>
+							<th ng-show="showPopulation" class="EmpId">Continent</th>
+							<th ng-show="showPopulation" class="EmpId">Population</th>
+							<th ng-show="showSample" class="EmpId">Sample Type</th>
+							<th ng-show="showSample" class="EmpId">Sample</th>
+							<th ng-show="showExpression" class="EmpId">Expression</th>
+							<th ng-show="showExpressionDetail" class="EmpId">Expression Details</th>
+							<th ng-show="showSignificance" class="EmpId">Significance</th>
+							<th ng-show="showDetectionMethod" class="EmpId">Detection Method</th>
+							<th ng-show="showMarker" class="EmpId">Marker</th>
+							<th ng-show="showMarkerDetail" class="EmpId">Marker details</th>
+							<th ng-show="showTherapy" class="EmpId">Response To Therapy</th>
+							<th ng-show="showTherapyDetail" class="EmpId">Details of Response To Therapy</th>
+							<th ng-show="showTumorSize" class="EmpId">Tumor-Size/ TNM Stage/ Metastasis/ Recurrence</th>
+							<th ng-show="showTumorSizeDetail" class="EmpId">Details of Tumor-Size/ TNM Stage/ Metastasis/ Recurrence</th>
+							<th class="EmpId">Reference</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-show="!expResult.length">
+							<td colspan=100 style="text-align: center; color: red">
+								No result found for this entry
+							</td>
+						</tr>
+						<tr ng-repeat="x in expResult">
+							<td title="{{ x.miRNA_name }}" class="miRNA ellipsis">{{ x.miRNA_name }}</td>
+							<td title="{{ x.cancer }}" class="ellipsis cancer" ng-show="showCancer">{{ x.cancer }}</td>
+							<td title="{{ x.cancer_subtype }}" class="ellipsis" ng-show="showCancerSubtype">{{ x.cancer_subtype }}</td>
+							<td title="{{ x.continent }}" class="ellipsis continent" ng-show="showPopulation">{{ x.continent }}</td>
+							<td title="{{ x.population }}" class="ellipsis population" ng-show="showPopulation">{{ x.population }}</td>
+							<td title="{{ x.sample_type }}" class="ellipsis sample" ng-show="showSample">{{ x.sample_type }}</td>
+							<td title="{{ x.sample }}" class="ellipsis" ng-show="showSample">{{ x.sample }}</td>
+							<td title="{{ x.expression }}" class="ellipsis" ng-show="showExpression">{{ x.expression }}</td>
+							<td title="{{ x.expression_details }}" class="ellipsis" ng-show="showExpressionDetail">{{ x.expression_details
+								}}</td>
+							<td title="{{ x.significance }}" class="ellipsis" ng-show="showSignificance">{{ x.significance }}</td>
+							<td title="{{ x.detection_method }}" class="ellipsis" ng-show="showDetectionMethod">{{ x.detection_method }}</td>
+							<td title="{{ x.marker }}" class="ellipsis marker" ng-show="showMarker">{{ x.marker }}</td>
+							<td title="{{ x.marker_details }}" class="ellipsis" ng-show="showMarkerDetail">{{ x.marker_details }}</td>
+							<td title="{{ x.therapy }}" class="ellipsis" ng-show="showTherapy">{{ x.therapy }}</td>
+							<td title="{{ x.therapy_details }}" class="ellipsis" ng-show="showTherapyDetail">{{ x.therapy_details }}</td>
+							<td title="{{ x.tumor_size }}" class="ellipsis" ng-show="showTumorSize">{{ x.tumor_size }}</td>
+							<td title="{{ x.tumor_size_details }}" class="ellipsis" ng-show="showTumorSizeDetail">{{ x.tumor_size_details }}</td>
+							<td class="link">
+								<a title="{{ x.reference }}" target="_blank" href="{{ x.reference }}">Link</a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<table ng-show="isTable(2)" class="table  table-hover data-table myTable">
+					<thead>
+						<tr>
+							<th class="EmpId">miRNA Name</th>
+							<th ng-show="showFuncCancer" class="EmpId">Cancer</th>
+							<th ng-show="showFuncCellLine" class="EmpId">Cell Line</th>
+							<th ng-show="showFuncTarget" class="EmpId">Target</th>
+							<th ng-show="showFuncTargetDetails" class="EmpId">Target Details</th>
+							<th ng-show="showFuncTechnique" class="EmpId">Technique used</th>
+							<th ng-show="showFuncFunction" class="EmpId">Function</th>
+							<th ng-show="showFuncFunction" class="EmpId">Function details</th>
+							<th class="EmpId">Reference</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-show="!miResult.length">
+							<td colspan=100 style="text-align: center; color: red">
+								No result found for this entry
+							</td>
+						</tr>
+						<tr ng-repeat="x in miResult">
+							<td title="{{ x.miRNA_name }}" class="miRNA ellipsis">{{ x.miRNA_name }}</td>
+							<td title="{{ x.cancer }}" class="ellipsis cancer" ng-show="showFuncCancer">{{ x.cancer }}</td>
+							<td title="{{ x.cell_line }}" class="ellipsis" ng-show="showFuncCellLine">{{ x.cell_line }}</td>
+							<td title="{{ x.target }}" class="ellipsis" ng-show="showFuncTarget">{{ x.target }}</td>
+							<td title="{{ x.target_details }}" class="ellipsis" ng-show="showFuncTargetDetails">{{ x.target_details }}</td>
+							<td title="{{ x.technique }}" class="ellipsis" ng-show="showFuncTechnique">{{ x.technique }}</td>
+							<td title="{{ x.function }}" class="ellipsis" ng-show="showFuncFunction">{{ x.function }}</td>
+							<td title="{{ x.function_details }}" class="ellipsis" ng-show="showFuncFunction">{{ x.function_details }}</td>
+							<td class="link">
+								<a title="{{ x.reference }}" target="_blank" href="{{ x.reference }}">Link</a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<table ng-show="isTable(3)" class="table  table-hover data-table myTable">
+					<thead>
+						<tr>
+							<th class="EmpId">miRNA name</th>
+							<th class="EmpId">Cancer</th>
+							<th class="EmpId">Cancer Subtype</th>
+							<th class="EmpId">Continent</th>
+							<th class="EmpId">Country</th>
+							<th class="EmpId">Sample</th>
+							<th class="EmpId">SNP</th>
+							<th class="EmpId">Function</th>
+							<th class="EmpId">Reference</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-show="!snpResult.length">
+							<td colspan=100 style="text-align: center; color: red">
+								No result found for this entry
+							</td>
+						</tr>
+						<tr ng-repeat="x in snpResult">
+							<td title="{{ x.miRNA_name }}" class="miRNA ellipsis">{{ x.miRNA_name }}</td>
+							<td title="{{ x.cancer }}" class="ellipsis cancer">{{ x.cancer }}</td>
+							<td title="{{ x.cancer_subtype }}" class="ellipsis">{{ x.cancer_subtype }}</td>
+							<td title="{{ x.continent }}" class="ellipsis continent">{{ x.continent }}</td>
+							<td title="{{ x.population }}" class="ellipsis population">{{ x.population }}</td>
+							<td title="{{ x.sample }}" class="ellipsis">{{ x.sample }}</td>
+							<td title="{{ x.snp }}" class="ellipsis">{{ x.snp }}</td>
+							<td title="{{ x.function }}" class="ellipsis">{{ x.function }}</td>
+							<td class="link">
+								<a title="{{ x.reference }}" target="_blank" href="{{ x.reference }}">Link</a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<!--////////////////////////////////////Footer-->
+			<footer>
+				<div class="zerogrid">
+					<div class="wrap-footer">
+						<div class="row">
+							<h3>Contact</h3>
+							<span>Phone / +91 987 37 73 623 </span>
+							</br>
+							<span>Email / its.priyanka.sharma@gmail.com </span>
+							</br>
+							<span>
+								<strong>Designed and developed by -
+									<a href="https://www.facebook.com/shubhdw">Shubham Dubey</a> &
+									<a href="https://www.linkedin.com/in/ashish-sharma-web-dev">Ashish Sharma</a>
+								</strong>
+							</span>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+
+		<div id="aboutUsPage" class="page" style="display: none;">
+			<div class="zerogrid">
+				<h2 style="color: #686868; margin: 30px auto 0; width: 140px;">
+					About Us
+				</h2>
 			</div>
 		</div>
-		<div id='resultTable' class="tableContainer">
-			<table ng-show="isTable(1)" class="table  table-hover data-table myTable">
-				<thead>
-					<tr>
-						<th class="EmpId">miRNA name</th>
-						<th ng-show="showCancer" class="EmpId">Cancer</th>
-						<th ng-show="showCancerSubtype" class="EmpId">Cancer Subtype</th>
-						<th ng-show="showPopulation" class="EmpId">Continent</th>
-						<th ng-show="showPopulation" class="EmpId">Population</th>
-						<th ng-show="showSample" class="EmpId">Sample Type</th>
-						<th ng-show="showSample" class="EmpId">Sample</th>
-						<th ng-show="showExpression" class="EmpId">Expression</th>
-						<th ng-show="showExpressionDetail" class="EmpId">Expression Details</th>
-						<th ng-show="showSignificance" class="EmpId">Significance</th>
-						<th ng-show="showDetectionMethod" class="EmpId">Detection Method</th>
-						<th ng-show="showMarker" class="EmpId">Marker</th>
-						<th ng-show="showMarkerDetail" class="EmpId">Marker details</th>
-						<th ng-show="showTherapy" class="EmpId">Response To Therapy</th>
-						<th ng-show="showTherapyDetail" class="EmpId">Details of Response To Therapy</th>
-						<th ng-show="showTumorSize" class="EmpId">Tumor-Size/ TNM Stage/ Metastasis/ Recurrence</th>
-						<th ng-show="showTumorSizeDetail" class="EmpId">Details of Tumor-Size/ TNM Stage/ Metastasis/ Recurrence</th>
-						<th class="EmpId">Reference</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr ng-show="!expResult.length">
-						<td colspan=100 style="text-align: center; color: red">
-							No result found for this entry
-						</td>
-					</tr>
-					<tr ng-repeat="x in expResult">
-						<td title="{{ x.miRNA_name }}" class="miRNA ellipsis">{{ x.miRNA_name }}</td>
-						<td title="{{ x.cancer }}" class="ellipsis cancer" ng-show="showCancer">{{ x.cancer }}</td>
-						<td title="{{ x.cancer_subtype }}" class="ellipsis" ng-show="showCancerSubtype">{{ x.cancer_subtype }}</td>
-						<td title="{{ x.continent }}" class="ellipsis continent" ng-show="showPopulation">{{ x.continent }}</td>
-						<td title="{{ x.population }}" class="ellipsis population" ng-show="showPopulation">{{ x.population }}</td>
-						<td title="{{ x.sample_type }}" class="ellipsis sample" ng-show="showSample">{{ x.sample_type }}</td>
-						<td title="{{ x.sample }}" class="ellipsis" ng-show="showSample">{{ x.sample }}</td>
-						<td title="{{ x.expression }}" class="ellipsis" ng-show="showExpression">{{ x.expression }}</td>
-						<td title="{{ x.expression_details }}" class="ellipsis" ng-show="showExpressionDetail">{{ x.expression_details }}</td>
-						<td title="{{ x.significance }}" class="ellipsis" ng-show="showSignificance">{{ x.significance }}</td>
-						<td title="{{ x.detection_method }}" class="ellipsis" ng-show="showDetectionMethod">{{ x.detection_method }}</td>
-						<td title="{{ x.marker }}" class="ellipsis marker" ng-show="showMarker">{{ x.marker }}</td>
-						<td title="{{ x.marker_details }}" class="ellipsis" ng-show="showMarkerDetail">{{ x.marker_details }}</td>
-						<td title="{{ x.therapy }}" class="ellipsis" ng-show="showTherapy">{{ x.therapy }}</td>
-						<td title="{{ x.therapy_details }}" class="ellipsis" ng-show="showTherapyDetail">{{ x.therapy_details }}</td>
-						<td title="{{ x.tumor_size }}" class="ellipsis" ng-show="showTumorSize">{{ x.tumor_size }}</td>
-						<td title="{{ x.tumor_size_details }}" class="ellipsis" ng-show="showTumorSizeDetail">{{ x.tumor_size_details }}</td>
-						<td class="link">
-							<a title="{{ x.reference }}" target="_blank" href="{{ x.reference }}">Link</a>
-						</td>
-					</tr>
-				</tbody>
-			</table>
-			<table ng-show="isTable(2)" class="table  table-hover data-table myTable">
-				<thead>
-					<tr>
-						<th class="EmpId">miRNA Name</th>
-						<th ng-show="showFuncCancer" class="EmpId">Cancer</th>
-						<th ng-show="showFuncCellLine" class="EmpId">Cell Line</th>
-						<th ng-show="showFuncTarget" class="EmpId">Target</th>
-						<th ng-show="showFuncTargetDetails" class="EmpId">Target Details</th>
-						<th ng-show="showFuncTechnique" class="EmpId">Technique used</th>
-						<th ng-show="showFuncFunction" class="EmpId">Function</th>
-						<th ng-show="showFuncFunction" class="EmpId">Function details</th>
-						<th class="EmpId">Reference</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr ng-show="!miResult.length">
-						<td colspan=100 style="text-align: center; color: red">
-							No result found for this entry
-						</td>
-					</tr>
-					<tr ng-repeat="x in miResult">
-						<td title="{{ x.miRNA_name }}" class="miRNA ellipsis">{{ x.miRNA_name }}</td>
-						<td title="{{ x.cancer }}" class="ellipsis cancer" ng-show="showFuncCancer">{{ x.cancer }}</td>
-						<td title="{{ x.cell_line }}" class="ellipsis" ng-show="showFuncCellLine">{{ x.cell_line }}</td>
-						<td title="{{ x.target }}" class="ellipsis" ng-show="showFuncTarget">{{ x.target }}</td>
-						<td title="{{ x.target_details }}" class="ellipsis" ng-show="showFuncTargetDetails">{{ x.target_details }}</td>
-						<td title="{{ x.technique }}" class="ellipsis" ng-show="showFuncTechnique">{{ x.technique }}</td>
-						<td title="{{ x.function }}" class="ellipsis" ng-show="showFuncFunction">{{ x.function }}</td>
-						<td title="{{ x.function_details }}" class="ellipsis" ng-show="showFuncFunction">{{ x.function_details }}</td>
-						<td class="link">
-							<a title="{{ x.reference }}" target="_blank" href="{{ x.reference }}">Link</a>
-						</td>
-					</tr>
-				</tbody>
-			</table>
-			<table ng-show="isTable(3)" class="table  table-hover data-table myTable">
-				<thead>
-					<tr>
-						<th class="EmpId">miRNA name</th>
-						<th class="EmpId">Cancer</th>
-						<th class="EmpId">Cancer Subtype</th>
-						<th class="EmpId">Continent</th>
-						<th class="EmpId">Country</th>
-						<th class="EmpId">Sample</th>
-						<th class="EmpId">SNP</th>
-						<th class="EmpId">Function</th>
-						<th class="EmpId">Reference</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr ng-show="!snpResult.length">
-						<td colspan=100 style="text-align: center; color: red">
-							No result found for this entry
-						</td>
-					</tr>
-					<tr ng-repeat="x in snpResult">
-						<td title="{{ x.miRNA_name }}" class="miRNA ellipsis">{{ x.miRNA_name }}</td>
-						<td title="{{ x.cancer }}" class="ellipsis cancer">{{ x.cancer }}</td>
-						<td title="{{ x.cancer_subtype }}" class="ellipsis">{{ x.cancer_subtype }}</td>
-						<td title="{{ x.continent }}" class="ellipsis continent">{{ x.continent }}</td>
-						<td title="{{ x.population }}" class="ellipsis population">{{ x.population }}</td>
-						<td title="{{ x.sample }}" class="ellipsis">{{ x.sample }}</td>
-						<td title="{{ x.snp }}" class="ellipsis">{{ x.snp }}</td>
-						<td title="{{ x.function }}" class="ellipsis">{{ x.function }}</td>
-						<td class="link">
-							<a title="{{ x.reference }}" target="_blank" href="{{ x.reference }}">Link</a>
-						</td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-
-		<!--////////////////////////////////////Footer-->
-		<footer>
-			<div class="zerogrid">
-				<div class="wrap-footer">
-					<div class="row">
-						<h3>Contact</h3>
-						<span>Phone / +91 987 37 73 623 </span>
-						</br>
-						<span>Email / its.priyanka.sharma@gmail.com </span>
-						</br>
-						<span>
-							<strong>Designed and developed by -
-								<a href="https://www.facebook.com/shubhdw">Shubham Dubey</a> &
-								<a href="https://www.linkedin.com/in/ashish-sharma-web-dev">Ashish Sharma</a>
-							</strong>
-						</span>
-					</div>
-				</div>
-			</div>
-		</footer>
-
 	</div>
 </body>
 

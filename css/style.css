@@ -113,7 +113,7 @@ header .logo img{
 #container {}
 #container .wrap-container{}
 
-.header { margin: 0 0 10px;}
+.header { margin: 0 0 10px 10px;}
 .header h1{font-size: 30px;margin-bottom: 10px;letter-spacing: 2px;}
 .header span{color: #686868;line-height: 1.4;font-size: 26px;font-weight:500;font-family: "Roboto",sans-serif;}
 

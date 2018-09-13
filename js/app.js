@@ -87,6 +87,47 @@
 				$scope.setTable(4);
 			}
 
+			$scope.setPage = function (pageName) {
+				$('.page').hide();
+				$(`#${pageName}Page`).show();
+			}
+
+			$scope.downloadCSV = function () {
+				let dataName = '';
+				switch ($scope.tableNo) {
+					case 1:
+						dataName = 'expResult';
+						break;
+					case 2:
+						dataName = 'miResult';
+						break;
+					case 3:
+						dataName = 'snpResult';
+						break;
+				}
+				const jsonData = $scope[dataName];
+				if (!jsonData instanceof Array) {
+					console.error('responseData is not an array');
+					return;
+				}
+				const options = { 
+					fieldSeparator: ',',
+					quoteStrings: '"',
+					decimalseparator: '.',
+					showLabels: true, 
+					showTitle: true,
+					title: 'GIMIRDB CSV',
+					useBom: true,
+					useKeysAsHeaders: true,
+					// headers: ['Column 1', 'Column 2', etc...] <-- Won't work with useKeysAsHeaders present!
+				};
+				const csvExporter = new ExportToCsv(options);
+				csvExporter.generateCsv(jsonData.map(function (record) {
+					delete record.$$hashKey;
+					return record;
+				}));
+			}
+
 			$scope.isSet = function (tabId) {
 				return $scope.tab === tabId;
 			}
@@ -156,20 +197,6 @@
 					}
 					else {
 						var searchData = this.RNA2;
-
-						// $scope.showFuncCancer = false;
-						// $scope.showFuncCellLine = false;
-						// $scope.showFuncTargetDetails = false;
-						// $scope.showFuncTechnique = false;
-						// $scope.showFuncFunction = false;
-
-						// if (searchData.function !== "" && searchData.function != undefined) {
-						// 	$scope.showFuncFunction = true;
-						// }
-						// else if (searchData.target !== "" && searchData.target != undefined) {
-						// 	$scope.showFuncTechnique = true;
-						// }
-
 					}
 					for (item in searchData) {
 						if (searchData[item] == '') {
@@ -182,32 +209,6 @@
 						$scope.miResult = response.data.sort(sortByMIRNA);
 						window.location.hash = "resultTable";
 						$scope.setTable(2);
-						// console.table(response.data);
-
-						// if (!$scope.showFuncCancer) {
-						// 	removeField(response.data, 'cancer');
-						// }
-						// if (!$scope.showFuncCellLine) {
-						// 	removeField(response.data, 'cell_line');
-						// }
-						// if (!$scope.showFuncTarget) {
-						// 	removeField(response.data, 'target');
-						// 	removeField(response.data, 'target_details');
-						// }
-						// if (!$scope.showFuncTechnique) {
-						// 	removeField(response.data, 'technique');
-						// }
-						// if (!$scope.showFuncFunction) {
-						// 	removeField(response.data, 'function');
-						// 	removeField(response.data, 'function_details');
-						// }
-						// removeField(response.data, '_id');
-						// startWorker(response.data, (data) => {
-						// 	$scope.miResult = data.sort(sortByMIRNA);
-						// 	window.location.hash = "resultTable";
-						// 	$scope.setTable(2);
-						// 	// console.table(response.data);
-						// })
 					});
 				}
 				else if ($scope.tab == "3") {
@@ -318,58 +319,11 @@
 						$scope.expResult = response.data.sort(sortByMIRNA);
 						window.location.hash = "resultTable";
 						$scope.setTable(1);
-						// console.table(response.data);
 						$('#dropdownsLabel').find('select').prop('disabled', false);
 						// $('#dropdownsLabel').find('select').val('');
 						$("#btSubmit").prop('disabled', true);
-						// if (!$scope.showMarker) {
-						// 	removeField(response.data, 'marker');
-						// }
-						// if (!$scope.showMarkerDetail) {
-						// 	removeField(response.data, 'marker_details');
-						// }
-						// if (!$scope.showTherapy) {
-						// 	removeField(response.data, 'therapy');
-						// }
-						// if (!$scope.showTherapyDetail) {
-						// 	removeField(response.data, 'therapy_details');
-						// }
-						// if (!$scope.showTumorSize) {
-						// 	removeField(response.data, 'tumor_size');
-						// }
-						// if (!$scope.showTumorSizeDetail) {
-						// 	removeField(response.data, 'tumor_size_details');
-						// }
-						// if (!$scope.showExpression) {
-						// 	removeField(response.data, 'expression');
-						// }
-						// if (!$scope.showExpressionDetail) {
-						// 	removeField(response.data, 'expression_details');
-						// }
-						// if (!$scope.showCancer) {
-						// 	removeField(response.data, 'cancer');
-						// }
-						// if (!$scope.showPopulation) {
-						// 	removeField(response.data, 'population');
-						// }
-						// if (!$scope.showSample) {
-						// 	removeField(response.data, 'sample');
-						// }
-						// if (!$scope.showSignificance) {
-						// 	removeField(response.data, 'significance');
-						// }
-						// if (!$scope.showDetectionMethod) {
-						// 	removeField(response.data, 'detection_method');
-						// }
-						// removeField(response.data, '_id');
-						// startWorker(response.data, (data) => {
-						// 	$scope.expResult = data.sort(sortByMIRNA);
-						// 	window.location.hash = "resultTable";
-						// 	$scope.setTable(1);
-						// 	console.table(response.data);
-						// })
 					});
 				}
 			}
-		}])
+		}])	
 })();
