@@ -47,7 +47,8 @@
 			<div class="wrap-header zerogrid">
 				<div style="float: right; clear: both; font-size: 16px; margin: 10px 0;">
 					<a ng-click="setPage('home')" style="cursor: pointer;">Home</a>
-					<a ng-click="setPage('aboutUs')" style="cursor: pointer; border-left: 1px solid; padding-left: 10px; margin-left: 10px">About us</a>
+					<a ng-click="setPage('aboutUs')" style="cursor: pointer; border-left: 1px solid; padding-left: 10px; margin-left: 10px">About
+						us</a>
 				</div>
 				<div class="row">
 					<div class="logo">
@@ -532,8 +533,8 @@
 				</div>
 			</div>
 			<div id='resultTable' class="tableContainer">
-				<div ng-show="isTable(1) || isTable(2) || isTable(3)" class="zerogrid" style="font-size: 13px;">
-					<a ng-click="downloadCSV()" style="float: right; clear: both; cursor: pointer; text-decoration: underline;">Download</a>
+				<div ng-show="isTable(1) || isTable(2) || isTable(3)" class="" style="font-size: 13px;">
+					<a ng-click="downloadCSV()" class='download-link'>Download the below table as CSV</a>
 				</div>
 				<table ng-show="isTable(1)" class="table  table-hover data-table myTable">
 					<thead>
@@ -685,9 +686,51 @@
 
 		<div id="aboutUsPage" class="page" style="display: none;">
 			<div class="zerogrid">
-				<h2 style="color: #686868; margin: 30px auto 0; width: 140px;">
+				<h2 class='about-us-heading'>
 					About Us
 				</h2>
+				<div class='about-us-grid'>
+					<div class='photos space-between'>
+						<img src="Photo.jpg" />
+						<img src="Photo.jpg" />
+						<img src="Photo.jpg" />
+						<img src="Photo.jpg" />
+					</div>
+					<div class='text space-between'>
+						<article>
+							<h3 class='name'>
+								Priyanka Sharma
+							</h3>
+							bahut sara text about the insan
+							bahut sara text about the insan
+							bahut sara text about the insan
+						</article>
+						<article>
+							<h3 class='name'>
+								Priyanka Sharma
+							</h3>
+							bahut sara text about the insan
+							bahut sara text about the insan
+							bahut sara text about the insan
+						</article>
+						<article>
+							<h3 class='name'>
+								Priyanka Sharma
+							</h3>
+							bahut sara text about the insan
+							bahut sara text about the insan
+							bahut sara text about the insan
+						</article>
+						<article>
+							<h3 class='name'>
+								Priyanka Sharma
+							</h3>
+							bahut sara text about the insan
+							bahut sara text about the insan
+							bahut sara text about the insan
+						</article>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
