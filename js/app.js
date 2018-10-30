@@ -190,6 +190,10 @@
 				}
 			}
 
+			$('body').loadingIndicator();
+			var loadingIndicator = $('body').data("loadingIndicator");
+			loadingIndicator.hide();
+
 			$scope.searchQuery = function (formData) {
 				if ($scope.tab == "2") {
 					if (formData.$name == 'form21') {
@@ -203,12 +207,14 @@
 							delete searchData[item];
 						}
 					}
+					loadingIndicator.show();
 					$http.get('/function', { params: searchData }).then(function (response) {
 						delete searchData.function;
 						delete searchData.target;
 						$scope.miResult = response.data.sort(sortByMIRNA);
 						window.location.hash = "resultTable";
 						$scope.setTable(2);
+						loadingIndicator.hide();
 					});
 				}
 				else if ($scope.tab == "3") {
@@ -225,11 +231,13 @@
 							delete searchData[item];
 						}
 					}
+					loadingIndicator.show();
 					$http.get('/snp', { params: searchData }).then((response) => {
 						$scope.snpResult = response.data.sort(sortByMIRNA);
 						window.location.hash = "resultTable";
 						$scope.setTable(3);
 						// console.table(response.data);
+						loadingIndicator.hide();
 					});
 				}
 				else if ($scope.tab == "1") {
@@ -309,6 +317,8 @@
 						}
 					}
 
+					loadingIndicator.show();
+
 					$http.get('/expression', { params: searchData }).then(function (response) {
 						// To reset the dropdowns
 						delete searchData.marker;
@@ -322,6 +332,9 @@
 						$('#dropdownsLabel').find('select').prop('disabled', false);
 						// $('#dropdownsLabel').find('select').val('');
 						$("#btSubmit").prop('disabled', true);
+						loadingIndicator.hide();
+					}).catch(function () {
+						loadingIndicator.hide();
 					});
 				}
 			}
