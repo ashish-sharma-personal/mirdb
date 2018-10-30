@@ -189,6 +189,27 @@
 					$('#functionDropdowns').find('select')[index].disabled = false;
 				}
 			}
+			angular.element(document).ready(function () {
+				$.highlightWindow('init').moveTo('#tabContainer', {
+					help: 'Select one of these three:'
+				});
+				// $(document).on('click', $.highlightWindow.bind($, 'hide'));
+				// setTimeout(function () {
+				// 	$.highlightWindow('hide');
+				// }, 3000);
+				// setTimeout(function () {
+				// 	$.highlightWindow('moveTo','#tab_1', {width: null, help: null});
+				// 	setTimeout(function () {
+				// 		$.highlightWindow('moveTo','#tab_2');
+				// 		setTimeout(function () {
+				// 			$.highlightWindow('moveTo','#tab_3');
+				// 			setTimeout(function () {
+				// 				$.highlightWindow('hide');
+				// 			}, 800);
+				// 		}, 900);
+				// 	}, 1000);
+				// }, 1500);
+			});
 
 			$('body').loadingIndicator();
 			var loadingIndicator = $('body').data("loadingIndicator");

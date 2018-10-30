@@ -1,0 +1,47 @@
+#highlight-window {
+  position: fixed;
+  top: -20px;
+  left: -20px;
+  width: 110%;
+  height: 110%;
+  z-index: 2000000;
+  border: 10000px solid rgba(0, 0, 0, 0.6);
+  margin-left: -10000px;
+  margin-top: -10000px;
+  box-shadow: inset 0 0 0 4px #038bcf, inset 0 0 20px rgba(0, 0, 0, 0.4);
+  pointer-events: none;
+  -webkit-border-radius: 10010px;
+  -moz-border-radius: 10010px;
+  border-radius: 10010px;
+  transition: all 0.6s ease 0.3s, border-radius 0.3s ease;
+  -webkit-transition: all 0.6s ease 0.3s, border-radius 0.3s ease;
+  -moz-transition: all 0.6s ease 0.3s, border-radius 0.3s ease;
+  -ms-transition: all 0.6s ease 0.3s, border-radius 0.3s ease;
+  -o-transition: all 0.6s ease 0.3s, border-radius 0.3s ease;
+  display: none;
+  box-sizing: unset;
+}
+
+.highlight-window-content {
+  width: 100%;
+  height: 100%;
+  position: absolute !important;
+  top: 0;
+  left: 0;
+}
+
+.highlight-window-content[help]::before {
+  content: attr(help);
+  color: white;
+  font-weight: 600;
+  text-transform: capitalize;
+  position: absolute;
+  background-color: #1b658a;
+  border: 1px solid #1b658a;
+  border-radius: 4px;
+  top: -30px;
+  left: 0;
+  padding: 2px;
+}
+
+/*# sourceMappingURL=highlight-window.css.map */

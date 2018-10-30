@@ -1159,3 +1159,12 @@ select.ng-valid-required {
   margin: 10px auto 15px;
   padding-bottom: 3px;
 }
+
+.nav-tabs {
+  border: none !important;
+  display: inline-block;
+}
+
+.nav-tabs-container {
+  border-bottom: 1px solid #ddd;
+}
