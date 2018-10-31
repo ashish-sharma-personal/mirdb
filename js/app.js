@@ -83,6 +83,12 @@
 			$scope.showFuncFunction = true;
 
 			$scope.setTab = function (tabId) {
+				setTimeout(function () {
+					$.highlightWindow('moveTo','#form_' + tabId, {help: 'Use this section to filter data and then click on the Search button'});
+				}, 1);
+				setTimeout(function () {
+					$.highlightWindow('hide');
+				}, 6000);
 				$scope.tab = tabId;
 				$scope.setTable(4);
 			}
