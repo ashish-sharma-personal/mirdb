@@ -603,10 +603,15 @@ select.ng-valid-required {
   cursor: pointer;
   text-decoration: underline;
   font-weight: 600;
-  margin-right: 30px;
+  margin: 15px 30px 0 0;
   background-color: #469646;
   color: white;
-  padding: 1px 10px 5px 10px;
+  padding: 3px 10px 5px 10px;
+}
+
+.download-link .fa-download {
+  display: inline;
+  margin-right: 5px;
 }
 
 /* ---------------------------------------------------------------------------- */
@@ -1166,5 +1171,5 @@ select.ng-valid-required {
 }
 
 .nav-tabs-container {
-  border-bottom: 1px solid #ddd;
+  /* border-bottom: 1px solid #ddd; */
 }
