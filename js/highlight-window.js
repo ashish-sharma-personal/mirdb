@@ -84,9 +84,9 @@
           highligh.find(".highlight-window-content").removeAttr("help");
         }
         var _this = this;
-        this.$elem.hover(function() {
+        this.$elem.click(function() {
             _this.hide();
-            _this.$elem.off('mouseenter mouseleave');
+            _this.$elem.off('click');
         });
       }
     },
