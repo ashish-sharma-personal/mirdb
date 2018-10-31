@@ -5,18 +5,6 @@ var router = express.Router();
 var fs = require('fs');
 var basicAuth = require('connect-basic-auth');
 
-var functionModel = require("./model/function");
-var funcFunctionModel = require("./model/funcFunction");
-var funcTargetModel = require("./model/funcTarget");
-var expressionModel = require("./model/expression");
-var expRegulationModel = require("./model/expRegulation");
-var expMarkerModel = require("./model/expMarker");
-var expTherapyModel = require("./model/expTherapy");
-var expTumorSizeModel = require("./model/expTumorSize");
-var expSampleTypeModel = require("./model/expSampleType");
-var snpModel = require("./model/snp");
-
-
 var funcData = require('./function.json');
 var funcFunctionData = require('./funcFunction.json');
 var funcTargetData = require('./funcTarget.json');
@@ -27,22 +15,6 @@ var expTherapyData = require('./expTherapy.json');
 var expTumorSizeData = require('./expTumorSize.json');
 var expSampleTypeData = require('./expSampleType.json');
 var snpData = require('./snp.json');
-
-function saveJSONToDB(json, model) {
-    for (var i = 0; i < json.length; i++) {
-        var db = new model();
-        Object.assign(db, json[i]);
-        db.save(function (err) {
-            if (err) {
-                console.log('error');
-                response = { "error": true, "message": "Error adding data" };
-            } else {
-                response = { "error": false, "message": "Data added" };
-            }
-        });
-    }
-}
-
 
 app.use(bodyParser.json());
 app.use(express.static('css'));
@@ -56,6 +28,33 @@ function parseQuery(originalQuery) {
     //     query[key] = new RegExp(originalQuery[key], 'i');
     // }
     return originalQuery; //query;
+}
+
+function sendDataAsync (database, query, res) {
+        new Promise(function (resolve, reject) {
+            var data = [];
+            try {
+                data = database.filter(function (record) {
+                    var matched = true;
+                    for (var key in query) {
+                        if (query.hasOwnProperty(key)) {
+                            if (query[key] !== record[key]) {
+                                matched = false;
+                                break;
+                            }
+                        }
+                     }
+                    return matched;
+                });
+            } catch (error) {
+                reject(error);
+            }
+            resolve(data);
+        }).then(function (data) {
+            res.json(data);
+        }).catch(function (error) {
+            res.json({ "error": error, "message": "Error fetching data" });
+        });
 }
 
 app.use(basicAuth(function (credentials, req, res, next) {
@@ -74,74 +73,38 @@ app.get("/", function (req, res, next) {
 
 app.route("/function")
     .get(function (req, res) {
-        var response = {},
-            query = parseQuery(req.query),
-            model = functionModel;
+       var query = parseQuery(req.query), database = funcData;
         if (query.function) {
-            model = funcFunctionModel;
+            database = funcFunctionData;
         } else if (query.target) {
-            model = funcTargetModel;
+            database = funcTargetData;
         }
-        model.find(parseQuery(req.query), function (err, data) {
-            if (err) {
-                response = { "error": true, "message": "Error fetching data" };
-            } else {
-                response = { "error": false, "message": data };
-            }
-            res.json(data);
-        });
+        sendDataAsync(database, query, res);
     });
 
 app.route("/expression")
     .get(function (req, res) {
-        var response = {},
-            query = parseQuery(req.query),
-            model = expressionModel;
+        var query = parseQuery(req.query), database = exprData;
 
         if (query.marker) {
-            model = expMarkerModel;
+            database = expMarkerData;
         } else if (query.expression) {
-            model = expRegulationModel;
+            database = expRegulationData;
         } else if (query.therapy) {
-            model = expTherapyModel;
+            database = expTherapyData;
         } else if (query.tumor_size) {
-            model = expTumorSizeModel;
+            database = expTumorSizeData;
         } else if (query.sample_type) {
-            model = expSampleTypeModel;
+            database = expSampleTypeData;
         }
-        model.find(parseQuery(query), function (err, data) {
-            if (err) {
-                response = { "error": true, "message": "Error fetching data" };
-            } else {
-                response = { "error": false, "message": data };
-            }
-            res.json(data);
-        });
+        sendDataAsync(database, query, res);
     });
 
 app.route("/snp")
     .get(function (req, res) {
-        var response = {};
-        snpModel.find(parseQuery(req.query), function (err, data) {
-            if (err) {
-                response = { "error": true, "message": "Error fetching data" };
-            } else {
-                response = { "error": false, "message": data };
-            }
-            res.json(data);
-        });
+        var  query = parseQuery(req.query);
+        sendDataAsync(snpData, query, res);
     });
-
-saveJSONToDB(exprData, expressionModel);
-saveJSONToDB(expRegulationData, expRegulationModel);
-saveJSONToDB(expMarkerData, expMarkerModel);
-saveJSONToDB(expTherapyData, expTherapyModel);
-saveJSONToDB(expSampleTypeData, expSampleTypeModel);
-saveJSONToDB(expTumorSizeData, expTumorSizeModel);
-saveJSONToDB(funcData, functionModel);
-saveJSONToDB(funcFunctionData, funcFunctionModel);
-saveJSONToDB(funcTargetData, funcTargetModel);
-saveJSONToDB(snpData, snpModel);
 
 app.listen(3000);
 console.log("3000");
