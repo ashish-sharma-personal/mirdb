@@ -1,6 +1,6 @@
 
 .loading-indicator-wrapper {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
@@ -10,7 +10,7 @@
   -moz-transition: all 250ms linear;
   -o-transition: all 250ms linear;
   -webkit-transition: all 250ms linear;
-  transition: all 250ms linear
+  transition: all 250ms linear;
 }
 
 .loading-indicator-wrapper.loader-visible {
