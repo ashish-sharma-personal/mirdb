@@ -131,7 +131,7 @@ app.route("/snp")
             res.json(data);
         });
     });
-/*
+
 saveJSONToDB(exprData, expressionModel);
 saveJSONToDB(expRegulationData, expRegulationModel);
 saveJSONToDB(expMarkerData, expMarkerModel);
@@ -142,6 +142,6 @@ saveJSONToDB(funcData, functionModel);
 saveJSONToDB(funcFunctionData, funcFunctionModel);
 saveJSONToDB(funcTargetData, funcTargetModel);
 saveJSONToDB(snpData, snpModel);
-*/
+
 app.listen(3000);
 console.log("3000");
