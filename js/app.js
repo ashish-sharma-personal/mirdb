@@ -123,6 +123,8 @@
 				};
 				const csvExporter = new ExportToCsv(options);
 				csvExporter.generateCsv(jsonData.map(function (record) {
+					delete record._id;
+					delete record.__v;
 					delete record.$$hashKey;
 					return record;
 				}));
