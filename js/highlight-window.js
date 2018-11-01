@@ -43,6 +43,7 @@
         var paddingHighlight = this.settings.style.paddingHighlight;
         var minWidth = this.settings.style.minWidth;
         var minHeight = this.settings.style.minHeight;
+        this.elementSelector = elementSelector;
         this.$elem = $(elementSelector);
         if (this.$elem.length !== 1) {
           console.error(
@@ -90,7 +91,10 @@
         });
       }
     },
-    hide: function() {
+    hide: function(elementSelector) {
+      if (elementSelector && elementSelector !== this.elementSelector) {
+        return;
+      }
       var highlight = $(this.highlightDOMElem);
       highlight.css("width", "");
       highlight.css("top", "");
