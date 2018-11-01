@@ -84,10 +84,13 @@
 
 			$scope.setTab = function (tabId) {
 				setTimeout(function () {
-					$.highlightWindow('moveTo','#form_' + tabId, {help: 'Use this section to filter data and then click on the Search button'});
+					$.highlightWindow('moveTo','#form_' + tabId, {help: null});
 				}, 1);
 				setTimeout(function () {
-					$.highlightWindow('hide');
+					$.highlightWindow('moveTo','#form_' + tabId, {help: 'Use this section to filter data and then click on the Search button'});
+				}, 600);
+				setTimeout(function () {
+					$.highlightWindow('hide', '#form_' + tabId);
 				}, 6000);
 				$scope.tab = tabId;
 				$scope.setTable(4);
@@ -243,6 +246,7 @@
 						$scope.miResult = response.data.sort(sortByMIRNA);
 						window.location.hash = "resultTable";
 						$scope.setTable(2);
+						$('#functionDropdowns').find('select').prop('disabled', false);
 						loadingIndicator.hide();
 					});
 				}
