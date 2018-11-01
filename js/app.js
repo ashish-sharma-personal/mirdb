@@ -82,16 +82,23 @@
 			$scope.showFuncTechnique = true;
 			$scope.showFuncFunction = true;
 
+			$scope.allHideTimers = [];
 			$scope.setTab = function (tabId) {
-				setTimeout(function () {
-					$.highlightWindow('moveTo','#form_' + tabId, {help: null});
-				}, 1);
+				// setTimeout(function () {
+				// 	$.highlightWindow('moveTo','#form_' + tabId, {help: null});
+				// }, 1);
 				setTimeout(function () {
 					$.highlightWindow('moveTo','#form_' + tabId, {help: 'Use this section to filter data and then click on the Search button'});
-				}, 600);
+				}, 200);
 				setTimeout(function () {
 					$.highlightWindow('hide', '#form_' + tabId);
 				}, 6000);
+				// $scope.allHideTimers.push(setTimeout(function () {
+				// 	$.highlightWindow('hide', '#form_' + tabId);
+				// 	$scope.allHideTimers.map(function(timer) {
+				// 		clearTimeout(timer);
+				// 	})
+				// }, 6000));
 				$scope.tab = tabId;
 				$scope.setTable(4);
 			}

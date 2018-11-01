@@ -48,7 +48,7 @@
         if (this.$elem.length !== 1) {
           console.error(
             "Element selector is not pointing to only 1 element but :" +
-            this.$elem.length
+              this.$elem.length
           );
           return;
         }
@@ -86,16 +86,19 @@
         }
         var _this = this;
         this.$elem.click(function() {
-            _this.hide();
-            _this.$elem.off('click');
+          _this.hide();
+          _this.$elem.off("click");
         });
       }
     },
     hide: function(elementSelector) {
       if (elementSelector && elementSelector !== this.elementSelector) {
+        console.log("NOT hiding " + elementSelector);
         return;
       }
+      console.log("hiding " + elementSelector, this.elementSelector);
       var highlight = $(this.highlightDOMElem);
+      highlight.hide();
       highlight.css("width", "");
       highlight.css("top", "");
       highlight.css("left", "");
@@ -117,7 +120,7 @@
         return windowHighlight;
       } else if (action === "hide") {
         var windowHighlight = $.data(document.body, "plugin_" + pluginName);
-        windowHighlight.hide();
+        windowHighlight.hide(arguments[1]);
         return windowHighlight;
       }
     }
